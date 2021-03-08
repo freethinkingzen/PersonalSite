@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="dark">
+    <head>
+        
+        <!-- Page Information -->
+        <meta http-equiv="author" content="John Lewis" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-script-type" content="text/javascript" />
+        <meta http-equiv="content-style-type" content="text/css" />
+        <meta http-equiv="content-language" content="en-us" />
+        <meta name="description" content="I'm John Lewis and this is my resume" />
+        <meta name="keywords" content="John Lewis, computer science, web developer" />
+        <meta name="robots" content="nofollow" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!--Bootstrap CSS-->
+        <link 
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./styles.css" />
+
+        <title>John Lewis</title>
+    </head>
+
+    <body>
+        <!-- dark mode toggle -->
+        <div class="switch-container">
+            <label class="theme-switch" for="checkbox"  title="Change Color Mode" aria-label="dark mode toggle">
+                <input tabindex="0" type="checkbox" id="checkbox" >
+                <span class="slider round"></span>
+            </label>
+            <p>Color Mode</p>
+        </div>
+        
+        <!-- Landing Page-->
+        <div class="container-fluid d-flex fullscreen" id="landing">
+            <div class="row mx-auto">
+                <div class="col my-auto">
+                    <h1 id="coding">CODING</h1>
+                    <h1 id="lifting">LIFTING</h1>
+                    <h1 id="philosophy">PHILOSOPHY</h1>
+                </div>
+            </div>
+
+            <!-- Bouncing down arrow/chevron scrolls to next section --->
+            <button type="button" class="glyph" id="downGlyph" title="Scroll to profile" role="button" aria-label="scroll down to profile">
+                <svg class="bounce" id="downArrow" width="4em" height="4em" viewBox="0 0 16 16" 
+                     fill="#ffffff" 
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Profile Page -->
+        <div class="container fullscreen" id="profile">
+            <h1 id="myName">JOHN LEWIS</h1>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-8" id="profilePic" >
+                    <img src="IMG/IMG_4088.jpg" alt="Profile Picture"/>
+                </div>
+                <div class="col-md-8 col-sm-6 col-12">
+                    <p>
+                        I'm a recent graduate of Portland State University with a B.S in
+                        Computer Science and a recovering philosophy major. I took a very
+                        non-traditional route to a degree with stops at two different colleges
+                        and three different majors over the course of 15 years.
+                        <br></br>
+                        Professionally, my interests are Machine Learning, Web Development, SAAS,
+                        and the ethics surrounding barriers to technology accessibility including
+                        race, income, and disability.
+                        <br></br>
+                        When I'm not coding, I love strength sports. I can tell you more than you
+                        would ever want or need to know about World's Strongest Man and powerlifting.
+                        The gym is my church and I "pray" as often and as heavy as possible.
+                        <br></br>
+                        My other interests include dusty old books, bicycles, hiking, camping, spending time 
+                        with my wife, and doing anything that I can in the outdoors.
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script src="./JS/buttons.js"></script>
+    </body>
+</html>

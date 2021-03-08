@@ -1,0 +1,247 @@
+
+:root {
+    --surface1: #000000;
+    --surface2: #525564;
+    --surface3: #74828F;
+    --element1: #ffffff;
+    --element2: #eeeeee;
+    --element3: #cecece;
+    --neon-text-color: #ff0000;
+    --neon-shadow: #ffffff;
+    --codingIMG: url(./IMG/coding.jpg);
+    --liftingIMG: url(./IMG/coding.jpg);
+    /*--philIMG: url()*/
+}
+
+[data-theme="light"] {
+    --surface1: #cecece;
+    --surface2: #eeeeee;
+    --surface3: #dddddd;
+    --element1: #000000;
+    --element2: #525564;
+    --element3: #74828f;
+    --neon-text-color: #08f;
+    --neon-shadow: #000000;
+    --codingIMG: url(./IMG/coding.jpg);
+    --liftingIMG: url(./IMG/coding.jpg);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    color: var(--element1);
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--surface1, #000000);
+}
+
+h1{
+    color: var(--element1);
+    font-family:'Courier New', Courier, monospace;
+    text-shadow: 0 0 5px var(--element3);
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 1.5vh;
+}
+
+p{
+    color: var(--element1);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.2ch;
+    padding: 1em;
+}
+
+.switch-container {
+    display: flex;
+    flex-direction:column;
+    color: var(--element3);
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.theme-switch {
+    position: relative;
+    height: 28px;
+    width: 50px;
+    z-index: 100;
+}
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--element3);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider::before {
+    background-color: var(--surface1);
+    bottom: 4px;
+    content: "";
+    height: 20px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+}
+
+input:focus + .slider{
+    outline: var(--primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.fullscreen {
+    padding: 3em 1em 2em 1em;
+    height: 100vh;
+    width: 100vw;
+}
+
+.neonFlicker {
+    color: var(--element1);
+    animation: flicker 1.5s infinite alternate;
+}
+
+.codingbg {
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/coding.jpg) center/cover no-repeat;
+    animation: bg-flicker 1.5s 1 alternate;
+}
+.liftingbg {
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/powerlifting.jpg) center/auto no-repeat; /*45% 50%;*/
+    animation: bg-flicker 1.5s 1 alternate;
+}
+.philbg {
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/philosophy.jpg) center/auto no-repeat; /*center center/100vh;*/
+    animation: bg-flicker 1.5s 1 alternate;
+}
+
+.glyph {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    z-index: 100;
+    background-color: transparent;
+    border: none;
+}
+
+.glyph:hover {
+    cursor: pointer;
+}
+
+.glyph:focus {
+    border: solid 1px var(--element3);
+    outline: none;
+}
+
+
+.bounce {
+    --webkit-animation: bounce 2s;
+    --webkit-iteration-count: infinite;
+    animation: bounce 2s;
+    animation-iteration-count: infinite;
+}
+
+#landing h1:hover{
+    color: var(--element1);
+    animation: flicker 1.5s infinite alternate;
+}
+
+#downArrow {
+    fill: var(--element1);
+}
+
+#profile img{
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 1px 1px 20px var(--element3);
+    border: solid var(--element3);
+    border-radius: 50%;
+    margin: 1em;
+}
+
+
+
+@-webkit-keyframes bounce {
+    0%, 25%, 50%, 75%,
+    100% {--webkit-transform: translateY(0);}
+    40% {--webkit-transfrom: translateY(-20px);}
+    60% {--webkit-transform: translateY{-12px};}
+}
+
+@keyframes bounce {
+    0%, 25%, 50%, 75%,
+    100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-12px);}
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        font-weight: bolder;
+
+        text-shadow:
+            -0.1rem -0.1rem 0.5rem #ffffff,
+            0.1rem 0.1rem 0.5rem #ffffff,
+            0 0 1rem var(--neon-text-color),
+            0 0 2rem var(--neon-text-color),
+            0 0 3rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 5rem var(--neon-text-color);
+        
+        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+@keyframes bg-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 100%;/*background: radial-gradient(transparent, #000000 50%), url(./IMG/powerlifting.jpg) no-repeat; */
+    }
+    10%, 20%, 24%, 55% {
+        opacity: 0%;
+        /*background: #000000;*/
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    p {
+        font-size: 12px;
+    }
+}
