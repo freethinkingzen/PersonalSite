@@ -45,6 +45,11 @@ window.addEventListener("scroll", function(e){
 function welcomeAnimation() {
     var hover = new Event('mouseover');
     var leave = new Event('mouseleave');
+
+    coding.classList.add("disableHoverClicks");
+    lifting.classList.add("disableHoverClicks");
+    phil.classList.add("disableHoverClicks");
+    //landing.classList.add("disableHoverClicks");
     setTimeout(() => {
         coding.dispatchEvent(hover);
         coding.classList.add("neonFlicker");
@@ -78,6 +83,9 @@ function welcomeAnimation() {
         coding.classList.remove("neonFlicker");
         lifting.classList.remove("neonFlicker");
         phil.classList.remove("neonFlicker");
+        coding.classList.remove("disableHoverClicks");
+        lifting.classList.remove("disableHoverClicks");
+        phil.classList.remove("disableHoverClicks");
     }, 9600);
     
 }
