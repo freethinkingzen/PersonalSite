@@ -180,7 +180,6 @@ input:checked + .slider:before {
     cursor: default;
     color: var(--element1);
     animation: flicker 1.5s infinite alternate;
-    cursor: none;
 }
 
 #downArrow {
@@ -283,5 +282,15 @@ input:checked + .slider:before {
     
     #profilePic img{
        margin-left: 5em;
+    }
+
+    .codingbg {
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding_small.jpg) center/cover no-repeat;
+    }
+    .liftingbg {
+        background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/powerlifting_small.jpg) center/cover no-repeat; /*45% 50%;*/
+    }
+    .philbg {
+        background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy_small.jpg) center/cover no-repeat; /*center center/100vh;*/
     }
 }
