@@ -125,6 +125,7 @@ input:checked + .slider:before {
     padding: 3em 1em 2em 1em;
     height: 100vh;
     width: 100vw;
+    margin: 0;
 }
 
 .neonFlicker {
@@ -181,6 +182,7 @@ input:checked + .slider:before {
     cursor: default;
     color: var(--element1);
     animation: flicker 1.5s infinite alternate;
+    cursor: none;
 }
 
 #downArrow {
