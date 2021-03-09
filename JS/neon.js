@@ -9,8 +9,8 @@ const phil = document.getElementById("philosophy");
 const profile = document.getElementById("profile");
 const myName = document.querySelector("#myName");
 
-const bgElement = [coding, lifting, phil];
-const backgrounds = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
+//const h1Elements = [coding, lifting, phil];
+const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
 
 // Detects mouseover landing page h1 to change background
 function bgFlicker(bg, e) {
@@ -23,8 +23,8 @@ function bgFlicker(bg, e) {
 }
 
 // Loops through h1s on landing to set up listeners for bg changes
-for(let i in backgrounds) {
-    bgFlicker(i, backgrounds[i]);
+for(i in landingTitles) {
+    bgFlicker(i, landingTitles[i]);
 }
 
 // Activates neon on profile page h1 when it scrolls into view
