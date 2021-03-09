@@ -8,6 +8,23 @@ const downGlyph = document.getElementById("downGlyph");
 const profile = document.getElementById("profile");
 const myName = document.querySelector("#myName");
 
+const bgElement = [coding, lifting, phil];
+const backgrounds = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
+
+function bgFlicker(bg, e) {
+    e.addEventListener("mouseover", function() {
+        landing.classList.add(bg);
+    
+    //coding.style.opacity = 0.6;
+    //phil.style.opacity = 0.6;
+    });
+    e.addEventListener("mouseleave", function() {
+        landing.classList.remove(bg);
+        //coding.style.opacity = 1;
+        //phil.style.opacity = 1;
+    });
+}
+
 if(currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
@@ -16,39 +33,10 @@ if(currentTheme) {
     }
 }
 
-lifting.addEventListener("mouseover", function(e) {
-    landing.classList.add("liftingbg");
-    
-    coding.style.opacity = 0.6;
-    phil.style.opacity = 0.6;
-});
-lifting.addEventListener("mouseleave", function(e) {
-    landing.classList.remove("liftingbg");
-    coding.style.opacity = 1;
-    phil.style.opacity = 1;
-});
-
-coding.addEventListener("mouseover", function(e) {
-    landing.classList.add("codingbg");
-    lifting.style.opacity = 0.6;
-    phil.style.opacity = 0.6;
-});
-coding.addEventListener("mouseleave", function(e) {
-    landing.classList.remove("codingbg");
-    lifting.style.opacity = 1;
-    phil.style.opacity = 1;
-});
-
-phil.addEventListener("mouseover", function(e) {
-    landing.classList.add("philbg");
-    coding.style.opacity = 0.6;
-    lifting.style.opacity = 0.6;
-});
-phil.addEventListener("mouseleave", function(e) {
-    landing.classList.remove("philbg");
-    coding.style.opacity = 1;
-    lifting.style.opacity = 1;
-});
+for(let i in backgrounds) {
+    bgFlicker(i, backgrounds[i]);
+    console.log(i, backgrounds[i]);
+}
 
 toggleSwitch.addEventListener('change', function(e) {
     if (e.target.checked) {

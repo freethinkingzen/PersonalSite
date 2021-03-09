@@ -137,22 +137,20 @@ input:checked + .slider:before {
 }
 
 .codingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/coding.jpg) center/cover no-repeat;
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 75%), url(./IMG/coding.jpg) center/cover no-repeat;
     animation: bg-flicker 1.5s 1 alternate;
 }
 .liftingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/powerlifting.jpg) center/cover no-repeat; /*45% 50%;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 75%), url(./IMG/powerlifting.jpg) center/cover no-repeat; /*45% 50%;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 .philbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/philosophy.jpg) center/auto no-repeat; /*center center/100vh;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 75%), url(./IMG/philosophy.jpg) center/auto no-repeat; /*center center/100vh;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 
 .glyph {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
     left: 0;
     right: 0;
     bottom: 15px;

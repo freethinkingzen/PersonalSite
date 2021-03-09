@@ -30,6 +30,9 @@
         <!-- CSS -->
         <link rel="stylesheet" href="./styles.css" />
 
+        <!-- Polyfill smoothscroll for browser compatibility-->
+        <link rel="smoothscroll" href="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js" />
+
         <title>John Lewis</title>
     </head>
 
@@ -55,7 +58,7 @@
             </div>
 
             <!-- Bouncing down arrow/chevron scrolls to next section --->
-            <button type="button" class="glyph" id="downGlyph" title="Scroll to profile" role="button" aria-label="scroll down to profile">
+            <button type="button" class="glyph mx-auto" id="downGlyph" title="Scroll to profile" role="button" aria-label="scroll down to profile">
                 <svg class="bounce" id="downArrow" width="4em" height="4em" viewBox="0 0 16 16" 
                      fill="#ffffff" 
                      xmlns="http://www.w3.org/2000/svg">
@@ -97,5 +100,6 @@
         </div>
 
         <script src="./JS/buttons.js"></script>
+
     </body>
 </html>
