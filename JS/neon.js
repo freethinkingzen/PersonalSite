@@ -25,7 +25,6 @@ function bgFlicker(bg, e) {
 // Loops through h1s on landing to set up listeners for bg changes
 for(let i in backgrounds) {
     bgFlicker(i, backgrounds[i]);
-    console.log(i, backgrounds[i]);
 }
 
 // Activates neon on profile page h1 when it scrolls into view
