@@ -66,9 +66,56 @@ downGlyph.addEventListener("click", function() {
 });
 
 window.addEventListener("scroll", function(e){
-    if(window.scrollY >= (profile.offsetTop - (0.5 * profile.scrollHeight)) && window.scrollY < (profile.offsetTop + (0.5 *profile.scrollHeight))){
-        if(!myName.classList.contains("neonFlicker")){
-            myName.classList.add("neonFlicker");
-        }
+    //if(window.scrollY >= (profile.offsetTop - (0.5 * profile.scrollHeight)) && window.scrollY < (profile.offsetTop + (0.5 *profile.scrollHeight))){
+    if(window.scrollY >= profile.offsetTop && window.scrollY < profile.offsetTop + 10){  
+        myName.classList.add("neonFlicker");
+        myName.querySelector("hr").classList.add("borderFlicker");
+        setTimeout(() => {
+            myName.classList.remove("neonFlicker");
+            myName.querySelector("hr").classList.remove("borderFlicker");
+        }, 5000);
+    
     }
 });
+
+// Control Welcome Neon Animation
+function welcomeAnimation() {
+    var hover = new Event('mouseover');
+    var leave = new Event('mouseleave');
+    setTimeout(() => {
+        coding.dispatchEvent(hover);
+        coding.classList.add("neonFlicker");
+    }, 2000);
+    setTimeout(() => {
+        coding.dispatchEvent(leave);
+        coding.classList.remove("neonFlicker");
+    }, 4200);
+    setTimeout(() => {
+        lifting.dispatchEvent(hover);
+        lifting.classList.add("neonFlicker");
+    }, 4400);
+    setTimeout(() => {
+        lifting.dispatchEvent(leave);
+        lifting.classList.remove("neonFlicker");
+    }, 6400);
+    setTimeout(() => {
+        phil.dispatchEvent(hover);
+        phil.classList.add("neonFlicker");
+    }, 6600);
+    setTimeout(() => {
+        phil.dispatchEvent(leave);
+        phil.classList.remove("neonFlicker");
+    }, 8600);
+    setTimeout(() => {
+        coding.classList.add("neonFlicker");
+        lifting.classList.add("neonFlicker");
+        phil.classList.add("neonFlicker");  
+    }, 8610);
+    setTimeout(() => {
+        coding.classList.remove("neonFlicker");
+        lifting.classList.remove("neonFlicker");
+        phil.classList.remove("neonFlicker");
+    }, 9600);
+    
+}
+window.onload = welcomeAnimation();

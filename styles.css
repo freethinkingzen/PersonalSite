@@ -7,6 +7,7 @@
     --element2: #eeeeee;
     --element3: #cecece;
     --neon-text-color: #ff0000;
+    --neon-border-color: #08f;
     --neon-shadow: #ffffff;
     --codingIMG: url(./IMG/coding.jpg);
     --liftingIMG: url(./IMG/coding.jpg);
@@ -51,12 +52,16 @@ h1{
 
 p{
     color: var(--element1);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.2ch;
     padding: 1em;
 }
 
+hr {
+    border: 1px solid var(--element1);
+}
 .switch-container {
     display: flex;
     flex-direction:column;
@@ -126,13 +131,16 @@ input:checked + .slider:before {
     color: var(--element1);
     animation: flicker 1.5s infinite alternate;
 }
+.borderFlicker {
+    animation: flickerBorder 1.5s infinite alternate;
+}
 
 .codingbg {
     background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/coding.jpg) center/cover no-repeat;
     animation: bg-flicker 1.5s 1 alternate;
 }
 .liftingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/powerlifting.jpg) center/auto no-repeat; /*45% 50%;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 85%), url(./IMG/powerlifting.jpg) center/cover no-repeat; /*45% 50%;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 .philbg {
@@ -170,6 +178,7 @@ input:checked + .slider:before {
 }
 
 #landing h1:hover{
+    cursor: default;
     color: var(--element1);
     animation: flicker 1.5s infinite alternate;
 }
@@ -178,15 +187,14 @@ input:checked + .slider:before {
     fill: var(--element1);
 }
 
-#profile img{
-    max-width: 100%;
-    max-height: 100%;
+#profile img {
+    max-width: 90%;
+    max-height: 90%;
     box-shadow: 1px 1px 20px var(--element3);
     border: solid var(--element3);
     border-radius: 50%;
-    margin: 1em;
+    margin: 10px;
 }
-
 
 
 @-webkit-keyframes bounce {
@@ -226,6 +234,28 @@ input:checked + .slider:before {
     }    
 }
 
+@keyframes flickerBorder {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        
+
+        box-shadow:
+            -0.1rem -0.1rem 0.5rem #ffffff,
+            0.1rem 0.1rem 0.5rem #ffffff,
+            0 0 1rem var(--neon-border-color),
+            0 0 2rem var(--neon-border-color),
+            0 0 3rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            0 0 5rem var(--neon-border-color);
+        
+        
+    }
+    
+    20%, 24%, 55% {        
+        box-shadow: none;
+    }    
+}
+
 @keyframes bg-flicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         opacity: 100%;/*background: radial-gradient(transparent, #000000 50%), url(./IMG/powerlifting.jpg) no-repeat; */
@@ -242,6 +272,16 @@ input:checked + .slider:before {
         font-weight: bolder;
     }
     p {
+        margin-top: 0;
         font-size: 12px;
+    }
+
+    #profile h1 {
+        text-align: center;
+    }
+    
+    #profilePic {
+        margin-right: auto;
+        margin-left: auto;
     }
 }
