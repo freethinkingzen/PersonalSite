@@ -281,7 +281,7 @@ input:checked + .slider:before {
     }
     
     #profilePic {
-        margin-right: auto;
-        margin-left: auto;
+        margin-right: 10%;
+        margin-left: 10%;
     }
 }
