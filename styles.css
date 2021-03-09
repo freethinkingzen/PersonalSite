@@ -137,15 +137,15 @@ input:checked + .slider:before {
 }
 
 .codingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 75%), url(./IMG/coding.jpg) center/cover no-repeat;
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding.jpg) center/cover no-repeat;
     animation: bg-flicker 1.5s 1 alternate;
 }
 .liftingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 75%), url(./IMG/powerlifting.jpg) center/cover no-repeat; /*45% 50%;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/powerlifting.jpg) center/cover no-repeat; /*45% 50%;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 .philbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 75%), url(./IMG/philosophy.jpg) center/auto no-repeat; /*center center/100vh;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy.jpg) center/auto no-repeat; /*center center/100vh;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 
@@ -268,13 +268,13 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 420px) {
     h1 {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: bolder;
         margin-bottom: 1em;
     }
     p {
         margin-top: 0;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     #profile h1 {
