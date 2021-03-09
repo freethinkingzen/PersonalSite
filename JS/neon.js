@@ -16,9 +16,15 @@ const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
 function bgFlicker(bg, e) {
     e.addEventListener("mouseover", function() {
         landing.classList.add(bg);
+        e.classList.add("neonFlicker");
+        setTimeout(() => {
+            landing.classList.remove(bg);
+            e.classList.remove("neonFlicker");
+        }, 3000);
     });
     e.addEventListener("mouseleave", function() {
         landing.classList.remove(bg);
+        e.classList.remove("neonFlicker");
     });
 }
 

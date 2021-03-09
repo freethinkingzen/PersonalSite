@@ -181,12 +181,6 @@ input:checked + .slider:before {
     animation-iteration-count: infinite;
 }
 
-#landing h1:hover{
-    cursor: default;
-    color: var(--element1);
-    animation: flicker 1.5s infinite alternate;
-}
-
 #downArrow {
     fill: var(--element1);
 }
