@@ -5,7 +5,7 @@
     --surface3: #74828F;
     --element1: #ffffff;
     --element2: #eeeeee;
-    --element3: #cecece;
+    --element3: #aeaeae;
     --neon-text-color: #ff0000;
     --neon-border-color: #08f;
     --neon-shadow: #ffffff;
@@ -60,8 +60,9 @@ p{
 }
 
 hr {
-    border: 1px solid var(--element1);
+    border: 2px outset var(--element1);
 }
+
 .switch-container {
     display: flex;
     flex-direction:column;
@@ -181,11 +182,49 @@ input:checked + .slider:before {
     animation-iteration-count: infinite;
 }
 
+.navbar{
+    padding: 0;
+    height: 3em;
+    font-size: 1.5em;
+    background-color: var(--surface1);
+    box-shadow: 0px 15px 10px var(--surface1);
+    border-bottom: 0.5px solid var(--element1);
+    border-radius: 3em 3em;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+.navbar-dark .navbar-toggler {
+    margin-left: 10px;
+    
+    border: none;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    margin-left: 10px;
+    color: var(--element1);
+    border: 1px 0 0 solid var(--element3);
+    cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--element1);
+    text-decoration: underline;
+}
+
 #downArrow {
     fill: var(--element1);
 }
+#hamburger {
+    fill: var(--element1);
+}
+#profile h1 {
+    margin-top: 1em;
+}
 
-#profile img {
+#profilePic {
     max-width: 90%;
     max-height: 90%;
     box-shadow: 1px 1px 20px var(--element3);
@@ -275,14 +314,6 @@ input:checked + .slider:before {
         font-size: 13px;
     }
 
-    #profile h1 {
-        text-align: center;
-    }
-    
-    #profilePic img{
-       margin-left: 5em;
-    }
-
     .codingbg {
     background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding_small.jpg) center/cover no-repeat;
     }
@@ -291,5 +322,25 @@ input:checked + .slider:before {
     }
     .philbg {
         background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy_small.jpg) center/cover no-repeat; /*center center/100vh;*/
+    }
+
+    .navbar {
+        height: 2em;
+        border: none;
+        
+    }
+    
+    .navbar-nav {
+    padding-right: 10px;
+    background-image: linear-gradient(var(--surface1) 90%, transparent);
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, var(--element1) 50%, transparent) 1 100%;
+    border-bottom: none;
+    }
+
+    #profile h1 {
+        text-align: center;
     }
 }

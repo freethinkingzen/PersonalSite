@@ -36,7 +36,7 @@ for(i in landingTitles) {
 // Activates neon on profile page h1 when it scrolls into view
 window.addEventListener("scroll", function(e){
     //if(window.scrollY >= (profile.offsetTop - (0.5 * profile.scrollHeight)) && window.scrollY < (profile.offsetTop + (0.5 *profile.scrollHeight))){
-    if(window.scrollY >= profile.offsetTop && window.scrollY < profile.offsetTop + 10){  
+    if(window.scrollY >= profile.offsetTop -2 && window.scrollY < (profile.offsetTop + profile.scrollHeight)){  
         myName.classList.add("neonFlicker");
         myName.querySelector("hr").classList.add("borderFlicker");
         setTimeout(() => {
