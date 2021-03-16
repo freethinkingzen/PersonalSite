@@ -59,6 +59,7 @@ p{
     font-weight: bold;
     letter-spacing: 0.2ch;
     padding: 1em;
+    margin-top: 5em;
 }
 
 hr {
@@ -244,6 +245,7 @@ input:checked + .slider:before {
     float: left;
     margin-right: 3em;
     margin-bottom: 1em;
+    margin-top: 5em;;
 }
 
 #downArrow {
@@ -351,10 +353,14 @@ input:checked + .slider:before {
 }
 
 @media only screen and (max-width: 769px){
+    p {
+        margin-top: 0;
+    }
     .profilePic {
         float: none;
         display: flex;
         justify-content: space-around;
+        margin-top: 2em;
     }
 
     #profilePic {
