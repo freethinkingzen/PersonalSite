@@ -7,9 +7,8 @@ const coding = document.getElementById("coding");
 const lifting = document.getElementById("lifting");
 const phil = document.getElementById("philosophy");
 const profile = document.getElementById("profile");
-const myName = document.querySelector("#myName");
-
-//const h1Elements = [coding, lifting, phil];
+const pageHeaders = document.getElementsByClassName("pageHeading");
+const profileNav = document.getElementById("profileNav")
 const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
 
 // Detects mouseover landing page h1 to change background
@@ -35,15 +34,22 @@ for(i in landingTitles) {
 
 // Activates neon on profile page h1 when it scrolls into view
 window.addEventListener("scroll", function(e){
-    //if(window.scrollY >= (profile.offsetTop - (0.5 * profile.scrollHeight)) && window.scrollY < (profile.offsetTop + (0.5 *profile.scrollHeight))){
-    if(window.scrollY >= profile.offsetTop -2 && window.scrollY < (profile.offsetTop + profile.scrollHeight)){  
-        myName.classList.add("neonFlicker");
-        myName.querySelector("hr").classList.add("borderFlicker");
+    if(window.scrollY >= profile.offsetTop -5 && window.scrollY < (profile.offsetTop + profile.scrollHeight)){  
+        pageHeaders[0].classList.add("neonFlicker");
+        pageHeaders[0].querySelector("hr").classList.add("borderFlicker");
         setTimeout(() => {
-            myName.classList.remove("neonFlicker");
-            myName.querySelector("hr").classList.remove("borderFlicker");
+            pageHeaders[0].classList.remove("neonFlicker");
+            pageHeaders[0].querySelector("hr").classList.remove("borderFlicker");
         }, 5000);
     
+    }
+    if(window.scrollY >= codingPage.offsetTop -5 && window.scrollY < (codingPage.offsetTop + codingPage.scrollHeight)){
+        pageHeaders[1].classList.add("neonFlicker");
+        pageHeaders[1].querySelector("hr").classList.add("borderFlicker");
+        setTimeout(() => {
+            pageHeaders[1].classList.remove("neonFlicker");
+            pageHeaders[1].querySelector("hr").classList.remove("borderFlicker");
+        }, 5000);
     }
 });
 

@@ -5,6 +5,8 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 const downGlyph = document.getElementById("downGlyph");
 const codingPage = document.getElementById("codingPage");
+const icons = document.querySelectorAll(".icon");
+const navlinks = document.querySelectorAll("nav li");
 
 // Handles mobile double tap
 var tappedTwice = false;
@@ -21,7 +23,9 @@ function tapHandler(event, elem) {
 // Checks for user's color theme preference from previous visits
 if(currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
-
+    icons.forEach(icon => {
+            icon.classList.add("invert");
+    });
     if(currentTheme === 'light') {
         toggleSwitch.checked = true;
     }
@@ -32,10 +36,16 @@ toggleSwitch.addEventListener('change', function(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
+        icons.forEach(icon => {
+            icon.classList.remove("invert");
+        });
     }
     else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
+        icons.forEach(icon => {
+            icon.classList.add("invert");
+        });
     }
 }, false);
 
@@ -44,6 +54,7 @@ downGlyph.addEventListener("click", function() {
     profile.scrollIntoView({behavior: 'smooth'});
 });
 
+// Scroll to element on homepage doubleclick
 coding.addEventListener("dblclick", function(e) {
     e.preventDefault();
     codingPage.scrollIntoView({behavior: 'smooth'});
@@ -55,3 +66,11 @@ coding.addEventListener("touchstart", function(e) {
     tapHandler(e, codingPage);
 });
 
+// Scroll based on navigation selection
+navlinks[0].addEventListener("click", function() {
+    profile.scrollIntoView({behavior: 'smooth'});
+});
+
+navlinks[1].addEventListener("click", function() {
+    codingPage.scrollIntoView({behavior: 'smooth'});
+});

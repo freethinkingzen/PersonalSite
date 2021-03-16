@@ -4,7 +4,7 @@
     --surface2: #525564;
     --surface3: #74828F;
     --element1: #ffffff;
-    --element2: #eeeeee;
+    --element2: #525564;
     --element3: #aeaeae;
     --neon-text-color: #ff0000;
     --neon-border-color: #08f;
@@ -15,14 +15,15 @@
 }
 
 [data-theme="light"] {
-    --surface1: #cecece;
+    --surface1: #aaaaaa;
     --surface2: #eeeeee;
     --surface3: #dddddd;
     --element1: #000000;
     --element2: #525564;
-    --element3: #74828f;
-    --neon-text-color: #08f;
-    --neon-shadow: #000000;
+    --element3: #ffffff;
+    --neon-text-color: #ffffff;
+    --neon-border-color: #ffffff;
+    --neon-shadow: #ffffff;
     --codingIMG: url(./IMG/coding.jpg);
     --liftingIMG: url(./IMG/coding.jpg);
 }
@@ -42,11 +43,12 @@ body {
 }
 
 h1{
+    margin-top: 1em;
     color: var(--element1);
     font-family:'Courier New', Courier, monospace;
-    text-shadow: 0 0 5px var(--element3);
+    text-shadow: 0 5px 20px var(--element3);
     font-size: 2.5em;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 1.5vh;
 }
 
@@ -60,13 +62,17 @@ p{
 }
 
 hr {
-    border: 2px outset var(--element1);
+    background-color: var(--element1);
+    border: 1.5px outset var(--element1);
 }
 
 .switch-container {
+    height: max-content;
     display: flex;
     flex-direction:column;
     color: var(--element3);
+    font-weight: bold;
+    text-shadow: 0 0 6px black;
     align-items: center;
     position: absolute;
     top: 10px;
@@ -85,6 +91,7 @@ hr {
 }
 
 .slider {
+    border: 2px solid var(--element2);
     background-color: var(--element3);
     bottom: 0;
     cursor: pointer;
@@ -96,8 +103,9 @@ hr {
 }
 
 .slider::before {
+    border: 2px solid var(--element2);
     background-color: var(--surface1);
-    bottom: 4px;
+    bottom: 2px;
     content: "";
     height: 20px;
     left: 4px;
@@ -126,8 +134,7 @@ input:checked + .slider:before {
     padding: 3em 1em 2em 1em;
     min-height: 100vh;
     height: max-content;
-    width: 100vw;
-    margin: 0;
+    
 }
 
 .neonFlicker {
@@ -182,55 +189,75 @@ input:checked + .slider:before {
     animation-iteration-count: infinite;
 }
 
-.navbar{
-    padding: 0;
+.nav{
     height: 3em;
     font-size: 1.5em;
     background-color: var(--surface1);
     box-shadow: 0px 15px 10px var(--surface1);
-    border-bottom: 0.5px solid var(--element1);
-    border-radius: 3em 3em;
+    border-bottom: 2px solid var(--element2);
     position: -webkit-sticky;
     position: sticky;
     top:0;
     z-index: 999;
 }
-
-.navbar-dark .navbar-toggler {
-    margin-left: 10px;
-    
-    border: none;
+.nav-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
 }
-
-.navbar-dark .navbar-nav .nav-link {
-    margin-left: 10px;
+.nav .link-text {
     color: var(--element1);
-    border: 1px 0 0 solid var(--element3);
-    cursor: pointer;
+    text-shadow: 0px 3px 10px var(--element3);
+    font-weight: bolder;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
+.nav .icon {
+    display: none;
+}
+
+.nav .link-text:hover,
+.nav .link-text:focus {
     color: var(--element1);
     text-decoration: underline;
+    cursor: pointer;
+    animation: flickerNav 1.5s 2 alternate; 
+}
+
+/* Make icons black*/
+.icon {
+    filter: brightness(0%);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/* Invert an image */
+.invert {
+    -webkit-filter: invert(1);
+    filter: brightness(0%) invert(1);
+}
+
+.profilePic {
+    display: inline;
+    float: left;
+    margin-right: 3em;
+    margin-bottom: 1em;
 }
 
 #downArrow {
     fill: var(--element1);
 }
-#hamburger {
-    fill: var(--element1);
-}
-#profile h1 {
-    margin-top: 1em;
-}
 
 #profilePic {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 350px;
+    max-height: 350px;
     box-shadow: 1px 1px 20px var(--element3);
     border: solid var(--element3);
     border-radius: 50%;
-    margin: 10px;
+    margin: 3em;
+    margin-top: 10px;
 }
 
 
@@ -255,13 +282,33 @@ input:checked + .slider:before {
         font-weight: bolder;
 
         text-shadow:
-            -0.1rem -0.1rem 0.5rem #ffffff,
-            0.1rem 0.1rem 0.5rem #ffffff,
+            -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+            0.1rem 0.1rem 0.5rem var(--neon-shadow),
             0 0 1rem var(--neon-text-color),
             0 0 2rem var(--neon-text-color),
             0 0 3rem var(--neon-text-color),
             0 0 4rem var(--neon-text-color),
             0 0 5rem var(--neon-text-color);
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+@keyframes flickerNav {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        font-weight: bolder;
+
+        text-shadow:
+            -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+            0.1rem 0.1rem 0.5rem var(--neon-shadow),
+            0 0 1rem var(--neon-border-color),
+            0 0 2rem var(--neon-border-color),
+            0 0 3rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            0 0 5rem var(--neon-border-color);
         
         
     }
@@ -277,8 +324,8 @@ input:checked + .slider:before {
         
 
         box-shadow:
-            -0.1rem -0.1rem 0.5rem #ffffff,
-            0.1rem 0.1rem 0.5rem #ffffff,
+            -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+            0.1rem 0.1rem 0.5rem var(--neon-shadow),
             0 0 1rem var(--neon-border-color),
             0 0 2rem var(--neon-border-color),
             0 0 3rem var(--neon-border-color),
@@ -303,10 +350,22 @@ input:checked + .slider:before {
     }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 769px){
+    .profilePic {
+        float: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #profilePic {
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 500px) {
     h1 {
-        font-size: 25px;
+        font-size: 30px;
         font-weight: bolder;
+        text-align: center;
         margin-bottom: 1em;
     }
     p {
@@ -324,23 +383,36 @@ input:checked + .slider:before {
         background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy_small.jpg) center/cover no-repeat; /*center center/100vh;*/
     }
 
-    .navbar {
-        height: 2em;
-        border: none;
-        
+    .nav {
+        height: 2.5em;
     }
-    
-    .navbar-nav {
-    padding-right: 10px;
-    background-image: linear-gradient(var(--surface1) 90%, transparent);
-    float: left;
-    border-width: 1px;
-    border-style: solid;
-    border-image: linear-gradient(to bottom, var(--element1) 50%, transparent) 1 100%;
-    border-bottom: none;
+    .nav .link-text {
+        display: none;
+    }
+    .nav .icon {
+        display: inline;
+    }    
+    .profilePic {
+        display: flex;
+        justify-content: center;
+        float: none;
     }
 
-    #profile h1 {
-        text-align: center;
+    #profilePic {
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    h1 {
+        font-size: 20px;
+        margin-top: 2em;
+    }
+    
+    .profilePic .row img {
+        height: 30px;
+    }
+    #profilePic {
+        height: 150px;
+        margin-bottom: 10px;
     }
 }
