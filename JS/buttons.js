@@ -8,26 +8,19 @@ const codingPage = document.getElementById("codingPage");
 const icons = document.querySelectorAll(".icon");
 const navlinks = document.querySelectorAll("nav li");
 
-// Handles mobile double tap
-var tappedTwice = false;
-function tapHandler(event, elem) {
-    if(!tappedTwice) {
-        tappedTwice = true;
-        setTimeout(function() {tappedTwice = false}, 300);
-        return false;
-    }
-    event.preventDefault();
-    elem.scrollIntoView({behavior: 'smooth'});
-}
 
 // Checks for user's color theme preference from previous visits
+icons.forEach(icon => {
+    icon.classList.add("invert");
+});
 if(currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    icons.forEach(icon => {
-            icon.classList.add("invert");
-    });
+    
     if(currentTheme === 'light') {
         toggleSwitch.checked = true;
+        icons.forEach(icon => {
+            icon.classList.remove("invert");
+        });
     }
 }
 

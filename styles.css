@@ -230,13 +230,14 @@ input:checked + .slider:before {
 
 /* Make icons black*/
 .icon {
+    -webkit-filter: brightness(0%) invert(1);
     filter: brightness(0%);
     margin-right: 10px;
     margin-left: 10px;
 }
 /* Invert an image */
 .invert {
-    -webkit-filter: invert(1);
+    -webkit-filter: brightness(0%) invert(1);
     filter: brightness(0%) invert(1);
 }
 
@@ -246,6 +247,10 @@ input:checked + .slider:before {
     margin-right: 3em;
     margin-bottom: 1em;
     margin-top: 5em;;
+}
+
+#landing h1:hover {
+    cursor: none;
 }
 
 #downArrow {
