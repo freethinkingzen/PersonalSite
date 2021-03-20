@@ -60,6 +60,7 @@ h2 {
         1px -1px var(--neon-border-color),
         -1px 1px var(--neon-border-color),
         1px -1px var(--neon-border-color);
+    margin-top: 3em;
 }
 
 
@@ -69,10 +70,9 @@ p{
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.2ch;
-    text-indent: 2em;
     padding: 1em;
     padding-top: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 hr {
