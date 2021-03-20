@@ -99,7 +99,7 @@ hr {
     position: relative;
     height: 28px;
     width: 50px;
-    z-index: 100;
+    z-index: 999;
 }
 .theme-switch input {
     display: none;
@@ -213,7 +213,7 @@ input:checked + .slider:before {
     position: -webkit-sticky;
     position: sticky;
     top:0;
-    z-index: 999;
+    z-index: 500;
 }
 .nav-links {
     display: flex;
