@@ -7,7 +7,23 @@ const downGlyph = document.getElementById("downGlyph");
 const codingPage = document.getElementById("codingPage");
 const icons = document.querySelectorAll(".icon");
 const navlinks = document.querySelectorAll("nav li");
+const moreBtn = document.getElementById("moreBtn");
 
+// Controls readmore on paragraphs
+moreBtn.addEventListener("click", function() {
+    var ellipses = document.getElementById("ellipses");
+    var more = document.getElementById("more");
+
+    if (ellipses.style.display === "none") {
+        ellipses.style.display = "inline";
+        moreBtn.innerHTML = "Continue Reading"; 
+        more.style.display = "none";
+  } else {
+    ellipses.style.display = "none";
+    moreBtn.innerHTML = "Read less"; 
+    more.style.display = "inline";
+  }
+})
 
 // Checks for user's color theme preference from previous visits
 icons.forEach(icon => {
