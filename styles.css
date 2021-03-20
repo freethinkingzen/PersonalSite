@@ -1,5 +1,7 @@
 
+/* Dark Mode Default theme */
 :root {
+    --text: #bcbcbc;
     --surface1: #000000;
     --surface2: #525564;
     --surface3: #74828F;
@@ -14,7 +16,9 @@
     /*--philIMG: url()*/
 }
 
+/* Light mode theme */
 [data-theme="light"] {
+    --text: #212121;
     --surface1: #aaaaaa;
     --surface2: #eeeeee;
     --surface3: #dddddd;
@@ -22,7 +26,7 @@
     --element2: #525564;
     --element3: #ffffff;
     --neon-text-color: #ffffff;
-    --neon-border-color: #ffffff;
+    --neon-border-color: #dcdcdc;
     --neon-shadow: #ffffff;
     --codingIMG: url(./IMG/coding.jpg);
     --liftingIMG: url(./IMG/coding.jpg);
@@ -41,7 +45,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--surface1, #000000);
     padding-left: 20px;
-    padding-roght: 20px;
+    padding-right: 20px;
 }
 
 h1{
@@ -62,13 +66,12 @@ h2 {
         1px -1px var(--neon-border-color),
         -1px 1px var(--neon-border-color),
         1px -1px var(--neon-border-color);
-    margin-top: 1.5em;
+    margin-top: 1.2em;
 }
 
-
 p{
-    color: var(--element1);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.2ch;
@@ -81,20 +84,19 @@ hr {
     border: 1.5px outset var(--element1);
 }
 
+/* Color mode switch */
 .switch-container {
     height: max-content;
     display: flex;
     flex-direction:column;
-    color: var(--element3);
+    color: var(--text);
     font-weight: bold;
-    text-shadow: 0 0 6px black;
     align-items: center;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     z-index: 999;
 }
-
 .theme-switch {
     position: relative;
     height: 28px;
@@ -104,7 +106,12 @@ hr {
 .theme-switch input {
     display: none;
 }
-
+.theme-switch p {
+    font-size: 14px;
+    margin-top: 30px;
+    letter-spacing: normal;
+    text-align: center;
+}
 .slider {
     border: 2px solid var(--element2);
     background-color: var(--element3);
@@ -116,7 +123,6 @@ hr {
     top: 0;
     transition: .4s;
 }
-
 .slider::before {
     border: 2px solid var(--element2);
     background-color: var(--surface1);
@@ -128,23 +134,20 @@ hr {
     transition: .4s;
     width: 20px;
 }
-
 input:focus + .slider{
     outline: var(--primary);
 }
-
 input:checked + .slider:before {
     transform: translateX(20px);
 }
-
 .slider.round {
   border-radius: 28px;
 }
-
 .slider.round::before {
   border-radius: 50%;
 }
 
+/* makes div 100% viewport height and expands with content */
 .fullscreen {
     padding: 3em 1em 2em 1em;
     min-height: 100vh;
@@ -152,6 +155,7 @@ input:checked + .slider:before {
     
 }
 
+/* For controlling flicker animation with JS */
 .neonFlicker {
     color: var(--element1);
     animation: flicker 1.5s infinite alternate;
@@ -160,6 +164,7 @@ input:checked + .slider:before {
     animation: flickerBorder 1.5s infinite alternate;
 }
 
+/* Backgrounds for landing page hover vignette effect */
 .codingbg {
     background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding.jpg) center/cover no-repeat;
     animation: bg-flicker 1.5s 1 alternate;
@@ -173,10 +178,12 @@ input:checked + .slider:before {
     animation: bg-flicker 1.5s 1 alternate;
 }
 
-.disableHoverClicks {
+/* Don't alow user to hover or click during welcome */ 
+.disableHover {
     pointer-events: none;
 }
 
+/* Down chevron on landing page */
 .glyph {
     position: absolute;
     left: 0;
@@ -186,17 +193,15 @@ input:checked + .slider:before {
     background-color: transparent;
     border: none;
 }
-
 .glyph:hover {
     cursor: pointer;
 }
-
 .glyph:focus {
     border: solid 1px var(--element3);
     outline: none;
 }
 
-
+/* Div will "bounce" over and over */
 .bounce {
     --webkit-animation: bounce 2s;
     --webkit-iteration-count: infinite;
@@ -204,6 +209,13 @@ input:checked + .slider:before {
     animation-iteration-count: infinite;
 }
 
+.icon {
+    -webkit-filter: brightness(0%);
+    filter: brightness(0%);
+    transition-duration: 0.2s;
+}
+
+/* Navbar, nav links, nav icons */
 .nav{
     height: 3em;
     width: 100%;
@@ -221,38 +233,44 @@ input:checked + .slider:before {
     margin: 0;
     padding: 0;
     align-items: center;
+    text-align: center;
     justify-content: space-evenly;
     width: 100%;
     list-style: none;
 }
-.nav .link-text {
-    display: flex;
-    color: var(--element1);
-    text-shadow: 0px 3px 10px var(--element3);
-    font-weight: bolder;
-}
-
 .nav .icon {
     display: none;
     margin-right: 10px;
     margin-left: 10px;
 }
-
-.nav .link-text:hover,
-.nav .link-text:focus {
+.nav .link-text {
+    display: flex;
+    justify-content: center;
     color: var(--element1);
-    text-decoration: underline;
-    cursor: pointer;
-    animation: flickerNav 1.5s 2 alternate; 
-}
-
-.profilePic.icon {
-    -webkit-filter: brightness(0%) invert(1);
-    filter: brightness(0%);
+    text-shadow: 0px 3px 10px var(--element3);
+    font-weight: bolder;
     transition-duration: 0.2s;
 }
-.profilePic.icon:hover,
-.profilePic.icon:active {
+.nav .link-text:hover,
+.nav .link-text:focus {
+    outline: none;
+    color: var(--element1);
+    text-decoration: underline;
+    text-shadow:
+            -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+            0.1rem 0.1rem 0.5rem var(--surface1),
+            0 0 0.5rem var(--neon-border-color),
+            0 0 1rem var(--neon-border-color),
+            0 0 1.5rem var(--neon-border-color),
+            0 0 2rem var(--neon-border-color),
+            0 0 2.5rem var(--neon-border-color);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+
+.profilePic .icon:hover,
+.profilePic .icon:active {
     margin-top: -20px;
     margin-bottom: 0;
     height: 80px;
@@ -269,7 +287,7 @@ input:checked + .slider:before {
     float: left;
     margin-right: 3em;
     margin-bottom: 1em;
-    margin-top: 5em;;
+    margin-top: 5em;
 }
 
 #landing h1:hover {
@@ -280,15 +298,11 @@ input:checked + .slider:before {
     fill: var(--element1);
 }
 
-#expNav img {
-    margin-left: 0.8em;
-    margin-bottom: -4px;
-}
 #profilePic {
     height: 25vw;
     min-height: 350px;
-    box-shadow: 1px 1px 20px var(--element3);
-    border: solid var(--element3);
+    box-shadow: 1px 1px 20px var(--neon-border-color);
+    border: 1px solid var(--element3);
     border-radius: 50%;
     margin: 3em;
     margin-top: 10px;
@@ -301,7 +315,7 @@ input:checked + .slider:before {
 #moreBtn {
     color: var(--element1);
     font-size: 1.2em;
-    background-color: var(--element2);
+    background-color: var(--surface2);
     border: 1px solid var(--element1);
     border-radius: 10px;
 }
@@ -445,7 +459,6 @@ input:checked + .slider:before {
         height: 2.5em;
     }
     .nav .link-text {
-        /*display: none;*/
         font-size: 12px;
     }
     .nav .icon {

@@ -8,7 +8,6 @@ const lifting = document.getElementById("lifting");
 const phil = document.getElementById("philosophy");
 const profile = document.getElementById("profile");
 const pageHeaders = document.getElementsByClassName("pageHeading");
-const profileNav = document.getElementById("profileNav")
 const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
 
 // Detects mouseover landing page h1 to change background
@@ -34,7 +33,8 @@ for(i in landingTitles) {
 
 // Activates neon on profile page h1 when it scrolls into view
 window.addEventListener("scroll", function(e){
-    if(window.scrollY >= profile.offsetTop -5 && window.scrollY < (profile.offsetTop + profile.scrollHeight)){  
+
+    if(window.scrollY >= profile.offsetTop - 50 && window.scrollY < (profile.offsetTop + profile.scrollHeight)){
         pageHeaders[0].classList.add("neonFlicker");
         pageHeaders[0].querySelector("hr").classList.add("borderFlicker");
         setTimeout(() => {
@@ -43,7 +43,7 @@ window.addEventListener("scroll", function(e){
         }, 5000);
     
     }
-    if(window.scrollY >= codingPage.offsetTop -5 && window.scrollY < (codingPage.offsetTop + codingPage.scrollHeight)){
+    if(window.scrollY >= codingPage.offsetTop - 50 && window.scrollY < (codingPage.offsetTop + codingPage.scrollHeight)){
         pageHeaders[1].classList.add("neonFlicker");
         pageHeaders[1].querySelector("hr").classList.add("borderFlicker");
         setTimeout(() => {
@@ -58,9 +58,9 @@ function welcomeAnimation() {
     var hover = new Event('mouseover');
     var leave = new Event('mouseleave');
 
-    coding.classList.add("disableHoverClicks");
-    lifting.classList.add("disableHoverClicks");
-    phil.classList.add("disableHoverClicks");
+    coding.classList.add("disableHover");
+    lifting.classList.add("disableHover");
+    phil.classList.add("disableHover");
     //landing.classList.add("disableHoverClicks");
     setTimeout(() => {
         coding.dispatchEvent(hover);
@@ -95,9 +95,9 @@ function welcomeAnimation() {
         coding.classList.remove("neonFlicker");
         lifting.classList.remove("neonFlicker");
         phil.classList.remove("neonFlicker");
-        coding.classList.remove("disableHoverClicks");
-        lifting.classList.remove("disableHoverClicks");
-        phil.classList.remove("disableHoverClicks");
+        coding.classList.remove("disableHover");
+        lifting.classList.remove("disableHover");
+        phil.classList.remove("disableHover");
     }, 9600);
     
 }

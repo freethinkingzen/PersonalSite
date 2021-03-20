@@ -29,6 +29,7 @@ moreBtn.addEventListener("click", function() {
 icons.forEach(icon => {
     icon.classList.add("invert");
 });
+
 if(currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
     
@@ -63,21 +64,10 @@ downGlyph.addEventListener("click", function() {
     profile.scrollIntoView({behavior: 'smooth'});
 });
 
-// Scroll to element on homepage doubleclick
-coding.addEventListener("dblclick", function(e) {
-    e.preventDefault();
-    codingPage.scrollIntoView({behavior: 'smooth'});
-}, false);
-
-coding.addEventListener("mousedown", function(e) {e.preventDefault();}, false);
-
-coding.addEventListener("touchstart", function(e) {
-    tapHandler(e, codingPage);
-});
-
 // Scroll based on navigation selection
 navlinks[0].addEventListener("click", function() {
     profile.scrollIntoView({behavior: 'smooth'});
+
 });
 
 navlinks[1].addEventListener("click", function() {
