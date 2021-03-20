@@ -89,10 +89,10 @@ hr {
     font-weight: bold;
     text-shadow: 0 0 6px black;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 100;
+    z-index: 101;
 }
 
 .theme-switch {
