@@ -69,7 +69,6 @@ navlinks[0].addEventListener("click", function() {
     profile.scrollIntoView({behavior: 'smooth'});
 
 });
-
 navlinks[1].addEventListener("click", function() {
     codingPage.scrollIntoView({behavior: 'smooth'});
 });
