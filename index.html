@@ -74,14 +74,6 @@
                     <img src="./IMG/coding-icon.png" alt="Computer icon" class="icon" height="35"/>
                     <span class="link-text" tabindex="0">Coding</span>
                 </li>
-                <li>
-                    <img src="./IMG/dumbbell.png" alt="Dumbbell icon" class="icon" height="30" />
-                    <span class="link-text" tabindex="0">Lifting</span>
-                </li>
-                <li>
-                    <img src="./IMG/book.svg" alt="Book icon" class="icon" height="30" />
-                    <span class="link-text" tabindex="0">Philosophy</span>
-                </li>
             </ul>
         </nav>
         
@@ -129,55 +121,84 @@
                 anything that I can in the outdoors.
                 
             </p>
-            <h2>My Education Story</h2>
-            <p>
-                I began my college career with a deep interest in what makes individuals tick and what motivates
-                people. I pursued a degree in psychology for two years and learned the basic
-                terminology and frameworks to better understand how people develop their
-                basic beliefs, but the science was too soft for the answers I was seeking.
-                This coincided with a renewed popularity in the works of Richard Dawkins and
-                E.O. Wilson as breakthroughs in neuroscience changed our understanding of the
-                "hardware" that human "software" runs on. I added a major in biology hoping to
-                learn about the brain as a means of understanding the beings they control.
-                <br><br>
-                During an unplanned, low-GPA-related "sabbatical,"<span id="ellipses">...</span><span id="more"> I began working in a bookstore. 
-                There I found existentialism, existential philosophy,
-                and ethical philosophy in the quietest, dustiest corners of the store. The way I 
-                thought about and understood everything was fundamentally altered forever. 
-                Propositional logic and existential philosophy were the mathematics of language. Existentialism 
-                explored "being" and ethics explored the implications of our actions as beings. 
-                Epistemology scrutinized knowledge, metaphysics questioned reality, and philosophy
-                of religion offered an honest assessment of religious belief. I WAS IN LOVE! I returned
-                to school as a philosophy major with a passion. Unfortunately, after my first
-                year of upper division coursework, my university dropped philosophy as a major.
-                I was left adrift, unsure where to go next. Around this time I read Joseph Campbell's
-                "The Hero with a Thousand Faces" and decided it was time to take "The Hero's Journey" myself.
-                <br><br>
-                I worked hard, saved money, and moved to Portland, Oregon. I excelled in my retail
-                management career, met my hot ass wife, and started looking back to school to move
-                into the next phase of my life. I could finish my degree in philosophy, but my
-                career potential was limited to being the most highly educated retail manager alive
-                and earning a fairly low salary. While doing the practice questions in my logic
-                textbook as a fun pastime (Nerd Alert!), the seed of an idea began to grow;
-                I realized computer science would
-                give me an opportunity to leverage a background in logic, science, and problem-solving
-                toward a degree with earning potential that wouldn't eventually bore me intellectually.
-                <br><br>
-                With almost four years' worth of credits already, I assumed I'd be out with a degree in no 
-                time. I WAS VERY WRONG. It took more than three years of full course loads, summer classes,
-                and retaking credits to finally earn my degree. I could not have done it without the support
-                of my wife. As a student in my thirties, I managed to make it through
-                the "survival of the fittest" approach to teaching lower division CS, the all-nighters to
-                debug programs, and the calculus/physics that I hadn't touched in more than 10 years.
-                Despite my long road, I have finally found something I excel at and enjoy. I maintained a place on
-                the Dean's List and President's List for high honors throughout my time at Portland State.
-                Finally, after 15 years, I had 280-ish credits, a 3.7 GPA, insight into how people work, arcane
-                knowledge about "Being and Time", the tools to code anything, and a magic piece of paper
-                that opens the doors to my future.
-                </span>
-                <button id="moreBtn" tabindex="0">Continue Reading</button>
-            </p>
-            
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active test" data-toggle="tab" href="#edPanel" id="edTab" role="tab" aria-controls="edPanel" aria-selected="true">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#liftPanel"  id="liftTab" role="tab" aria-controls="liftPanel" aria-selected="false">
+                        <span>Lifting</span>
+                        <img src="./IMG/dumbbell.png" alt="Dumbbell icon" class="icon" height="30" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    
+                    <a class="nav-link" data-toggle="tab" href="#philPanel" id="philTab" role="tab" aria-controls="philPanel" aria-selected="false">
+                        <span>Philosophy</span>
+                        <img src="./IMG/book.svg" alt="Book icon" class="icon" height="30" />
+                    </a>
+                </li>
+            </ul>
+            <div class="row px-3">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="edPanel" role="tabpanel" aria-labelledby="edTab">
+                        <h2>My Education Story</h2>
+                        <p>
+                                    I began my college career with a deep interest in what makes individuals tick and what motivates
+                                    people. I pursued a degree in psychology for two years and learned the basic
+                                    terminology and frameworks to better understand how people develop their
+                                    basic beliefs, but the science was too soft for the answers I was seeking.
+                                    This coincided with a renewed popularity in the works of Richard Dawkins and
+                                    E.O. Wilson as breakthroughs in neuroscience changed our understanding of the
+                                    "hardware" that human "software" runs on. I added a major in biology hoping to
+                                    learn about the brain as a means of understanding the beings they control.
+                                    <br><br>
+                                    During an unplanned, low-GPA-related "sabbatical,"<span id="ellipses">...</span><span id="more"> I began working in a bookstore. 
+                                    There I found existentialism, existential philosophy,
+                                    and ethical philosophy in the quietest, dustiest corners of the store. The way I 
+                                    thought about and understood everything was fundamentally altered forever. 
+                                    Propositional logic and existential philosophy were the mathematics of language. Existentialism 
+                                    explored "being" and ethics explored the implications of our actions as beings. 
+                                    Epistemology scrutinized knowledge, metaphysics questioned reality, and philosophy
+                                    of religion offered an honest assessment of religious belief. I WAS IN LOVE! I returned
+                                    to school as a philosophy major with a passion. Unfortunately, after my first
+                                    year of upper division coursework, my university dropped philosophy as a major.
+                                    I was left adrift, unsure where to go next. Around this time I read Joseph Campbell's
+                                    "The Hero with a Thousand Faces" and decided it was time to take "The Hero's Journey" myself.
+                                    <br><br>
+                                    I worked hard, saved money, and moved to Portland, Oregon. I excelled in my retail
+                                    management career, met my hot ass wife, and started looking back to school to move
+                                    into the next phase of my life. I could finish my degree in philosophy, but my
+                                    career potential was limited to being the most highly educated retail manager alive
+                                    and earning a fairly low salary. While doing the practice questions in my logic
+                                    textbook as a fun pastime (Nerd Alert!), the seed of an idea began to grow;
+                                    I realized computer science would
+                                    give me an opportunity to leverage a background in logic, science, and problem-solving
+                                    toward a degree with earning potential that wouldn't eventually bore me intellectually.
+                                    <br><br>
+                                    With almost four years' worth of credits already, I assumed I'd be out with a degree in no 
+                                    time. I WAS VERY WRONG. It took more than three years of full course loads, summer classes,
+                                    and retaking credits to finally earn my degree. I could not have done it without the support
+                                    of my wife. As a student in my thirties, I managed to make it through
+                                    the "survival of the fittest" approach to teaching lower division CS, the all-nighters to
+                                    debug programs, and the calculus/physics that I hadn't touched in more than 10 years.
+                                    Despite my long road, I have finally found something I excel at and enjoy. I maintained a place on
+                                    the Dean's List and President's List for high honors throughout my time at Portland State.
+                                    Finally, after 15 years, I had 280-ish credits, a 3.7 GPA, insight into how people work, arcane
+                                    knowledge about "Being and Time", the tools to code anything, and a magic piece of paper
+                                    that opens the doors to my future.
+                                    </span>
+                                    <button id="moreBtn" tabindex="0">Continue Reading</button>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="liftPanel" role="tabpanel" aria-labelledby="liftTab">
+                        <h2>Lifting and Fitness</h2>
+                    </div>
+                    <div class="tab-pane fade" id="philPanel" role="tabpanel" arialabelledby="philTab">
+                        <h2>Philosophy</h2>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Coding Page -->

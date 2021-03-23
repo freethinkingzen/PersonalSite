@@ -273,7 +273,51 @@ input:checked + .slider:before {
     cursor: pointer;
 }
 
+/* Fight with Bootstrap to change colors */
+.nav-tabs {
+    background-color: var(--surface1);
+    margin-top: 2em;
+    height: max-content;
+    box-shadow: 0 0.2em 0.1em var(--neon-shadow),
+                0 0.3em 0.3em var(--neon-border-color);
+}
 
+.nav-link {
+    color: var(--element1);
+    height: 100%;
+            
+}
+.nav-link.active {
+    background-color: var(--surface1) !important;
+    color: var(--element1) !important;
+    border: 3px solid var(--neon-shadow) !important;
+    border-bottom: 20px solid var(--surface1) !important;
+    font-weight: bold;
+    text-shadow:
+        -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+        0.1rem 0.1rem 0.5rem var(--surface1),
+        0 0 0.25rem var(--neon-text-color),
+        0 0 0.5rem var(--neon-text-color),
+        0 0 0.75rem var(--neon-text-color),
+        0 0 1rem var(--neon-text-color),
+        0 0 1.25rem var(--neon-text-color);
+    animation: flickerBorder 1.5s 2 alternate;
+    transition-duration: 0.1s;
+}
+.nav-link:hover {
+    color: var(--element1);
+    text-decoration: underline;
+    text-shadow:
+        -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+        0.1rem 0.1rem 0.5rem var(--surface1),
+        0 0 0.5rem var(--neon-border-color),
+        0 0 1rem var(--neon-border-color),
+        0 0 1.5rem var(--neon-border-color),
+        0 0 2rem var(--neon-border-color),
+        0 0 2.5rem var(--neon-border-color);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
 .profileBox .icon:hover,
 .profileBox .icon:active {
     margin-top: -20px;
@@ -419,6 +463,9 @@ input:checked + .slider:before {
     p {
         margin-top: 0;
     }
+    h2 {
+        font-size: 25px;
+    }
     .fullscreen {
         padding: 2em;
     }
@@ -434,6 +481,9 @@ input:checked + .slider:before {
     }
     .profileBox a {
         padding: 1em;
+    }
+    .nav-item span {
+        font-size: 20px;
     }
 
     #profilePic {
@@ -484,9 +534,24 @@ input:checked + .slider:before {
     .profileBox .icon {
         height: 50px;
     }
+   
+    .nav-item span {
+        display: none;
+    }
+
+    .nav-link.active .icon {
+        display: none;
+    }
+    .nav-link.active span {
+        display: block;
+    }
+    .tab-content h2{
+        text-align: center;
+    }
     #downArrow {
         height: 3em;
     }
+    
     #profilePic {
         min-height: 200px;
         height: 250px;
