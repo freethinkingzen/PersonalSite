@@ -1,10 +1,10 @@
 
 /* Dark Mode Default theme */
 :root {
-    --text: #bcbcbc;
-    --surface1: #000000;
-    --surface2: #525564;
-    --surface3: #74828F;
+    --text: #cbcbcb;
+    --surface1: #141414;
+    --surface2: #111111;
+    --surface3: #444444;
     --element1: #ffffff;
     --element2: #525564;
     --element3: #aeaeae;
@@ -19,9 +19,9 @@
 /* Light mode theme */
 [data-theme="light"] {
     --text: #212121;
-    --surface1: #aaaaaa;
-    --surface2: #eeeeee;
-    --surface3: #dddddd;
+    --surface1: #bdbdbd;
+    --surface2: #cacaca;
+    --surface3: #eeeeee;
     --element1: #000000;
     --element2: #525564;
     --element3: #ffffff;
@@ -44,23 +44,22 @@ body {
     font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--surface1, #000000);
-    padding-left: 20px;
-    padding-right: 20px;
+    
 }
 
 h1{
     margin-top: 1em;
     color: var(--element1);
-    font-family:'Courier New', Courier, monospace;
-    text-shadow: 0 5px 20px var(--element3);
+    text-shadow: 0 5px 5px var(--surface2);
     font-size: 3em;
     font-weight: bold;
     letter-spacing: 1.5vh;
 }
 
 h2 {
+    font-family: Courier, monospace;
     color: var(--element1);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
     text-shadow: 
         -1px -1px var(--neon-border-color),
         1px -1px var(--neon-border-color),
@@ -72,9 +71,12 @@ h2 {
 p{
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 10px var(--surface2),
+                -2px -2px 10px var(--surface2),
+                1px 1px var(--surface1),
+                -1px -1px var(--surface1);
     font-size: 16px;
     font-weight: bold;
-    letter-spacing: 0.2ch;
     padding: 0em;
     margin-bottom: 1em;
 }
@@ -149,7 +151,7 @@ input:checked + .slider:before {
 
 /* makes div 100% viewport height and expands with content */
 .fullscreen {
-    padding: 3em 1em 2em 1em;
+    padding: 3em;
     min-height: 100vh;
     height: max-content;
     
@@ -220,9 +222,12 @@ input:checked + .slider:before {
     height: 3em;
     width: 100%;
     font-size: 1.5em;
-    background-color: var(--surface1);
-    box-shadow: 0px 15px 10px var(--surface1);
-    border-bottom: 2px solid var(--element2);
+    background-color: var(--surface2);
+    box-shadow: 0px 10px 20px var(--surface2),
+                0px 10px 20px var(--surface1),
+                0px -15px 30px var(--surface2),
+                0px -15px 25px var(--surface2);
+    /*border-bottom: 2px solid var(--element2);*/
     position: -webkit-sticky;
     position: sticky;
     top:0;
@@ -315,8 +320,9 @@ input:checked + .slider:before {
 #moreBtn {
     color: var(--element1);
     font-size: 1.2em;
-    background-color: var(--surface2);
-    border: 1px solid var(--element1);
+    font-weight: bold;
+    background-color: var(--surface3);
+    border: 2px solid var(--element2);
     border-radius: 10px;
 }
 
