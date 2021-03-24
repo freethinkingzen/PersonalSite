@@ -510,7 +510,7 @@ input:checked + .slider:before {
     }
     p {
         margin-top: 0;
-        font-size: 13px;
+        font-size: 14px;
     }
   
     .codingbg {
@@ -621,8 +621,8 @@ input:checked + .slider:before {
     
     #profilePic {
         min-height: 100px;
-        height: 160px;
-        margin-bottom: 10px;
+        height: 200px;
+        margin-bottom: 2em;
     }
 }
 
@@ -639,5 +639,10 @@ input:checked + .slider:before {
     }
     .nav-item span {
         font-size: 10px;
+    }
+
+    #profilePic {
+        height: 160px;
+        margin-right: 25px;
     }
 }
