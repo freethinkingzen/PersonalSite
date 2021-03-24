@@ -43,6 +43,7 @@ body {
     color: var(--element1);
     font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.1ch;
     background-color: var(--surface1, #000000);
     
 }
@@ -53,7 +54,7 @@ h1{
     text-shadow: 0 5px 5px var(--surface2);
     font-size: 3em;
     font-weight: bold;
-    letter-spacing: 1.5vh;
+    letter-spacing: 0.5ch;
 }
 
 h2 {
@@ -78,7 +79,7 @@ p{
     font-size: 16px;
     font-weight: bold;
     padding: 0em;
-    margin-bottom: 1em;
+    margin-bottom: 0;
 }
 
 hr {
@@ -227,7 +228,6 @@ input:checked + .slider:before {
                 0px 10px 20px var(--surface1),
                 0px -15px 30px var(--surface2),
                 0px -15px 25px var(--surface2);
-    /*border-bottom: 2px solid var(--element2);*/
     position: -webkit-sticky;
     position: sticky;
     top:0;
@@ -273,7 +273,53 @@ input:checked + .slider:before {
     cursor: pointer;
 }
 
-
+/* Fight with Bootstrap to change tab styling */
+.nav-tabs {
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    height: max-content;
+    z-index: 10;
+}
+.nav-link {
+    color: var(--element1);
+    text-decoration: underline;
+    height: 100%;
+    border: 2px solid var(--element3) !important;
+    border-bottom: none !important;
+    border-radius: 10px 10px 0 0 !important;
+    transition-duration: 0.2s;
+}
+.nav-link.active {
+    background-color: var(--surface2) !important;
+    color: var(--element1) !important;
+    border: 3px solid var(--neon-shadow) !important;
+    border-bottom: 8px solid var(--surface1) !important;
+    font-weight: bold;
+    text-shadow:
+        -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+        0.1rem 0.1rem 0.5rem var(--surface1),
+        0 0 0.25rem var(--neon-text-color),
+        0 0 0.5rem var(--neon-text-color),
+        0 0 0.75rem var(--neon-text-color),
+        0 0 1rem var(--neon-text-color),
+        0 0 1.25rem var(--neon-text-color);
+    transition-duration: 0.1s;
+}
+.nav-link:hover {
+    color: var(--element1);
+    text-decoration: underline;
+    text-shadow:
+        -0.1rem -0.1rem 0.5rem var(--neon-shadow),
+        0.1rem 0.1rem 0.5rem var(--surface1),
+        0 0 0.5rem var(--neon-border-color),
+        0 0 1rem var(--neon-border-color),
+        0 0 1.5rem var(--neon-border-color),
+        0 0 2rem var(--neon-border-color),
+        0 0 2.5rem var(--neon-border-color);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
 .profileBox .icon:hover,
 .profileBox .icon:active {
     margin-top: -20px;
@@ -301,6 +347,10 @@ input:checked + .slider:before {
 
 #downArrow {
     fill: var(--element1);
+}
+
+#profile .column {
+        width: 100%;
 }
 
 #profilePic {
@@ -419,6 +469,10 @@ input:checked + .slider:before {
     p {
         margin-top: 0;
     }
+    
+    h3 {
+        font-size: 22px;
+    }
     .fullscreen {
         padding: 2em;
     }
@@ -434,6 +488,9 @@ input:checked + .slider:before {
     }
     .profileBox a {
         padding: 1em;
+    }
+    .nav-item span {
+        font-size: 20px;
     }
 
     #profilePic {
@@ -455,7 +512,7 @@ input:checked + .slider:before {
         margin-top: 0;
         font-size: 13px;
     }
-    
+  
     .codingbg {
     background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding_small.jpg) center/cover no-repeat;
     }
@@ -484,9 +541,29 @@ input:checked + .slider:before {
     .profileBox .icon {
         height: 50px;
     }
+
+    .nav-tabs {
+        height: 3.4em;
+    }
+    .nav-tabs .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-tabs .nav-item .nav-link {
+        width: 5em;
+        text-align: center;
+    }
+    .nav-item span {
+        display: block;
+        font-size: 12px;
+    }
+
+    
     #downArrow {
         height: 3em;
     }
+    
     #profilePic {
         min-height: 200px;
         height: 250px;
@@ -498,12 +575,23 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 400px) {
     h1 {
-        font-size: 20px;
+        text-align: center;
+        font-size: 28px;
         margin-top: 2.5em;
     }
     h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
         margin-top: 1em;
     }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        padding: 1em;
+    }
+
     .fullscreen {
         padding: 1.5em;
     }
@@ -512,10 +600,44 @@ input:checked + .slider:before {
         height: 40px;
     }
 
+    .nav-tabs {
+        justify-content: space-evenly;
+    }
+    .nav-tabs .nav-link {
+        width: 4.5em !important;
+        padding: 0;
+    }
+    .nav-tabs .nav-link.active {
+        border-bottom: 30px solid var(--surface2) !important;
+    }
+    .nav-item .icon {
+        width: 20px;
+    }
+    .nav-item span {
+        display: block;
+        font-size: 11px;
+    }
+
+    
     #profilePic {
         min-height: 100px;
         height: 160px;
         margin-bottom: 10px;
-        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    h3 {
+        font-size: 18px;
+    }
+    .nav-tabs .nav-link {
+        width: 3.2em !important;
+        
+    }
+    .nav-tabs .nav-link.active {
+        border-bottom: 30px solid var(--surface2) !important;
+    }
+    .nav-item span {
+        font-size: 10px;
     }
 }
