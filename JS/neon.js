@@ -27,9 +27,7 @@ function bgFlicker(bg, e) {
 }
 
 // Loops through h1s on landing to set up listeners for bg changes
-for(i in landingTitles) {
-    bgFlicker(i, landingTitles[i]);
-}
+
 
 // Activates neon on profile page h1 when it scrolls into view
 window.addEventListener("scroll", function(e){
@@ -101,4 +99,9 @@ function welcomeAnimation() {
     }, 9600);
     
 }
-window.onload = welcomeAnimation();
+window.onload = function(){
+    for(i in landingTitles) {
+        bgFlicker(i, landingTitles[i]);
+    }
+    welcomeAnimation();
+}
