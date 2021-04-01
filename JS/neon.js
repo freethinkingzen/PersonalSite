@@ -41,7 +41,7 @@ window.addEventListener("scroll", function(e){
         }, 5000);
     
     }
-    if(window.scrollY >= codingPage.offsetTop - 50 && window.scrollY < (codingPage.offsetTop + codingPage.scrollHeight)){
+    if(window.scrollY >= expPage.offsetTop - 50 && window.scrollY < (expPage.offsetTop + expPage.scrollHeight)){
         pageHeaders[1].classList.add("neonFlicker");
         pageHeaders[1].querySelector("hr").classList.add("borderFlicker");
         setTimeout(() => {

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en" color-mode="dark">
+
     <head>
         
         <!-- Page Information -->
@@ -31,7 +33,8 @@
         <title>John Lewis</title>
     </head>
 
-    <body>
+    <body>i
+
         <!-- dark mode toggle -->
         <div class="switch-container">
             <label class="theme-switch" for="checkbox" title="Change Color Mode" aria-label="dark mode toggle">
@@ -44,6 +47,8 @@
         
         <!-- Landing Page-->
         <div class="container d-flex justify-content-center fullscreen" id="landing">
+
+            <!-- Page Content -->
             <div class="row">
                 <div class="col my-auto">
                     <h1 id="coding">CODING</h1>
@@ -60,33 +65,41 @@
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                 </svg>
             </button>
+
         </div>
 
-        <!-- Navbar -->
+        <!-- Sticky Navbar -->
         <nav class="nav">
+
             <!-- Navbar links -->
             <ul class="nav-links">
-                <li>
+                <li> <!-- Profile Page -->
                     <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="30"/>
                     <span class="link-text" tabindex="0">Profile</span>
                 </li>
-                <li>
+                <li> <!-- Experience Page -->
                     <img src="./IMG/coding-icon.png" alt="Computer icon" class="icon" height="35"/>
                     <span class="link-text" tabindex="0">Experience</span>
                 </li>
             </ul>
+
         </nav>
         
         <!-- Profile Page -->
         <div class="container-fluid fullscreen" id="profile">
+
+            <!-- Profile Picture and Short Bio-->
             <div class="row">
                 <div class="column">
                     <h1 class="pageHeading">JOHN LEWIS<hr></h1>
                     <div class="profileBox">
+
+                        <!-- Profile Pic -->
                         <div class="row">
                             <img src="IMG/IMG_4088.jpg" alt="Profile Picture" id="profilePic" height="300" />
-                            
                         </div>
+
+                        <!-- Contact Links -->
                         <div class="row justify-content-around align-items-center">
                             <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" target="_blank" rel="noopener noreferrer">
                                 <img src="./IMG/LI-In-Bug.png" alt="LinkedIn icon" height="45" class="icon"/>
@@ -98,7 +111,10 @@
                                 <img src="./IMG/mail-142.svg" alt="Email icon" height="60" class="icon" />
                             </a>
                         </div>
+
                     </div>
+
+                    <!-- About Me -->
                     <h2>Let Me Introduce Myself...</h2>
                     <p>
                         I'm a recent graduate of Portland State University with a B.S. in
@@ -131,36 +147,42 @@
                         and doing anything that I can in the outdoors.
                         
                     </p>
+
                 </div>
             </div>
+
             <h2 class="row ml-1">Learn More About Me</h2>
-            <!-- Tabs to control panels-->
+            <!-- Tabs navigation to control info panels-->
             <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
+                <li class="nav-item"> <!-- Education -->
                     <a class="nav-link active test" data-toggle="tab" href="#edPanel" id="edTab" role="tab" aria-controls="edPanel" aria-selected="true">
                         <img src="./IMG/graduation-cap-64.png" alt="Graduation cap icon" class="icon" height="30" />
                         <span>Education</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item"> <!-- Lifting -->
                     <a class="nav-link" data-toggle="tab" href="#liftPanel"  id="liftTab" role="tab" aria-controls="liftPanel" aria-selected="false">
                         <img src="./IMG/dumbbell.png" alt="Dumbbell icon" class="icon" height="30" />
                         <span>Lifting</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item"> <!-- Philosophy -->
                     <a class="nav-link" data-toggle="tab" href="#philPanel" id="philTab" role="tab" aria-controls="philPanel" aria-selected="false">
                         <img src="./IMG/book.svg" alt="Book icon" class="icon" height="30" />
                         <span>Philosophy</span>
                     </a>
                 </li>
             </ul>
-            <!-- About Me Panels-->
+
+            <!-- Info Panels controlled by tabs-->
             <div class="row px-3">
                 <div class="tab-content">
+
+                    <!-- Education Panel -->
                     <div class="tab-pane fade show active" id="edPanel" role="tabpanel" aria-labelledby="edTab">
-                        <q>With almost four years' worth of credits already, I assumed I'd be out with a degree in no 
-                            time. I WAS <em>VERY WRONG</em>.</q>
+                        <q> With almost four years' worth of credits already, I assumed I'd be out with a degree in no 
+                            time. I WAS <em>VERY WRONG</em>.
+                        </q>
                         <p>
                             I began my college career with a deep interest in what makes individuals tick.
                             I pursued a degree in psychology for two years and learned the basic
@@ -180,6 +202,8 @@
                             <br><br>
                             During an unplanned, low-GPA-related "sabbatical,"
                             <span class="ellipses">...</span>
+
+                            <!-- Content displayed when "Read More" button is clicked -->
                             <span class="more"> 
                                 I began working in a bookstore. There I found 
                                 <a href="https://plato.stanford.edu/entries/existentialism/" target="_blank" rel="noopener noreferrer">
@@ -235,9 +259,14 @@
                                 </a>
                                 , the tools to code anything, and a magic piece of paper that opens the doors to my future.
                             </span>
+
+                            <!-- "Read More" button -->
                             <button class="moreBtn" type="button" tabindex="0">Continue Reading</button>
+
                         </p>
                     </div>
+
+                    <!-- Lifting Panel -->
                     <div class="tab-pane fade" id="liftPanel" role="tabpanel" aria-labelledby="liftTab">
                         <q>Maybe, with work, I could be one strong-ass string bean.</q>
                         <p>
@@ -253,60 +282,69 @@
                             the reruns of World's Strongest Man. I fully accepted that I would not look like them,
                             but I was stronger than I appeared
                             <span class="ellipses">...</span>
+
+                            <!-- Content displayed when "Read More" button is clicked -->
                             <span class="more"> 
-                            from ranch work ("farm strong" is real) and
-                            an active lifestyle. Maybe, with work, I could be one strong-ass string bean.
-                            I got my hands on
-                            <a href="https://www.amazon.com/Bodybuilding-Weider-Approach-Joe/dp/0809259087">
-                                "Bodybuilding: The Weider Approach"
-                            </a>
-                            by Joe Weider. I learned about rep ranges, set ranges, and how to structure workouts
-                            for progression. I would go to the YMCA with my mom to put my new knowledge into
-                            practice. Luckily, the workouts made for mass monsters fueled by anabolics were
-                            just about perfect for a pubescent teen: moderate weight, high reps, no recovery time.
-                            <br><br>
-                            I would go through phases of varying dedication through my teens and twenties, often
-                            motivated by vanity more than anything. Then, I traded the P90-x and bodybuilding
-                            routines for powerlifting. I was obsessed with the tangible progress that powerlifting
-                            offered. Intellectually, there had to be a perfect plan in place
-                            to incrementally increase weight and make projections for hitting the biggest lifts.
-                            Physically, it allowed me to put every bit of myself into something and get measurable
-                            results. Sometimes you give everything you've got to achieve a goal and for one reason
-                            or another things just don't go your way, with powerlifting the work you
-                            put in directly correlates to the things you achieve. The gym became my church.
-                            When nothing else made sense in life, I could always go there and get out what I put in.
-                            <br><br>
-                            In 2017, I had a devastating knee injury leaving me partially paralyzed that required
-                            multiple surgeries and <em>LOTS</em> of physical therapy. Instead of ending my Lifting
-                            career, it deepened my love for strength sports. All the tools and mental tricks I 
-                            used to improve my weightlifting translated into recovery. I set my goals and worked
-                            toward them incrementally with a focus on doing the best I was capable of safely, without
-                            over-reaching. I went from a 500lb deadlift to carefully lifting an empty bar. I focused
-                            on my form as I re-learned how to walk. I pushed through pain to get my body where I knew 
-                            it could go. I can tell you that today I'm stronger than I ever was before and you'd
-                            never guess I have any kind of disability thanks to the mindset developed lifting weights.
-                            <br><br>
-                            Just as they helped me through hardship, the principles for improving in the gym are
-                            helpful in coding. What is practicing algroithms but learning the correct form so you 
-                            don't waste energy or break your shit? Are reps and sets not an iterative approach? 
-                            Isn't there a waterfall model inherent in deciding a fitness goal, desining a routine,
-                            going to the gym, hitting your goals, then maintining your new fitness level? The
-                            carryover has helped me practive every day to improve my coding and my knowledge to be
-                            the best engineer I can be.
+                                from ranch work ("farm strong" is real) and
+                                an active lifestyle. Maybe, with work, I could be one strong-ass string bean.
+                                I got my hands on
+                                <a href="https://www.amazon.com/Bodybuilding-Weider-Approach-Joe/dp/0809259087">
+                                    "Bodybuilding: The Weider Approach"
+                                </a>
+                                by Joe Weider. I learned about rep ranges, set ranges, and how to structure workouts
+                                for progression. I would go to the YMCA with my mom to put my new knowledge into
+                                practice. Luckily, the workouts made for mass monsters fueled by anabolics were
+                                just about perfect for a pubescent teen: moderate weight, high reps, no recovery time.
+                                <br><br>
+                                I would go through phases of varying dedication through my teens and twenties, often
+                                motivated by vanity more than anything. Then, I traded the P90-x and bodybuilding
+                                routines for powerlifting. I was obsessed with the tangible progress that powerlifting
+                                offered. Intellectually, there had to be a perfect plan in place
+                                to incrementally increase weight and make projections for hitting the biggest lifts.
+                                Physically, it allowed me to put every bit of myself into something and get measurable
+                                results. Sometimes you give everything you've got to achieve a goal and for one reason
+                                or another things just don't go your way, with powerlifting the work you
+                                put in directly correlates to the things you achieve. The gym became my church.
+                                When nothing else made sense in life, I could always go there and get out what I put in.
+                                <br><br>
+                                In 2017, I had a devastating knee injury leaving me partially paralyzed that required
+                                multiple surgeries and <em>LOTS</em> of physical therapy. Instead of ending my Lifting
+                                career, it deepened my love for strength sports. All the tools and mental tricks I 
+                                used to improve my weightlifting translated into recovery. I set my goals and worked
+                                toward them incrementally with a focus on doing the best I was capable of safely, without
+                                over-reaching. I went from a 500lb deadlift to carefully lifting an empty bar. I focused
+                                on my form as I re-learned how to walk. I pushed through pain to get my body where I knew 
+                                it could go. I can tell you that today I'm stronger than I ever was before and you'd
+                                never guess I have any kind of disability thanks to the mindset developed lifting weights.
+                                <br><br>
+                                Just as they helped me through hardship, the principles for improving in the gym are
+                                helpful in coding. What is practicing algroithms but learning the correct form so you 
+                                don't waste energy or break your shit? Are reps and sets not an iterative approach? 
+                                Isn't there a waterfall model inherent in deciding a fitness goal, desining a routine,
+                                going to the gym, hitting your goals, then maintining your new fitness level? The
+                                carryover has helped me practive every day to improve my coding and my knowledge to be
+                                the best engineer I can be.
                             </span>
+
+                            <!-- "Read More" button -->
                             <button class="moreBtn" type="button" tabindex="0">Continue Reading</button>
+
                         </p>
                     
                     </div>
+
+                    <!-- Philosophy Panel -->
                     <div class="tab-pane fade" id="philPanel" role="tabpanel" arialabelledby="philTab">
                         <q>- Philosophy -</q>
                     </div>
+
                 </div>
             </div>
+
         </div>
 
-        <!-- Coding Page -->
-        <div class="container-fluid fullscreen" id="codingPage">
+        <!-- Experience Page -->
+        <div class="container-fluid fullscreen" id="expPage">
             <h1 class="pageHeading">EXPERIENCE<hr></h1>
         </div>
 

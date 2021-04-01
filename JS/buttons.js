@@ -74,6 +74,6 @@ navlinks[0].addEventListener("click", function() {
 
 });
 navlinks[1].addEventListener("click", function() {
-    codingPage.scrollIntoView({behavior: 'smooth'});
+    expPage.scrollIntoView({behavior: 'smooth'});
 });
 
