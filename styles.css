@@ -38,6 +38,9 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     width: 100%;
     color: var(--element1);
@@ -58,6 +61,7 @@ h1{
 }
 
 h2 {
+    text-align: center;
     font-family: Courier, monospace;
     color: var(--element1);
     font-weight: bold;
@@ -94,6 +98,13 @@ hr {
     border: 1.5px outset var(--element1);
 }
 
+.btn {
+    color: var(--element1);
+    border: 2px outset var(--element1);
+}
+.btn:hover {
+    color: var(--neon-text-color);
+}
 
 /* Color mode switch */
 .switch-container {
@@ -203,7 +214,7 @@ input:checked + .slider:before {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: 40px;
     z-index: 999;
     background-color: transparent;
     border: none;
@@ -259,6 +270,7 @@ input:checked + .slider:before {
 }
 .nav .icon {
     display: none;
+    margin-top: 5px;
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -290,6 +302,7 @@ input:checked + .slider:before {
 /* nav tabs, links, and icons */
 /* Fight with Bootstrap to change tab styling */
 .nav-tabs {
+    justify-content: center;
     align-items: center;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -312,7 +325,8 @@ input:checked + .slider:before {
     background-color: var(--surface2) !important;
     color: var(--element1) !important;
     border: 3px solid var(--element1) !important;
-    border-bottom: 8px solid var(--surface2) !important;
+    border-bottom: 1px solid var(--surface1) !important;
+    box-shadow: 0 5px 5px var(--surface2);
     font-weight: bolder;
     text-shadow:
         -0.1rem -0.1rem 0.5rem var(--neon-shadow),
@@ -377,6 +391,44 @@ input:checked + .slider:before {
     border-radius: 10px;
 }
 
+#warning {
+    text-align: center;
+}
+
+#warning p {
+    color: white;
+    text-shadow: none;
+    background-color: black;
+    padding: 1em;
+    border: 3px solid white;
+}
+#impact {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 1em;
+    color:white;
+    text-shadow:
+        -0.1rem -0.1rem 0.5rem #000000,
+        0.1rem 0.1rem 0.5rem #000000,
+        0 0 0.25rem #ff0000,
+        0 0 0.5rem #ff0000,
+        0 0 0.75rem #ff0000,
+        0 0 1rem #ff0000,
+        0 0 1.25rem #ff0000;
+    transition-duration: 0.1s;
+}
+
+ #proceedBtn {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bolder;
+    width: 18em;
+    height: 3em;
+    margin-top: 2em;
+    background-color: #04a504;
+    border: 2px solid var(--element1);
+    border-radius: 1em;
+}
 
 #landing h1:hover {
     cursor: none;
@@ -390,6 +442,7 @@ input:checked + .slider:before {
         width: 100%;
 }
 
+
 #profilePic {
     height: 25vw;
     min-height: 350px;
@@ -400,8 +453,6 @@ input:checked + .slider:before {
     margin: 3em;
     margin-top: 10px;
 }
-
-
 
 @-webkit-keyframes bounce {
     0%, 25%, 50%, 75%,
@@ -529,15 +580,13 @@ input:checked + .slider:before {
     .profileBox a {
         padding: 1em;
     }
-    .nav-item span {
+    .nav-link span {
         font-size: 20px;
     }
 
     #profilePic {
         min-height: 300px;
         height: 300px;
-        
-        
     }
 
     
@@ -587,16 +636,11 @@ input:checked + .slider:before {
     .nav-tabs {
         height: 3.4em;
     }
-    .nav-tabs .nav-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .nav-tabs .nav-item .nav-link {
+    .nav-tabs .nav-link {
         width: 5em;
         text-align: center;
     }
-    .nav-item span {
+    .nav-link span {
         display: block;
         font-size: 12px;
     }
@@ -610,9 +654,6 @@ input:checked + .slider:before {
         min-height: 200px;
         height: 250px;
     }
-
-    
-
 }
 
 @media only screen and (max-width: 400px) {
@@ -639,7 +680,7 @@ input:checked + .slider:before {
     }
 
     .profileBox .row img {
-        height: 40px;
+        height: 32px;
     }
 
     .nav-tabs {
@@ -652,10 +693,12 @@ input:checked + .slider:before {
     .nav-tabs .nav-link.active {
         border-bottom: 30px solid var(--surface2) !important;
     }
-    .nav-item .icon {
+    .nav-link .icon {
+        height: 20px;
         width: 20px;
+    
     }
-    .nav-item span {
+    .nav-link span {
         display: block;
         font-size: 11px;
     }
@@ -679,7 +722,7 @@ input:checked + .slider:before {
     .nav-tabs .nav-link.active {
         border-bottom: 30px solid var(--surface2) !important;
     }
-    .nav-item span {
+    .nav-link span {
         font-size: 10px;
     }
 
