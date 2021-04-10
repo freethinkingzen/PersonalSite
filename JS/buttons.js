@@ -65,7 +65,7 @@ toggleSwitch.addEventListener('change', function(e) {
 
 // Scroll down to profile when down arrow on landing is clicked
 downGlyph.addEventListener("click", function() {
-    profile.scrollIntoView({behavior: 'smooth'});
+    warning.scrollIntoView({behavior: 'smooth'});
 });
 
 // Scroll based on navigation selection

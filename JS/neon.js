@@ -7,6 +7,7 @@ const coding = document.getElementById("coding");
 const lifting = document.getElementById("lifting");
 const phil = document.getElementById("philosophy");
 const profile = document.getElementById("profile");
+const warning = document.getElementById("warning");
 const pageHeaders = document.getElementsByClassName("pageHeading");
 const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
 
