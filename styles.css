@@ -557,10 +557,6 @@ input:checked + .slider:before {
 
 }
 @media only screen and (max-width: 769px) {
-    p {
-        margin-top: 0;
-    }
-    
     q {
         font-size: 22px;
     }
@@ -599,8 +595,11 @@ input:checked + .slider:before {
         margin-top: 1.75em;
         margin-bottom: 1em;
     }
+    h2 {
+        text-align: center;
+        width: 100%;
+    }
     p {
-        margin-top: 0;
         font-size: 14px;
     }
   
@@ -663,8 +662,6 @@ input:checked + .slider:before {
         margin-top: 2.5em;
     }
     h2 {
-        width: 100%;
-        text-align: center;
         font-size: 25px;
         margin-top: 1em;
     }
