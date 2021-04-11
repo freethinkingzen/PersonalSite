@@ -8,7 +8,7 @@
         <meta property="og:title" content="John Lewis" />
         <meta property="og:description" content="I'm John Lewis and this is my website. Enjoy!" />
         <meta property="og:url" content="https://www.johnlewiswebdev.com" />
-        <meta property="og:image" content="./IMG/snapshot.png" />
+        <meta property="og:image" content="./IMG/snapshot.webp" />
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <meta http-equiv="author" content="John Lewis" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -23,7 +23,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!--Bootstrap CSS-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
         <!-- CSS -->
         <link rel="stylesheet" href="./styles.css" />
 
@@ -33,7 +34,7 @@
         <title>John Lewis</title>
     </head>
 
-    <body>i
+    <body>
 
         <!-- dark mode toggle -->
         <div class="switch-container">
@@ -46,17 +47,17 @@
         </div>
         
         <!-- Landing Page-->
-        <div class="container d-flex justify-content-center fullscreen" id="landing">
-
+        <div class="container d-flex align-items-center fullscreen" id="landing">
+            
             <!-- Page Content -->
-            <div class="row">
-                <div class="col my-auto">
+            <div class="row mx-auto">
+                <div class="col">
                     <h1 id="coding">CODING</h1>
                     <h1 id="lifting">LIFTING</h1>
                     <h1 id="philosophy">PHILOSOPHY</h1>
                 </div>
             </div>
-
+            
             <!-- Bouncing down arrow/chevron scrolls to next section --->
             <button type="button" class="glyph mx-auto" id="downGlyph" title="Scroll to profile" role="button" aria-label="scroll down to profile page">
                 <svg class="bounce" id="downArrow" width="4em" height="4em" viewBox="0 0 16 16" 
@@ -74,17 +75,48 @@
             <!-- Navbar links -->
             <ul class="nav-links">
                 <li> <!-- Profile Page -->
-                    <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="30"/>
+                    <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="30" width="30"/>
                     <span class="link-text" tabindex="0">Profile</span>
                 </li>
                 <li> <!-- Experience Page -->
-                    <img src="./IMG/coding-icon.png" alt="Computer icon" class="icon" height="35"/>
+                    <img src="./IMG/coding-icon.png" alt="Computer icon" class="icon" height="35" width="35"/>
                     <span class="link-text" tabindex="0">Experience</span>
                 </li>
             </ul>
 
         </nav>
-        
+
+        <!-- Welcome Page -->
+        <div class="container-fluid fullscreen" id="warning">
+            <div>
+                <h1 id="impact">!WARNING!</h1>
+                <p class="mt-5">
+                    <b> THIS IS <em>NOT</em> ANOTHER BORING ONLINE RESUME. THIS IS AN INTRODUCTION TO ME AND MY WORK.
+                        <br><br>
+                        IF YOU WOULD PREFER A DRY CHRONICLING OF MY SKILLS AND ACHIEVEMENTS OR REPOSITORIES OF MY CODE,
+                        PROCEED TO MY LINKEDIN OR GITHUB USING THE BUTTONS PROVIDED BELOW.
+                        <br><br>
+                        ON THIS SITE YOU WILL FIND DETAILS ABOUT MY STORY, MY SKILLS, AND MY PROJECTS SHARED WITH YOU
+                        IN MY OWN PERSONAL STYLE. BUCKLE UP AND ENJOY THE RIDE OR TURN BACK NOW...
+                    </b>
+                </p>
+            </div>
+            <div class="row mt-2  d-flex justify-content-center">
+                <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" class="btn w-30" target="_blank" rel="noopener noreferrer">
+                    <span>Exit to LinkedIn</span>
+                    <img src="./IMG/LI-In-Bug.png" alt="LinkedIn icon" height="30" class="icon"/>
+                </a>
+                <a href="https://github.com/freethinkingzen/" class="btn w-30" target="_blank" rel="noopener noreferrer">
+                    <span>Exit to GitHub</span>
+                    <img src="./IMG/GitHub-Mark-64px.png" alt="GitHub icon" height="30" class="icon" />
+                </a>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <a href="#profile" class="py-3 btn btn-success" id="proceedBtn">
+                    Proceed
+                </a>
+            </div>
+        </div>
         <!-- Profile Page -->
         <div class="container-fluid fullscreen" id="profile">
 
@@ -96,7 +128,7 @@
 
                         <!-- Profile Pic -->
                         <div class="row">
-                            <img src="IMG/IMG_4088.jpg" alt="Profile Picture" id="profilePic" height="300" />
+                            <img src="./IMG/profilePic.webp" alt="Profile Picture" id="profilePic" height="300"/>
                         </div>
 
                         <!-- Contact Links -->
@@ -116,7 +148,7 @@
 
                     <!-- About Me -->
                     <h2>Let Me Introduce Myself...</h2>
-                    <p>
+                    <p id="bio">
                         I'm a recent graduate of Portland State University with a B.S. in
                         Computer Science. As a recovering philosophy major, I took a very
                         non-traditional route to a degree with stops at two different colleges
@@ -128,19 +160,16 @@
                         <br><br>
                         Professionally, my interests are AI, Machine Learning, Web Development,
                         and the ethics surrounding barriers to technology accessibility, especially
-                        those of race, income, and disability. I'm most proficient in C, C++, Python,
-                        and HTML/CSS and fluent in Javscript, Java, and C#. With proficiency in
-                        low-level and high-level languages, I'm comfortable coding efficient solutions
-                        to bottlenecks as well as using object-oriented programming to organize large projects.
+                        those of race, income, and disability. I am proficient in
+                        low-level and high-level languages, allowing me to code efficient solutions
+                        to bottlenecks and utilize object-oriented programming to organize large projects.
                         I like puzzles and the power of statistics to simplify large problems, so
                         I enjoy the elegance of good datascience and AI algorithms.
                         <br><br>
                         When I'm not coding, I love to lift weights and follow strength sports. I can
                         tell you more than you would ever want or need to know about World's Strongest Man,
-                        powerlifting, and bodybuilding. There is something zen about testing your limits,
-                        working to improve, and commiting to achieve something through focus and hard work.
-                        There is a lot of carryover from the skills that makes a good lifter, to the skills
-                        that make a good programmer.
+                        powerlifting, and bodybuilding. There is a lot of carryover from the skills that make
+                         a good lifter to the skills that make a good programmer.
                         <br><br>
                         My other interests include reading dusty old books by dead philosophers,
                         spending time with my wife, everything involving bicycles, hiking, camping,
@@ -151,35 +180,35 @@
                 </div>
             </div>
 
-            <h2 class="row ml-1">Learn More About Me</h2>
+            <h2>Want to Know More?
+                <p>SELECT A TAB BELOW</p>
+            </h2>
+            
             <!-- Tabs navigation to control info panels-->
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item"> <!-- Education -->
-                    <a class="nav-link active test" data-toggle="tab" href="#edPanel" id="edTab" role="tab" aria-controls="edPanel" aria-selected="true">
-                        <img src="./IMG/graduation-cap-64.png" alt="Graduation cap icon" class="icon" height="30" />
-                        <span>Education</span>
-                    </a>
-                </li>
-                <li class="nav-item"> <!-- Lifting -->
-                    <a class="nav-link" data-toggle="tab" href="#liftPanel"  id="liftTab" role="tab" aria-controls="liftPanel" aria-selected="false">
-                        <img src="./IMG/dumbbell.png" alt="Dumbbell icon" class="icon" height="30" />
-                        <span>Lifting</span>
-                    </a>
-                </li>
-                <li class="nav-item"> <!-- Philosophy -->
-                    <a class="nav-link" data-toggle="tab" href="#philPanel" id="philTab" role="tab" aria-controls="philPanel" aria-selected="false">
-                        <img src="./IMG/book.svg" alt="Book icon" class="icon" height="30" />
-                        <span>Philosophy</span>
-                    </a>
-                </li>
-            </ul>
+            <div class="nav nav-tabs" role="tablist" aria-label="More About Me Tabs">
+                <!-- Education -->
+                <a class="nav-link test" data-toggle="tab" href="#edPanel" id="edTab" role="tab" aria-controls="edPanel" aria-selected="false">
+                    <img src="./IMG/graduation-cap-64.png" alt="Graduation cap icon" class="icon" height="30" width="30" />
+                    <span>Education</span>
+                </a>
+                <!-- Lifting -->
+                <a class="nav-link" data-toggle="tab" href="#liftPanel"  id="liftTab" role="tab" aria-controls="liftPanel" aria-selected="false">
+                    <img src="./IMG/dumbbell.png" alt="Dumbbell icon" class="icon" height="30" width="30" />
+                    <span>Lifting</span>
+                </a>
+                <!-- Philosophy -->
+                <a class="nav-link" data-toggle="tab" href="#philPanel" id="philTab" role="tab" aria-controls="philPanel" aria-selected="false">
+                    <img src="./IMG/book.svg" alt="Book icon" class="icon" height="30" width="30"/>
+                    <span>Philosophy</span>
+                </a>
+            </div>
 
             <!-- Info Panels controlled by tabs-->
-            <div class="row px-3">
+            <div class="row">
                 <div class="tab-content">
 
                     <!-- Education Panel -->
-                    <div class="tab-pane fade show active" id="edPanel" role="tabpanel" aria-labelledby="edTab">
+                    <div class="tab-pane fade" id="edPanel" role="tabpanel" aria-labelledby="edTab">
                         <q> With almost four years' worth of credits already, I assumed I'd be out with a degree in no 
                             time. I WAS <em>VERY WRONG</em>.
                         </q>
@@ -388,11 +417,11 @@
         <!-- Experience Page -->
         <div class="container-fluid fullscreen" id="expPage">
             <h1 class="pageHeading">EXPERIENCE<hr></h1>
+
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <script src="./JS/buttons.js"></script>
         <script src="./JS/neon.js"></script>
     </body>
