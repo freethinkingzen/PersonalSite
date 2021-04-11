@@ -190,15 +190,15 @@ input:checked + .slider:before {
 
 /* Backgrounds for landing page hover vignette effect */
 .codingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding.jpg) center/cover no-repeat;
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding.webp) center/cover no-repeat;
     animation: bg-flicker 1.5s 1 alternate;
 }
 .liftingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/powerlifting.jpg) center/cover no-repeat; /*45% 50%;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/powerlifting.webp) center/cover no-repeat; /*45% 50%;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 .philbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy.jpg) center/auto no-repeat; /*center center/100vh;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy.webp) center/auto no-repeat; /*center center/100vh;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 
@@ -604,13 +604,13 @@ input:checked + .slider:before {
     }
   
     .codingbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding_small.jpg) center/cover no-repeat;
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding_small.webp) center/cover no-repeat;
     }
     .liftingbg {
-        background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/powerlifting_small.jpg) center/cover no-repeat; /*45% 50%;*/
+        background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/powerlifting_small.webp) center/cover no-repeat; /*45% 50%;*/
     }
     .philbg {
-        background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy_small.jpg) center/cover no-repeat; /*center center/100vh;*/
+        background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy_small.webp) center/cover no-repeat; /*center center/100vh;*/
     }
 
     .nav {
