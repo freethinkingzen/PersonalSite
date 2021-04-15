@@ -78,9 +78,9 @@
                     <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="30" width="30"/>
                     <span class="link-text" tabindex="0">Profile</span>
                 </li>
-                <li> <!-- Experience Page -->
+                <li> <!-- Projects Page -->
                     <img src="./IMG/coding-icon.png" alt="Computer icon" class="icon" height="35" width="35"/>
-                    <span class="link-text" tabindex="0">Experience</span>
+                    <span class="link-text" tabindex="0">Projects</span>
                 </li>
             </ul>
 
@@ -117,6 +117,7 @@
                 </a>
             </div>
         </div>
+        
         <!-- Profile Page -->
         <div class="container-fluid fullscreen" id="profile">
 
@@ -149,7 +150,7 @@
                     <!-- About Me -->
                     <h2>Let Me Introduce Myself...</h2>
                     <p id="bio">
-                        I'm a recent graduate of Portland State University with a B.S. in
+                        I'm a cum laude graduate of Portland State University with a B.S. in
                         Computer Science. As a recovering philosophy major, I took a very
                         non-traditional route to a degree with stops at two different colleges
                         and three different majors over the course of 15 years. I have 10 years
@@ -372,10 +373,161 @@
 
         </div>
 
-        <!-- Experience Page -->
+        <!-- Projects Page -->
         <div class="container-fluid fullscreen" id="expPage">
-            <h1 class="pageHeading">EXPERIENCE<hr></h1>
+            <h1 class="pageHeading">PROJECTS<hr></h1>
+            <div class="row">
 
+                <div class="col-lg-6 text-center">
+                    <h2>This Site!</h2>
+                    <a href="https://www.johnlewiswebdev.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./IMG/snapshot.webp" alt="Picture of this sites landing page" width="500" class="rounded"/>
+                    </a>
+                    <br>
+                    <a href="https://github.com/freethinkingzen/PersonalSite" target="_blank" rel="noopener noreferrer">
+                        <span>See Source Code</span>
+                    </a>
+                    <br>
+                    <span class="ellipses"></span>
+                    <p class="more">More about this project</p>
+                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <h2>Seismic Dashboard</h2>
+                    <a href="https://www.seismic-dashboard.com" target="_blank" rel="noopener noreferrer">
+                        <img src="./IMG/SeismicDashboard.png" alt="Snapshot of Seismic Dashboard Website" width="500" class="rounded" />
+                    </a>
+                    <br>
+                    <a href="https://github.com/freethinkingzen/Seismic-Dashboard" target="_blank" rel="noopener noreferrer">
+                        <span>See Source Code</span>
+                    </a>
+                    <br>
+                    <span class="ellipses"></span>
+                    <p class="more">More about this project</p>
+                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+                </div>                
+                <div class="col-lg-12 text-center">
+                    <h2>ServiceNow Chatbot</h2>
+                    <div class="row d-flex align-items-center justify-content-center my-3">
+                        <div class="col-2 text-center">
+                            <img src="./IMG/ABS_Icon.png" alt="Bot Framework Icon" height="50"/>
+                        </div>
+                        <div class="col-3 text-center">
+                            <img src="./IMG/servicenow-header-logo.svg" alt="ServiceNow Icon" />
+                        </div>
+                        <div class="col-3 text-center">
+                            <img src="./IMG/MultCoLogo.png" alt="Multnomah County Logo" />
+                        </div>
+                    </div>
+                    <span class="ellipses"></span>
+                    <p class="more">This was a chatbot prototype built for Multnomah County in Portland, Oregon. They were experiencing
+                        frustrations with the interface provided by ServiceNow and wanted a simple way for employees to 
+                        submit and check on work orders without becoming experts in the ServiceNow dashboard. The chatbot
+                        allowed users to interact with natural language to request services or report outages. Since chatbots
+                        can be frustrating, conversation details for current and previous conversations were saved in a user profile
+                        to remember common fields for forms and the problem the user is experiencing. This was also 
+                        intended to reduce the work done by the departments addressing the work orders by checking current tickets
+                        before submitting and allowing comments to be added as others exerience similar issues rather than creating
+                        duplicate requests.
+                    </p>
+                    <!-- "Read More" button -->
+                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+
+                    
+                    <ul>
+                        <li>Built for Multnomah County in Portland, Oregon</li>
+                        <li>Allow internal employees to create, query, and update ServiceNow work tickets using natural language.</li>
+                        <li>Saves current and previous conversation details to make creating or updating tickets easier by pre-filling form fields for user review.</li>
+                        <li>Prevent duplicate tickets by notifying employee if work order is already opened for a service</li>
+                        <li>Deployed via url from Azure Portal</li>
+                        <li>The stack:</li>
+                        <ul>
+                            <li>Azure Web Apps</li>
+                            <li>Azure Bot Framework</li>
+                            
+                            <li>Azure Language Understanding Intelligent Service (LUIS)</li>
+                            <li>Azure Key Vault</li>
+                            <li>Bot Framework Composer</li>
+                            <li>C#, .NET, JSON</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Page -->
+        <div class="container-fluid fullscreen">
+            <h1 class="pageHeading">EXPERIENCE<hr></h1>    
+            <div class="row border border-light">
+                <h2 class="col">Languages</h2>
+            </div>
+            <div class="row border border-light">
+                <div class="col border border-primary">
+                    <h3>Proficient</h2>
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="col border border-success">
+                    <h3>Fluent</h2>
+                    <ul>
+                        <li>C#</li>
+                        <li>Java</li>
+                        <li><strong>Javascript</strong></li>
+                        <li>SQL / MySQL</li>
+                    </ul>
+                </div>
+                <div class="col border border-warning">
+                    <h3>Familiar or Learning</h3>
+                    <ul>
+                        <li>Assembly / Inline Assembly</li>
+                        <li>R</li>
+                        <li>Go</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="col">Tools, Frameworks, and Environments</h2>
+            </div>
+            <div class="row border border-light">
+                <div class="col border border-primary">
+                    <h3>Proficient</h2>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>JSON</li>
+                        <li>Linux</li>
+                        <li>Matplotlib</li>
+                        <li>NumPy</li>
+                        <li>RESTful APIs</li>
+                        <li>Scikit-learn</li>
+                        <li>Windows</li>
+                    </ul>
+                </div>
+                <div class="col border border-success">
+                    <h3>Fluent</h2>
+                    <ul>
+                        <li>Azure Resources</li>
+                        <li>Bot Framework</li>
+                        <li>Git</li>
+                        <li>Pandas</li>
+                        <li>PyTorch</li>
+                        <li>React</li>
+                        <li>Terminal / Command / Bash</li>
+                    </ul>
+                </div>
+                <div class="col border border-warning">
+                    <h3>Familiar or Learning</h3>
+                    <ul>
+                        <li>Google Cloud</li>
+                        <li>Node.js</li>
+                        <li>.Net</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

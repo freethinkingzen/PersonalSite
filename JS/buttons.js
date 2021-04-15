@@ -17,7 +17,7 @@ function more(elem, index) {
     elem.addEventListener("click", function() {
         if (ellipses[index].style.display === "none") {
             ellipses[index].style.display = "inline";
-            elem.innerHTML = "Continue Reading"; 
+            elem.innerHTML = "Learn More"; 
             moreText[index].style.display = "none";
         } else {
             ellipses[index].style.display = "none";
