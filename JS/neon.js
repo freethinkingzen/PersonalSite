@@ -16,10 +16,6 @@ function bgFlicker(bg, e) {
     e.addEventListener("mouseover", function() {
         landing.classList.add(bg);
         e.classList.add("neonFlicker");
-        setTimeout(() => {
-            landing.classList.remove(bg);
-            e.classList.remove("neonFlicker");
-        }, 3000);
     });
     e.addEventListener("mouseleave", function() {
         landing.classList.remove(bg);
@@ -62,34 +58,37 @@ function welcomeAnimation() {
     phil.classList.add("disableHover");
     //landing.classList.add("disableHoverClicks");
     setTimeout(() => {
+        coding.style.visibility = "visible";
         coding.dispatchEvent(hover);
-        coding.classList.add("neonFlicker");
-    }, 2000);
+    }, 3000);
     setTimeout(() => {
+        coding.style.visibility = "hidden";
         coding.dispatchEvent(leave);
-        coding.classList.remove("neonFlicker");
-    }, 4200);
+    }, 5200);
     setTimeout(() => {
+        lifting.style.visibility = "visible";
         lifting.dispatchEvent(hover);
-        lifting.classList.add("neonFlicker");
-    }, 4400);
+    }, 5400);
     setTimeout(() => {
+        lifting.style.visibility = "hidden";
         lifting.dispatchEvent(leave);
-        lifting.classList.remove("neonFlicker");
-    }, 6400);
+    }, 7400);
     setTimeout(() => {
+        phil.style.visibility = "visible";
         phil.dispatchEvent(hover);
-        phil.classList.add("neonFlicker");
-    }, 6600);
+    }, 7600);
     setTimeout(() => {
+        phil.style.visibility = "hidden";
         phil.dispatchEvent(leave);
-        phil.classList.remove("neonFlicker");
-    }, 8600);
+    }, 9600);
     setTimeout(() => {
+        coding.style.visibility = "visible";
+        lifting.style.visibility = "visible";
+        phil.style.visibility = "visible";
         coding.classList.add("neonFlicker");
         lifting.classList.add("neonFlicker");
-        phil.classList.add("neonFlicker");  
-    }, 8610);
+        phil.classList.add("neonFlicker");
+    }, 10000);
     setTimeout(() => {
         coding.classList.remove("neonFlicker");
         lifting.classList.remove("neonFlicker");
@@ -97,7 +96,8 @@ function welcomeAnimation() {
         coding.classList.remove("disableHover");
         lifting.classList.remove("disableHover");
         phil.classList.remove("disableHover");
-    }, 9600);
+        
+    }, 11600);
     
 }
 window.onload = function(){

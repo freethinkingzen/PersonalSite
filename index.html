@@ -47,17 +47,18 @@
         </div>
         
         <!-- Landing Page-->
-        <div class="container d-flex align-items-center fullscreen" id="landing">
-            
-            <!-- Page Content -->
-            <div class="row mx-auto">
-                <div class="col">
-                    <h1 id="coding">CODING</h1>
-                    <h1 id="lifting">LIFTING</h1>
-                    <h1 id="philosophy">PHILOSOPHY</h1>
+        <div class="d-flex fullscreen" id="landing">
+            <div id="intro">
+                <span><u>DESIGN</u> and <u>WORK ETHIC</u> built on <u>PASSION</u> for </span>
+            </div>
+            <div class="my-auto mx-auto pb-2">
+                <div>
+                    <h1 id="coding" style="visibility: hidden;">CODING</h1>
+                    <h1 id="lifting" style="visibility: hidden;">LIFTING</h1>
+                    <h1 id="philosophy" style="visibility: hidden;">PHILOSOPHY</h1>
                 </div>
             </div>
-            
+    
             <!-- Bouncing down arrow/chevron scrolls to next section --->
             <button type="button" class="glyph mx-auto" id="downGlyph" title="Scroll to profile" role="button" aria-label="scroll down to profile page">
                 <svg class="bounce" id="downArrow" width="4em" height="4em" viewBox="0 0 16 16" 
@@ -122,64 +123,59 @@
         <div class="container-fluid fullscreen" id="profile">
 
             <!-- Profile Picture and Short Bio-->
-            <div class="row">
-                <div class="column">
-                    <h1 class="pageHeading">JOHN LEWIS<hr></h1>
-                    <div class="profileBox">
+            <h1 class="pageHeading">JOHN LEWIS<hr></h1>
+            <div class="profileBox">
 
-                        <!-- Profile Pic -->
-                        <div class="row">
-                            <img src="./IMG/profilePic.webp" alt="Profile Picture" id="profilePic" height="300"/>
-                        </div>
-
-                        <!-- Contact Links -->
-                        <div class="row justify-content-around align-items-center">
-                            <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" target="_blank" rel="noopener noreferrer">
-                                <img src="./IMG/linkedin.png" alt="LinkedIn icon" height="45" class="icon"/>
-                            </a>
-                            <a href="https://github.com/freethinkingzen/" target="_blank" rel="noopener noreferrer">
-                                <img src="./IMG/GitHub-Mark-64px.png" alt="GitHub icon" height="50" class="icon" />
-                            </a>
-                            <a href="mailto: johnlewis208503@gmail.com">
-                                <img src="./IMG/mail-142.svg" alt="Email icon" height="60" class="icon" />
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <!-- About Me -->
-                    <h2>Let Me Introduce Myself...</h2>
-                    <p id="bio">
-                        I'm a cum laude graduate of Portland State University with a B.S. in
-                        Computer Science. As a recovering philosophy major, I took a very
-                        non-traditional route to a degree with stops at two different colleges
-                        and three different majors over the course of 15 years. I have 10 years
-                        of large scale retail management and operations experience that have honed
-                        my communication, mediation, and conflict resolution skills. My current focus
-                        is finding a path into software development by blending my CS skills
-                        with my work experience to improve any team or company that I join.
-                        <br><br>
-                        Professionally, my interests are AI, Machine Learning, Web Development,
-                        and the ethics surrounding barriers to technology accessibility, especially
-                        those of race, income, and disability. I am proficient in
-                        low-level and high-level languages, allowing me to code efficient solutions
-                        to bottlenecks and utilize object-oriented programming to organize large projects.
-                        I like puzzles and the power of statistics to simplify large problems, so
-                        I enjoy the elegance of good datascience and AI algorithms.
-                        <br><br>
-                        When I'm not coding, I love to lift weights and follow strength sports. I can
-                        tell you more than you would ever want or need to know about World's Strongest Man,
-                        powerlifting, and bodybuilding. There is a lot of carryover from the skills that make
-                         a good lifter to the skills that make a good programmer.
-                        <br><br>
-                        My other interests include reading dusty old books by dead philosophers,
-                        spending time with my wife, everything involving bicycles, hiking, camping,
-                        and doing anything that I can in the outdoors.
-                        
-                    </p>
-
+                <!-- Profile Pic -->
+                <div class="row">
+                    <img src="./IMG/profilePic.webp" alt="Profile Picture" id="profilePic" height="300"/>
                 </div>
+
+                <!-- Contact Links -->
+                <div class="row justify-content-around align-items-center">
+                    <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" target="_blank" rel="noopener noreferrer">
+                        <img src="./IMG/linkedin.png" alt="LinkedIn icon" height="45" class="icon"/>
+                    </a>
+                    <a href="https://github.com/freethinkingzen/" target="_blank" rel="noopener noreferrer">
+                        <img src="./IMG/GitHub-Mark-64px.png" alt="GitHub icon" height="50" class="icon" />
+                    </a>
+                    <a href="mailto: johnlewis208503@gmail.com">
+                        <img src="./IMG/mail-142.svg" alt="Email icon" height="60" class="icon" />
+                    </a>
+                </div>
+
             </div>
+
+            <!-- About Me -->
+            <h2>Let Me Introduce Myself...</h2>
+            <p id="bio">
+                I'm a cum laude graduate of Portland State University with a B.S. in
+                Computer Science. As a recovering philosophy major, I took a very
+                non-traditional route to a degree with stops at two different colleges
+                and three different majors over the course of 15 years. I have 10 years
+                of large scale retail management and operations experience that have honed
+                my communication, mediation, and conflict resolution skills. My current focus
+                is finding a path into software development by blending my CS skills
+                with my work experience to improve any team or company that I join.
+                <br><br>
+                Professionally, my interests are AI, Machine Learning, Web Development,
+                and the ethics surrounding barriers to technology accessibility, especially
+                those of race, income, and disability. I am proficient in
+                low-level and high-level languages, allowing me to code efficient solutions
+                to bottlenecks and utilize object-oriented programming to organize large projects.
+                I like puzzles and the power of statistics to simplify large problems, so
+                I enjoy the elegance of good datascience and AI algorithms.
+                <br><br>
+                When I'm not coding, I love to lift weights and follow strength sports. I can
+                tell you more than you would ever want or need to know about World's Strongest Man,
+                powerlifting, and bodybuilding. There is a lot of carryover from the skills that make
+                    a good lifter to the skills that make a good programmer.
+                <br><br>
+                My other interests include reading dusty old books by dead philosophers,
+                spending time with my wife, everything involving bicycles, hiking, camping,
+                and doing anything that I can in the outdoors.
+                
+            </p>
 
             <h2>Want to Know More?
                 <p>SELECT A TAB BELOW</p>
@@ -376,51 +372,16 @@
         <!-- Projects Page -->
         <div class="container-fluid fullscreen" id="expPage">
             <h1 class="pageHeading">PROJECTS<hr></h1>
-            <div class="row">
-
-                <div class="col-lg-6 text-center">
-                    <h2>This Site!</h2>
-                    <a href="https://www.johnlewiswebdev.com" target="_blank" rel="noopener noreferrer">
-                    <img src="./IMG/snapshot.webp" alt="Picture of this sites landing page" width="500" class="rounded"/>
-                    </a>
-                    <br>
-                    <a href="https://github.com/freethinkingzen/PersonalSite" target="_blank" rel="noopener noreferrer">
-                        <span>See Source Code</span>
-                    </a>
-                    <br>
-                    <span class="ellipses"></span>
-                    <p class="more">More about this project</p>
-                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <h2>Seismic Dashboard</h2>
-                    <a href="https://www.seismic-dashboard.com" target="_blank" rel="noopener noreferrer">
-                        <img src="./IMG/SeismicDashboard.png" alt="Snapshot of Seismic Dashboard Website" width="500" class="rounded" />
-                    </a>
-                    <br>
-                    <a href="https://github.com/freethinkingzen/Seismic-Dashboard" target="_blank" rel="noopener noreferrer">
-                        <span>See Source Code</span>
-                    </a>
-                    <br>
-                    <span class="ellipses"></span>
-                    <p class="more">More about this project</p>
-                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
-                </div>                
-                <div class="col-lg-12 text-center">
+            <div class="row justify-content-around">
+                <div class="col-lg-5 my-3 text-center">
                     <h2>ServiceNow Chatbot</h2>
-                    <div class="row d-flex align-items-center justify-content-center my-3">
-                        <div class="col-2 text-center">
-                            <img src="./IMG/ABS_Icon.png" alt="Bot Framework Icon" height="50"/>
-                        </div>
-                        <div class="col-3 text-center">
-                            <img src="./IMG/servicenow-header-logo.svg" alt="ServiceNow Icon" />
-                        </div>
-                        <div class="col-3 text-center">
-                            <img src="./IMG/MultCoLogo.png" alt="Multnomah County Logo" />
-                        </div>
+                    <div class="py-3 mx-3">
+                        <img src="./IMG/chatbot.png" alt="Multnomah County Logo" width="100%" class="image-fluid rounded"/>
                     </div>
                     <span class="ellipses"></span>
-                    <p class="more">This was a chatbot prototype built for Multnomah County in Portland, Oregon. They were experiencing
+                    <div class="more">
+                        <p>
+                        This was a chatbot prototype built for Multnomah County in Portland, Oregon. They were experiencing
                         frustrations with the interface provided by ServiceNow and wanted a simple way for employees to 
                         submit and check on work orders without becoming experts in the ServiceNow dashboard. The chatbot
                         allowed users to interact with natural language to request services or report outages. Since chatbots
@@ -429,28 +390,121 @@
                         intended to reduce the work done by the departments addressing the work orders by checking current tickets
                         before submitting and allowing comments to be added as others exerience similar issues rather than creating
                         duplicate requests.
-                    </p>
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col">
+                                <h3><u>Requirements:</u></h3>
+                                <ul>
+                                    <li>Open ServiceNow tickets, incidents, or work requests</li>
+                                    <ol>
+                                        <li>Through chat dialogue</li>
+                                        <li>Through forms</li>
+                                        <li>Using information from previous conversations (never re-ask a question)</li>
+                                    </ol>
+                                    <li>Check open tickets to prevent duplicates</li>
+                                    <li>Query/Search previous tickets</li>
+                                    <ol>
+                                        <li>By service reported/requested</li>
+                                        <li>By who created the ticket</li>
+                                        <li>By date and time</li>
+                                    </ol>
+                                    <li>Allow comments or new reports</li>
+                                    <ol>
+                                        <li>Additional reports of outages</li>
+                                        <li>Feedback from department assigned to the ticket</li>
+                                        <li>Additional information from reporters</li>
+                                    </ol>
+                                    <li>Integrate LUIS (Language Understanding Intelligent Service) for natural language interactions</li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <h3><u>The Stack:</u></h3>
+                                <ul>
+                                    <li>Azure Web Apps</li>
+                                    <li>Azure Bot Framework</li>
+                                    <li>Azure Language Understanding Intelligent Service (LUIS)</li>
+                                    <li>Azure Key Vault</li>
+                                    <li>Bot Framework Composer</li>
+                                    <li>C#, .NET, JSON</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <!-- "Read More" button -->
                     <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+                </div>
+                
+                <div class="col-lg-5 my-3 text-center">
+                    <h2>Seismic Dashboard</h2>
+                    <a href="https://www.seismic-dashboard.com" target="_blank" rel="noopener noreferrer">
+                        <img src="./IMG/SeismicDashboard.png" alt="Snapshot of Seismic Dashboard Website" width="100%" class="image-fluid rounded py-3"  />
+                    </a>
+                    <br>
+                    <a href="https://github.com/freethinkingzen/Seismic-Dashboard" target="_blank" rel="noopener noreferrer">
+                        <span>--> See Source Code</span>
+                    </a>
+                    <br>
+                    <span class="ellipses"></span>
+                    <div class="more">
+                        <p>
+                        This project accesses the USGS Earthquake Catalog to get real-time seismic activity around the world. The central goal
+                        for this project was to create a user-friendly and attractive dashboard to analyze and display information from a large
+                        and dynamic dataset. The USGS API is queried every second for alerts and every minute for new seismic activity. Using 
+                        Leaflet.js and Chart.js, the location, time, depth, magnitude, and alert information related to each earthquake are displayed
+                        for the user. Any alerts or hazards trigger a notification at the top of the screen as well as a color code in the live earthquake feed.
+                        Mapped earthquakes are given both a color code, a relative marker size, and a ARIA enabled callout so that any visual
+                        disabilities or impairment should not interfere with accessibilty. Activity can be filtered by set timeframes and the user's
+                        location if they allow it to offer options to filter the data that is relevant to the user without filling our form fields.
+                        This project should offer a one-stop-shop for users looking for quick insights, but also offers more in-depth information if 
+                        the user needs more details or chooses to explore more.
+                        <br><br>
+                        This was my first foray into front-end design and still bears some of the scars of being hacked at
+                        by a beginner. Fortunately, my skills have developed and this site is being redeployed using React in 2021 so it can get
+                        a full overhaul and remain available to the people who have enjoyed it as a web app while offering a mobile app for a 
+                        fully native mobile experience.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col">
+                                <h3><u>Goals:</u></h3>
+                                <ul>
+                                    <li>Single-page dashboard</li>
+                                    <li>Access and process large dataset available through APIs</li>
+                                    <li>Explore interactive map functionality</li>
+                                    <li>Include interactive charts/graphs</li>
+                                    <li>Accessible for limb-different and visually impaired users</li>
+                                    <li>Responsive - Any screen size should feel native</li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <h3><u>The Stack:</u></h3>
+                                <ul>
+                                    <li>HTML/CSS</li>
+                                    <li>Bootstrap</li>
+                                    <li>AJAX</li>
+                                    <li>Leaflet.js for maps</li>
+                                    <li>Chart.js for charts</li>
+                                    <li>Moment.js for world time conversions</li>
+                                    <li>USGS API</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+                </div>
 
-                    
-                    <ul>
-                        <li>Built for Multnomah County in Portland, Oregon</li>
-                        <li>Allow internal employees to create, query, and update ServiceNow work tickets using natural language.</li>
-                        <li>Saves current and previous conversation details to make creating or updating tickets easier by pre-filling form fields for user review.</li>
-                        <li>Prevent duplicate tickets by notifying employee if work order is already opened for a service</li>
-                        <li>Deployed via url from Azure Portal</li>
-                        <li>The stack:</li>
-                        <ul>
-                            <li>Azure Web Apps</li>
-                            <li>Azure Bot Framework</li>
-                            
-                            <li>Azure Language Understanding Intelligent Service (LUIS)</li>
-                            <li>Azure Key Vault</li>
-                            <li>Bot Framework Composer</li>
-                            <li>C#, .NET, JSON</li>
-                        </ul>
-                    </ul>
+                <div class="col-lg-5 my-3 text-center">
+                    <h2>This Site!</h2>
+                    <a href="https://www.johnlewiswebdev.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./IMG/snapshot.webp" alt="Picture of this sites landing page" width="100%" class="image-fluid rounded py-3"/>
+                    </a>
+                    <br>
+                    <a href="https://github.com/freethinkingzen/PersonalSite" target="_blank" rel="noopener noreferrer">
+                        <span>--> See Source Code</span>
+                    </a>
+                    <br>
+                    <span class="ellipses"></span>
+                    <p class="more">More about this project</p>
+                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
                 </div>
             </div>
         </div>
