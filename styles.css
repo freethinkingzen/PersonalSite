@@ -63,17 +63,19 @@ h1{
 }
 
 h2 {
-    text-align: center;
     font-family: Courier, monospace;
     color: var(--element1);
-    font-weight: bold;
-    text-shadow: 
-        -1px -1px var(--neon-border-color),
-        1px -1px var(--neon-border-color),
-        -1px 1px var(--neon-border-color),
-        1px -1px var(--neon-border-color);
+    font-weight: bolder;
+    letter-spacing: 0.5ch;
+    text-shadow:
+            -0.1rem -0.1rem 0.5rem var(--surface1),
+            0.1rem 0.1rem 0.5rem var(--surface1),
+            0 0 0.1rem var(--neon-border-color),
+            0 0 0.25rem var(--neon-border-color),
+            0 0 0.3rem var(--neon-border-color),
+            0 0 0.5rem var(--neon-border-color),
+            0 0 0.75rem var(--neon-border-color);
     margin-top: 1.2em;
-    margin-bottom: 0;
 }
 
 q {
@@ -88,7 +90,7 @@ p{
                 -2px -2px 10px var(--surface2),
                 1px 1px var(--surface1),
                 -1px -1px var(--surface1);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     padding: 0em;
     margin-bottom: 0;
@@ -363,11 +365,8 @@ input:checked + .slider:before {
 
 /* Div containing profile pic and links */
 .profileBox {
-    display: inline;
-    float: left;
-    margin-right: 3em;
-    margin-bottom: 1em;
-    margin-top: 5em;
+    margin-top: 3em;
+    max-width: 400px;
 }
 .profileBox .icon:hover,
 .profileBox .icon:active {
@@ -407,11 +406,12 @@ input:checked + .slider:before {
     font-style: italic;
     font-weight: bolder;
     letter-spacing: 0.8ch;
-    animation: fade ease 10s;
+    animation: fade ease 4s;
 }
 
 #warning {
     text-align: center;
+    transition-duration: 1s;
 }
 
 #warning p {
@@ -458,21 +458,16 @@ input:checked + .slider:before {
 }
 
 #profilePic {
-    height: 25vw;
-    min-height: 350px;
-    max-height: 500px;
     box-shadow: 1px 1px 20px var(--neon-border-color);
     border: 1px solid var(--element3);
     border-radius: 50%;
-    margin: 3em;
-    margin-top: 10px;
+    margin-bottom: 2em;
 }
 
 
 
 @keyframes fade {
     0%  {opacity: 0;}
-    15% {opacity: 1;}
     100% {opacity: 1;}
 }
 
@@ -558,11 +553,7 @@ input:checked + .slider:before {
     }
 }
 
-@media only screen and (min-width: 1500px) {
-    #profilePic {
-        margin-right: 5vw;
-    }
-}
+
 @media only screen and (max-width: 769px) {
     q {
         font-size: 22px;
@@ -570,15 +561,10 @@ input:checked + .slider:before {
     .fullscreen {
         padding: 2em;
     }
-    .profileBox {
-        float: none;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 2em;
-    }
+    
     .profileBox .icon {
         margin-right: 0;
-        height: 70px;
+        height: 60px;
     }
     .profileBox a {
         padding: 1em;
@@ -599,13 +585,9 @@ input:checked + .slider:before {
         font-size: 10px;
         right: 1em;
     }
-    #profilePic {
-        min-height: 300px;
-        height: 300px;
-    }
 
-    
 }
+
 @media only screen and (max-width: 500px) {
     h1 {
         font-size: 30px;
@@ -641,12 +623,7 @@ input:checked + .slider:before {
     .nav .icon {
         display: inline;
     }    
-    .profileBox {
-        display: flex;
-        justify-content: center;
-        float: none;
-        margin-bottom: -2em;
-    }
+   
     .profileBox .icon {
         height: 50px;
     }
@@ -667,11 +644,7 @@ input:checked + .slider:before {
     #downArrow {
         height: 3em;
     }
-    
-    #profilePic {
-        min-height: 200px;
-        height: 250px;
-    }
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -681,14 +654,14 @@ input:checked + .slider:before {
         margin-top: 2.5em;
     }
     h2 {
-        font-size: 25px;
+        font-size: 22px;
         margin-top: 1em;
     }
     q {
         font-size: 20px;
     }
     p {
-        padding: 1em;
+        padding: 5px;
     }
 
     .fullscreen {
@@ -719,15 +692,15 @@ input:checked + .slider:before {
         font-size: 11px;
     }
 
-    
-    #profilePic {
-        min-height: 100px;
-        height: 200px;
-        margin-bottom: 2em;
-    }
 }
 
 @media only screen and (max-width: 320px) {
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 12px;
+    }
     q {
         font-size: 18px;
     }
@@ -740,10 +713,5 @@ input:checked + .slider:before {
     }
     .nav-link span {
         font-size: 10px;
-    }
-
-    #profilePic {
-        height: 160px;
-        margin-right: 25px;
     }
 }

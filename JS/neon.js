@@ -7,7 +7,9 @@ const coding = document.getElementById("coding");
 const lifting = document.getElementById("lifting");
 const phil = document.getElementById("philosophy");
 const profile = document.getElementById("profile");
-const warning = document.getElementById("warning");
+const projects = document.getElementById("projPage");
+const expPage = document.getElementById("expPage");
+//const warning = document.getElementById("warning");
 const pageHeaders = document.getElementsByClassName("pageHeading");
 const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
 
@@ -23,28 +25,26 @@ function bgFlicker(bg, e) {
     });
 }
 
-// Loops through h1s on landing to set up listeners for bg changes
+// Adds neonFlicker class with timeout
+function glowInViewport(el) {
+    if(!el.classList.contains("neonFlicker")){
+        el.classList.add("neonFlicker");
+        el.querySelector("hr").classList.add("borderFlicker");
+        setTimeout(() => {
+            el.classList.remove("neonFlicker");
+            el.querySelector("hr").classList.remove("borderFlicker");
+        }, 5000);
+    }   
+}
 
 
 // Activates neon on profile page h1 when it scrolls into view
-window.addEventListener("scroll", function(e){
-
-    if(window.scrollY >= profile.offsetTop - 50 && window.scrollY < (profile.offsetTop + profile.scrollHeight)){
-        pageHeaders[0].classList.add("neonFlicker");
-        pageHeaders[0].querySelector("hr").classList.add("borderFlicker");
-        setTimeout(() => {
-            pageHeaders[0].classList.remove("neonFlicker");
-            pageHeaders[0].querySelector("hr").classList.remove("borderFlicker");
-        }, 5000);
-    
-    }
-    if(window.scrollY >= expPage.offsetTop - 50 && window.scrollY < (expPage.offsetTop + expPage.scrollHeight)){
-        pageHeaders[1].classList.add("neonFlicker");
-        pageHeaders[1].querySelector("hr").classList.add("borderFlicker");
-        setTimeout(() => {
-            pageHeaders[1].classList.remove("neonFlicker");
-            pageHeaders[1].querySelector("hr").classList.remove("borderFlicker");
-        }, 5000);
+window.addEventListener("scroll", function(e) {
+    for(header of pageHeaders){
+        
+        if(window.scrollY >= header.offsetTop - 100 && window.scrollY < (header.offsetTop + header.scrollHeight)) {
+            glowInViewport(header);
+        }
     }
 });
 

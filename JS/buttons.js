@@ -10,6 +10,7 @@ const navlinks = document.querySelectorAll("nav li");
 const moreBtns = document.querySelectorAll(".moreBtn");
 const ellipses = document.querySelectorAll(".ellipses");
 const moreText = document.querySelectorAll(".more");
+const proceed = document.getElementById("proceedBtn");
 
 
 /* Controls the text-expanding "Read More" buttons */
@@ -28,12 +29,11 @@ function more(elem, index) {
 }
 moreBtns.forEach(more);
 
-
-// Checks for user's color theme preference from previous visits
 icons.forEach(icon => {
     icon.classList.add("invert");
 });
 
+// Checks for user's color theme preference from previous visits
 if(currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
     
@@ -65,7 +65,7 @@ toggleSwitch.addEventListener('change', function(e) {
 
 // Scroll down to profile when down arrow on landing is clicked
 downGlyph.addEventListener("click", function() {
-    warning.scrollIntoView({behavior: 'smooth'});
+    profile.scrollIntoView({behavior: 'smooth'});
 });
 
 // Scroll based on navigation selection
@@ -74,6 +74,8 @@ navlinks[0].addEventListener("click", function() {
 
 });
 navlinks[1].addEventListener("click", function() {
-    expPage.scrollIntoView({behavior: 'smooth'});
+    projPage.scrollIntoView({behavior: 'smooth'});
 });
-
+navlinks[2].addEventListener("click", function() {
+    expPage.scrollIntoView({behavior: 'smooth'});
+})
