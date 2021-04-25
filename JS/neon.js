@@ -9,6 +9,7 @@ const phil = document.getElementById("philosophy");
 const profile = document.getElementById("profile");
 const projects = document.getElementById("projPage");
 const expPage = document.getElementById("expPage");
+const skillPage = document.getElementById("skillPage");
 //const warning = document.getElementById("warning");
 const pageHeaders = document.getElementsByClassName("pageHeading");
 const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};

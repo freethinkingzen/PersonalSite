@@ -71,11 +71,13 @@ downGlyph.addEventListener("click", function() {
 // Scroll based on navigation selection
 navlinks[0].addEventListener("click", function() {
     profile.scrollIntoView({behavior: 'smooth'});
-
 });
 navlinks[1].addEventListener("click", function() {
     projPage.scrollIntoView({behavior: 'smooth'});
 });
 navlinks[2].addEventListener("click", function() {
     expPage.scrollIntoView({behavior: 'smooth'});
-})
+});
+navlinks[3].addEventListener("click", function() {
+    skillPage.scrollIntoView({behavior: 'smooth'});
+});

@@ -76,7 +76,7 @@
             <!-- Navbar links -->
             <ul class="nav-links">
                 <li> <!-- Profile Page -->
-                    <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="30" width="30"/>
+                    <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="35" width="35"/>
                     <span class="link-text" tabindex="0">Profile</span>
                 </li>
                 <li> <!-- Projects Page -->
@@ -84,8 +84,12 @@
                     <span class="link-text" tabindex="0">Projects</span>
                 </li>
                 <li> <!-- Experience Page -->
-                    <img src="./IMG/experience.jpg" alt="Experience icon" class="icon" height="35" />
+                    <img src="./IMG/experience.jpg" alt="Experience icon" class="icon" height="35" width="35" />
                     <span class="link-text" tabindex="0">Experience</span>
+                </li>
+                <li>
+                    <img src="./IMG/skills.png" alt="Skills icon" class="icon" height="35" width="35" />
+                    <span class="link-text" tabindex="0">Skills</span>
                 </li>
             </ul>
 
@@ -130,24 +134,23 @@
 
             <!-- Profile Picture and Short Bio-->
             <div class="row justify-content-around">
-                <div class="col-xl-4 col-md-5 col-sm-7 col-12 profileBox mx-auto">
+                <div class="col-xl-4 col-md-5 col-sm-7 col-10 profileBox mx-auto">
                     
-
-                        <!-- Profile Pic -->
-                        <img src="./IMG/profilePic.webp" alt="Profile Picture"  width="100%" class="image-fluid" id="profilePic"/>
-                    
-                        <!-- Contact Links -->
-                        <div class="row justify-content-around align-items-center">
-                            <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" target="_blank" rel="noopener noreferrer">
-                                <img src="./IMG/linkedin.png" alt="LinkedIn icon" height="45" class="icon"/>
-                            </a>
-                            <a href="https://github.com/freethinkingzen/" target="_blank" rel="noopener noreferrer">
-                                <img src="./IMG/GitHub-Mark-64px.png" alt="GitHub icon" height="50" class="icon" />
-                            </a>
-                            <a href="mailto: johnlewis208503@gmail.com">
-                                <img src="./IMG/mail-142.svg" alt="Email icon" height="60" class="icon" />
-                            </a>
-                        </div>
+                    <!-- Profile Pic -->
+                    <img src="./IMG/profilePic.webp" alt="Profile Picture"  width="100%" class="image-fluid" id="profilePic"/>
+                
+                    <!-- Contact Links -->
+                    <div class="row justify-content-around align-items-center">
+                        <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" target="_blank" rel="noopener noreferrer">
+                            <img src="./IMG/linkedin.png" alt="LinkedIn icon" height="45" class="icon"/>
+                        </a>
+                        <a href="https://github.com/freethinkingzen/" target="_blank" rel="noopener noreferrer">
+                            <img src="./IMG/GitHub-Mark-64px.png" alt="GitHub icon" height="50" class="icon" />
+                        </a>
+                        <a href="mailto: johnlewis208503@gmail.com">
+                            <img src="./IMG/mail-142.svg" alt="Email icon" height="60" class="icon" />
+                        </a>
+                    </div>
 
                 </div>
             
@@ -368,7 +371,50 @@
 
                     <!-- Philosophy Panel -->
                     <div class="tab-pane fade" id="philPanel" role="tabpanel" arialabelledby="philTab">
-                        <q>- Philosophy -</q>
+                        <q>We are better off when we know that we don't know than when we are ignorant to our ignorance.</q>
+                        <p>
+                            I can't begin to describe how thankful I am for my dead-end road to being a philosopher.
+                            Three years of examining everything in excruciating detail and questioning everything we
+                            "know" about the world altered me forever. It was extremely tedious, and many times 
+                            it felt like my brain had been turned inside out, but once you've pulled back the curtain on 
+                            science, knowledge, religion, ethics, being, and time, you see that nothing is a concrete as 
+                            we take it to be.
+                            <br><br>
+                            If you've taken a physics course, you may have learned that the only reason we don't
+                            pass right through the ground is not due to earth being "solid" but from the electrostatic force.
+                            In truth, you have never actually physically touched any of the solid objects you interact with. 
+                            If you've learned this, you either don't care because it doesn't change anything about your life,
+                            or you start to question other parts of our perception of reality. Philosophy bombards you with 
+                            these instances and even if you try to toss them away as semantic games, a pile of reasons that 
+                            our reality and objective reality don't quite match grows
+                            <span class="ellipses">...</span>
+                            <span class="more">
+                                , festers, and becomes impossible to ignore. However, we are better off when we know that we
+                                don't know than when we are ignorant to our ignorance. In the words of Socrates in
+                                <a href="https://en.wikipedia.org/wiki/Republic_(Plato)" target="_blank" rel="noopener noreferrer">Plato's Republic</a>
+                                :
+                                <br><br>
+                                <q>Although I do not suppose that either of us knows anything really beautiful and good,
+                                I am better off than he is – for he knows nothing, and thinks that he knows. I neither know nor think that I know.
+                                </q>
+                                <br><br>
+                                Luckily, philosophy also provides a way to navigate this abyss with logic. You begin to rebuild
+                                what you "know", what you believe, and what you want from the world starting from <i>a priori</i>
+                                to <i>a posteriori</i>, from deductive to inductive, all while understanding your own limitations
+                                in understanding. Statements and sentiments can be examined in an almost mathematical way with 
+                                formal logic (sound familiar CS kids?). 
+                                <br><br>
+                                There is also a beautiful, almost poetic side of philosophy. My favorite book of all time is
+                                <a href="https://en.wikipedia.org/wiki/Thus_Spoke_Zarathustra" target="_blank" rel="noopener noreferrer">Thus Spoke Zarathustra</a>
+                                for precisely this reason. Existential and ethical philosophers pondering the questions that all of us ponder
+                                and creating thought experiments or stories for us to dissociate and examine our own thoughts
+                                
+
+                            </span>
+
+                            <!-- "Read More" button -->
+                            <button class="moreBtn" type="button" tabindex="0">Continue Reading</button>
+                        </p>
                     </div>
 
                 </div>
@@ -380,13 +426,18 @@
         <div class="container-fluid fullscreen" id="projPage">
             <h1 class="pageHeading">PROJECTS<hr></h1>
             <div class="row justify-content-around">
+
+                <!-- Chatbot Project -->
                 <div class="col-lg-5 my-3 text-center">
                     <h2>ServiceNow Chatbot</h2>
                     <div class="py-3 mx-3">
                         <img src="./IMG/chatbot.png" alt="Multnomah County Logo" width="100%" class="image-fluid rounded"/>
                     </div>
                     <span class="ellipses"></span>
+                    
+                    <!-- "Read More" button -->
                     <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+                    
                     <div class="more">
                         <p>
                         This was a chatbot prototype built for Multnomah County in Portland, Oregon. They were experiencing
@@ -438,14 +489,13 @@
                             </div>
                         </div>
                     </div>
-                    <!-- "Read More" button -->
-                    
                 </div>
                 
+                <!-- Seismic Dashboard Project -->
                 <div class="col-lg-5 my-3 text-center">
                     <h2>Seismic Dashboard</h2>
                     <a href="https://www.seismic-dashboard.com" target="_blank" rel="noopener noreferrer">
-                        <img src="./IMG/SeismicDashboard.png" alt="Snapshot of Seismic Dashboard Website" width="100%" class="image-fluid rounded py-3"  />
+                        <img src="./IMG/SeismicDashboard.webp" alt="Snapshot of Seismic Dashboard Website" width="100%" class="image-fluid rounded py-3"  />
                     </a>
                     <br>
                     <a href="https://github.com/freethinkingzen/Seismic-Dashboard" target="_blank" rel="noopener noreferrer">
@@ -501,6 +551,7 @@
                     
                 </div>
 
+                <!-- Personal Website Project -->
                 <div class="col-lg-5 my-3 text-center">
                     <h2>This Site!</h2>
                     <a href="https://www.johnlewiswebdev.com" target="_blank" rel="noopener noreferrer">
@@ -513,9 +564,29 @@
                     <br>
                     <span class="ellipses"></span>
                     <button class="moreBtn" type="button" tabindex="0">Learn More</button>
-                    <p class="more">More about this project</p>
-                    
+                    <div class="more">
+                        <p>This is my fixed-gear bike:</p>
+                        <b> 
+                        <ul>
+                            <li>It's stylish and fast.</li>
+                            <li>It tells you about the builder and stands out from all the others.</li>
+                            <li>It's not overly practical, but it has a singular purpose that it should fulfill.</li>
+                            <li>I've removed the parts I don't want, don't like, or don't care to maintain.</li>
+                        </ul>
+                        </b>
+                        <p>
+                        This project is a platform for sharing what I do with everyone without being
+                        constrained by the format of LinkedIn.
+                        The goal was something like a marketing splash page that would give people a feel for who I am and
+                        what my work looks like. It should immerse the visitor while remaining as simple as possible.
+                        Anyone should be able to visit this site, not just engineers, developers, and recruiters.
+                        <br><br>
+                        A large part of this was exercising HTML/CSS and limiting the JavaScript needed. It should
+                        be easy to use, easy to understand, fully accessible to everyone, and impactful in its design.
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -571,12 +642,19 @@
                     </p>
                 </div>
             </div>
+        </div>
+        
+        <!-- Skills Page -->
+        <div class="container-fluid fullscreen" id="skillPage">
+            <h1 class="pageHeading">SKILLS<hr></h1>
             <div class="row">
                 <div class="col">
+                    
                     <h2>Genereal Skills</h2>
                     <ul>
                         <li>Just-in-time Learning</li>
                         <li>Management and Leadership</li>
+                        <li>Object Oriented Programming</li>
                         <li>Front-end Design</li>
                         <li>Accessibility</li>
                         <li>Simplifying and Streamlining Complex Solutions</li>
@@ -604,7 +682,7 @@
                     <ul>
                         <li>C#</li>
                         <li>Java</li>
-                        <li><strong>Javascript</strong></li>
+                        <li>Javascript</li>
                         <li>SQL / MySQL</li>
                     </ul>
                 </div>
@@ -657,8 +735,38 @@
             </div>
         </div>
 
+        <!-- Quote Page -->
+        <div class="container-fluid fullscreen">
+            <h1 class="pageHeading">ONE FINAL WORD<hr></h1>
+            
+            <figure>
+                <blockquote>
+                    <br><br>
+                    "[Humanity] is a rope stretched between the animal and the Ubermensch (<i>advanced being</i>)—a rope over an abyss.
+                    <br><br>
+                    A dangerous crossing, a dangerous wayfaring, a dangerous looking-back, a dangerous trembling and halting.
+                    <br><br>
+                    What is great in [humanity] is that it is a bridge and not a goal...
+                    <br><br>
+                    I love [those] who liveth in order to know, and seeketh to know in order that the Ubermench may hereafter live."
+                    <br><br>
+                    <figcaption>- Friedrich Nietzsche, <i>Thus Spoke Zarathustra</i></figcaption>
+                </blockquote>
+            </figure>
+            
+        </div>
+
+        <footer class="text-center">
+            <a href="#landing"><h2 class="border border-primary rounded mt-5">Back to Top</h2></a>
+            <hr>
+            <span>John Lewis</span>
+            <br>
+            <small> Copyright &copy; 2021</small>
+            <hr>
+        </footer>
+
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <script src="./JS/buttons.js"></script>
         <script src="./JS/neon.js"></script>
     </body>

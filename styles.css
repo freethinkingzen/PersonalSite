@@ -78,6 +78,10 @@ h2 {
     margin-top: 1.2em;
 }
 
+h3 {
+    font-weight: bold;
+    text-decoration: underline;
+}
 q {
     font-size: 1.5em;
     font-weight: bold;
@@ -207,7 +211,7 @@ input:checked + .slider:before {
     animation: bg-flicker 1.5s 1 alternate;
 }
 .philbg {
-    background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/philosophy.webp) center/auto no-repeat; /*center center/100vh;*/
+    background: radial-gradient(ellipse at center, transparent, var(--surface1) 80%), url(./IMG/philosophy.webp) center/cover no-repeat; /*center center/100vh;*/
     animation: bg-flicker 1.5s 1 alternate;
 }
 
@@ -597,12 +601,21 @@ input:checked + .slider:before {
         margin-bottom: 1em;
     }
     h2 {
+        font-size: 25px;
         text-align: center;
         width: 100%;
+    }
+    h3 {
+        font-size: 18px;
+        
+        
+        text-align: center;
+        margin-top: 1em;
     }
     p {
         font-size: 14px;
     }
+    
   
     .codingbg {
     background: radial-gradient(ellipse at center, transparent, var(--surface1) 70%), url(./IMG/coding_small.webp) center/cover no-repeat;
@@ -654,13 +667,15 @@ input:checked + .slider:before {
         margin-top: 2.5em;
     }
     h2 {
-        font-size: 22px;
+        font-size: 20px;
         margin-top: 1em;
     }
+    
     q {
         font-size: 20px;
     }
     p {
+        font-size: 13px;
         padding: 5px;
     }
 
@@ -668,23 +683,23 @@ input:checked + .slider:before {
         padding: 1.5em;
     }
 
-    .profileBox .row img {
-        height: 32px;
+    .profileBox .icon {
+        height: 40px;
     }
 
     .nav-tabs {
         justify-content: space-evenly;
     }
     .nav-tabs .nav-link {
-        width: 4.5em !important;
+        width: 4.2em !important;
         padding: 0;
     }
     .nav-tabs .nav-link.active {
         border-bottom: 30px solid var(--surface2) !important;
     }
     .nav-link .icon {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
     
     }
     .nav-link span {
@@ -695,14 +710,19 @@ input:checked + .slider:before {
 }
 
 @media only screen and (max-width: 320px) {
-    h2 {
-        font-size: 20px;
-    }
+   
     p {
         font-size: 12px;
     }
     q {
-        font-size: 18px;
+        font-size: 15px;
+    }
+    .nav .link-text {
+        font-size: 10px;
+    }
+    .nav .icon {
+        width: 30px;
+        height: 30px;
     }
     .nav-tabs .nav-link {
         width: 3.2em !important;
@@ -712,6 +732,6 @@ input:checked + .slider:before {
         border-bottom: 30px solid var(--surface2) !important;
     }
     .nav-link span {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
