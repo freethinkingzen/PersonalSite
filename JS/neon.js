@@ -7,7 +7,7 @@ const coding = document.getElementById("coding");
 const lifting = document.getElementById("lifting");
 const phil = document.getElementById("philosophy");
 const profile = document.getElementById("profile");
-const projects = document.getElementById("projPage");
+const projects = document.getElementById("projects");
 const expPage = document.getElementById("expPage");
 const skillPage = document.getElementById("skillPage");
 //const warning = document.getElementById("warning");
@@ -28,12 +28,14 @@ function bgFlicker(bg, e) {
 
 // Adds neonFlicker class with timeout
 function glowInViewport(el) {
+    const border = el.nextElementSibling;
+
     if(!el.classList.contains("neonFlicker")){
         el.classList.add("neonFlicker");
-        el.querySelector("hr").classList.add("borderFlicker");
+        border.classList.add("borderFlicker");
         setTimeout(() => {
             el.classList.remove("neonFlicker");
-            el.querySelector("hr").classList.remove("borderFlicker");
+            border.classList.remove("borderFlicker");
         }, 5000);
     }   
 }
@@ -41,7 +43,7 @@ function glowInViewport(el) {
 
 // Activates neon on profile page h1 when it scrolls into view
 window.addEventListener("scroll", function(e) {
-    for(header of pageHeaders){
+    for(const header of pageHeaders){
         
         if(window.scrollY >= header.offsetTop - 100 && window.scrollY < (header.offsetTop + header.scrollHeight)) {
             glowInViewport(header);

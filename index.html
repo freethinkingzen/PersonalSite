@@ -11,25 +11,20 @@
         <meta name="title" content="John Lewis" />
         <meta name="description" content="I'm John Lewis and this is my website. This is a platform to share my story and my work in my own words and personal style. Enjoy!" />
         <meta name="keywords" content="John Lewis, computer science, web developer" />
-        <meta name="robots" content="nofollow" />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="author" content="John Lewis" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="content-script-type" content="text/javascript" />
-        <meta http-equiv="content-style-type" content="text/css" />
-        <meta http-equiv="content-language" content="en-us" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="UTF-8" />
         
         <!-- OG/Facebook -->
-        <meta property="og:image" content="//www.johnlewiswebdev.com/IMG/snapshot.png" />
-        <meta property="og:image:secure_url" content="//www.johnlewiswebdev.com/IMG/snapshot.png" />
+        <meta property="og:image" content="https://www.johnlewiswebdev.com/IMG/snapshot.png" />
+        <meta property="og:image:secure_url" content="https://www.johnlewiswebdev.com/IMG/snapshot.png" />
         <meta name="title" property="og:title" content="John Lewis" />
         <meta name="description" property="og:description" content="I'm John Lewis and this is my website. This is a platform to share my story and my work in my own words and personal style. Enjoy!" />
-        <meta name="url" property="og:url" content="//www.johnlewiswebdev.com" />
+        <meta name="url" property="og:url" content="https://www.johnlewiswebdev.com" />
         <meta name="author" property="og:author" content="John Lewis" />
         <meta name="type" property="og:type" content="website" />
+        <link rel="canonical" href="https://www.johnlewiswebdev.com/" />
         
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -48,10 +43,10 @@
         <!-- dark mode toggle -->
         <div class="switch-container">
             <label class="theme-switch" for="checkbox" title="Change Color Mode" aria-label="dark mode toggle">
-                <input tabindex="0" type="checkbox" id="checkbox" >
+                <input type="checkbox" id="checkbox" >
                 <span class="slider round"></span>
-                <p>Color Mode</p>
             </label>
+            <span class="theme-label">Color Mode</span>
 
         </div>
         
@@ -62,14 +57,14 @@
             </div>
             <div class="my-auto mx-auto pb-2">
                 <div>
-                    <h1 id="coding" style="visibility: hidden;">CODING</h1>
-                    <h1 id="lifting" style="visibility: hidden;">LIFTING</h1>
-                    <h1 id="philosophy" style="visibility: hidden;">PHILOSOPHY</h1>
+                    <h1 id="coding" class="landing-title">CODING</h1>
+                    <h1 id="lifting" class="landing-title">LIFTING</h1>
+                    <h1 id="philosophy" class="landing-title">PHILOSOPHY</h1>
                 </div>
             </div>
     
             <!-- Bouncing down arrow/chevron scrolls to next section --->
-            <button type="button" class="glyph mx-auto" id="downGlyph" title="Scroll to profile" role="button" aria-label="scroll down to profile page">
+            <button type="button" class="glyph mx-auto" id="downGlyph" title="Scroll to profile" aria-label="scroll down to profile page">
                 <svg class="bounce" id="downArrow" width="4em" height="4em" viewBox="0 0 16 16" 
                      fill="#ffffff" 
                      xmlns="http://www.w3.org/2000/svg">
@@ -80,66 +75,35 @@
         </div>
 
         <!-- Sticky Navbar -->
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary navigation">
 
             <!-- Navbar links -->
             <ul class="nav-links">
-                <li> <!-- Profile Page -->
+                <li>
                     <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="35" width="35" />
-                    <span class="link-text" tabindex="0">Profile</span>
+                    <a class="link-text" href="#profile">Profile</a>
                 </li>
-                <li> <!-- Projects Page -->
+                <li>
                     <img src="./IMG/coding-icon.png" alt="Computer icon" class="icon" height="35" width="35"/>
-                    <span class="link-text" tabindex="0">Projects</span>
+                    <a class="link-text" href="#projects">Projects</a>
                 </li>
-                <li> <!-- Experience Page -->
+                <li>
                     <img src="./IMG/experience.jpg" alt="Experience icon" class="icon" height="35" width="35" />
-                    <span class="link-text" tabindex="0">Experience</span>
+                    <a class="link-text" href="#expPage">Experience</a>
                 </li>
                 <li>
                     <img src="./IMG/skills.png" alt="Skills icon" class="icon" height="35" width="35" />
-                    <span class="link-text" tabindex="0">Skills</span>
+                    <a class="link-text" href="#skillPage">Skills</a>
                 </li>
             </ul>
 
         </nav>
 
-        <!-- Welcome Page
-        <div class="container-fluid fullscreen" id="warning">
-            <div>
-                <h1 id="impact">!WARNING!</h1>
-                <p class="mt-5">
-                    <b> THIS IS <em>NOT</em> ANOTHER BORING ONLINE RESUME. THIS IS AN INTRODUCTION TO ME AND MY WORK.
-                        <br><br>
-                        IF YOU WOULD PREFER A DRY CHRONICLING OF MY SKILLS AND ACHIEVEMENTS OR REPOSITORIES OF MY CODE,
-                        PROCEED TO MY LINKEDIN OR GITHUB USING THE BUTTONS PROVIDED BELOW.
-                        <br><br>
-                        ON THIS SITE YOU WILL FIND DETAILS ABOUT MY STORY, MY SKILLS, AND MY PROJECTS SHARED WITH YOU
-                        IN MY OWN PERSONAL STYLE. BUCKLE UP AND ENJOY THE RIDE OR TURN BACK NOW...
-                    </b>
-                </p>
-            </div>
-            <div class="row mt-2  d-flex justify-content-center">
-                <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" class="btn w-30" target="_blank" rel="noopener noreferrer">
-                    <span>Exit to LinkedIn</span>
-                    <img src="./IMG/linkedin.png" alt="LinkedIn icon" height="30" class="icon"/>
-                </a>
-                <a href="https://github.com/freethinkingzen/" class="btn w-30" target="_blank" rel="noopener noreferrer">
-                    <span>Exit to GitHub</span>
-                    <img src="./IMG/GitHub-Mark-64px.png" alt="GitHub icon" height="30" class="icon" />
-                </a>
-            </div>
-            <div class="row d-flex justify-content-center">
-                <button type="button" class="py-3 btn btn-success" id="proceedBtn">
-                    Proceed
-                </button>
-            </div>
-        </div>
-        -->
-        
+        <main>
+
         <!-- Profile Page -->
         <div class="container-fluid fullscreen" id="profile">
-            <h1 class="pageHeading">JOHN LEWIS<hr></h1>
+            <h1 class="pageHeading">JOHN LEWIS</h1><hr>
 
             <!-- Profile Picture and Short Bio-->
             <div class="row justify-content-around">
@@ -157,7 +121,7 @@
                         <a href="https://www.linkedin.com/in/john-lewis-b85a93202/" target="_blank" rel="noopener noreferrer">
                             <img src="./IMG/linkedin.png" alt="LinkedIn icon" height="45" class="icon" loading="lazy" />
                         </a>
-                        <a href="mailto: johnlewis208503@gmail.com">
+                        <a href="mailto:johnlewis208503@gmail.com">
                             <img src="./IMG/mail-142.svg" alt="Email icon" height="60" class="icon" loading="lazy"/>
                         </a>
                     </div>
@@ -167,34 +131,9 @@
                 <div class="col-xl-8 col-12">
                     <!-- About Me -->
                     <h2>Let Me Introduce Myself</h2>
-                    <p id="bio">
-                        I'm a <i>cum laude</i> graduate of Portland State University with a B.S. in
-                        Computer Science. As a recovering philosophy major, I took a very
-                        non-traditional route to a degree with stops at two different colleges
-                        and three different majors over the course of 15 years. I have 10 years
-                        of large scale retail management and operations experience that have honed
-                        my communication, mediation, and conflict resolution skills. My current focus
-                        is finding a path into software development by blending my CS skills
-                        with my work experience to improve any team or company that I join.
-                        <br><br>
-                        Professionally, my interests are AI, Machine Learning, Web Development,
-                        and the ethics surrounding barriers to technology accessibility, especially
-                        those of race, income, and disability. I am proficient in
-                        low-level and high-level languages, allowing me to code efficient solutions
-                        to bottlenecks and utilize object-oriented programming to organize large projects.
-                        I like puzzles and the power of statistics to simplify large problems, so
-                        I enjoy the elegance of good datascience and AI algorithms.
-                        <br><br>
-                        When I'm not coding, I love to lift weights and follow strength sports. I can
-                        tell you more than you would ever want or need to know about World's Strongest Man,
-                        powerlifting, and bodybuilding. There is a lot of carryover from the skills that make
-                            a good lifter to the skills that make a good programmer.
-                        <br><br>
-                        My other interests include reading dusty old books by dead philosophers,
-                        spending time with my wife and twin girls, everything involving bicycles, eating great food,
-                        and catching any sleep I can from the sleep deprivation of having twins.
-                        
-                    </p>
+                    <div id="bio" class="prose">
+                        {{ siteContent.profileIntro | markdown | raw }}
+                    </div>
                 </div>
             </div>    
 
@@ -226,6 +165,11 @@
 
                     <!-- Education Panel -->
                     <div class="tab-pane fade" id="edPanel" role="tabpanel" aria-labelledby="edTab">
+                        <q class="tabQuote">With almost four years' worth of credits already, I assumed I'd be out with a degree in no time. I WAS <em>VERY WRONG</em>.</q>
+                        <div class="prose">
+                            {{ siteContent.education | markdown | raw }}
+                        </div>
+                        {% comment %} Legacy inline copy retained during migration.
                         <q> With almost four years' worth of credits already, I assumed I'd be out with a degree in no 
                             time. I WAS <em>VERY WRONG</em>.
                         </q>
@@ -307,17 +251,23 @@
                             </span>
 
                             <!-- "Read More" button -->
-                            <button class="moreBtn" type="button" tabindex="0">Continue Reading</button>
+                            <button class="moreBtn" type="button" aria-expanded="false">Continue Reading</button>
 
                         </p>
+                        {% endcomment %}
                     </div>
 
                     <!-- Lifting Panel -->
                     <div class="tab-pane fade" id="liftPanel" role="tabpanel" aria-labelledby="liftTab">
+                        <q class="tabQuote">Maybe, with work, I could be one strong-ass string bean.</q>
+                        <div class="prose">
+                            {{ siteContent.lifting | markdown | raw }}
+                        </div>
+                        {% comment %} Legacy inline copy retained during migration.
                         <q>Maybe, with work, I could be one strong-ass string bean.</q>
                         <p>
                             I was always an active kid. Growing up in Boise, Idaho, (<em>ACTUAL</em> Boise) we
-                            rode bikes everywhere, hiked the foothills when we were bored, and skiied in the
+                            rode bikes everywhere, hiked the foothills when we were bored, and skied in the
                             winter. Home video game consoles were gaining popularity, but those were for rainy
                             weekends and required renting the games and console. I worked on
                             my grandmother's ranch over many weekends and summers and learned the true meaning
@@ -364,23 +314,29 @@
                             never guess I have any kind of disability thanks to the mindset developed lifting weights.
                             <br><br>
                             Just as they helped me through hardship, the principles for improving in the gym are
-                            helpful in coding. What is practicing algroithms but learning the correct form so you 
+                            helpful in coding. What is practicing algorithms but learning the correct form so you
                             don't waste energy or break your shit? Are reps and sets not an iterative approach? 
                             Isn't there a waterfall model inherent in deciding a fitness goal, designing a routine,
-                            going to the gym, hitting your goals, then maintining your new fitness level? The
+                            going to the gym, hitting your goals, then maintaining your new fitness level? The
                             carryover has helped me practice every day, put in my reps, and improve my coding and knowledge to be
                             the best developer/engineer I can be.
                             </span>
 
                             <!-- "Read More" button -->
-                            <button class="moreBtn" type="button" tabindex="0">Continue Reading</button>
+                            <button class="moreBtn" type="button" aria-expanded="false">Continue Reading</button>
 
                         </p>
+                        {% endcomment %}
                     
                     </div>
 
                     <!-- Philosophy Panel -->
-                    <div class="tab-pane fade" id="philPanel" role="tabpanel" arialabelledby="philTab">
+                    <div class="tab-pane fade" id="philPanel" role="tabpanel" aria-labelledby="philTab">
+                        <q class="tabQuote">We are better off when we know that we don't know than when we are ignorant to our ignorance.</q>
+                        <div class="prose">
+                            {{ siteContent.philosophy | markdown | raw }}
+                        </div>
+                        {% comment %} Legacy inline copy retained during migration.
                         <q>We are better off when we know that we don't know than when we are ignorant to our ignorance.</q>
                         <p>
                             I can't begin to describe how thankful I am for my dead-end road to being a philosopher.
@@ -431,137 +387,35 @@
                             </span>
 
                             <!-- "Read More" button -->
-                            <button class="moreBtn" type="button" tabindex="0">Continue Reading</button>
+                            <button class="moreBtn" type="button" aria-expanded="false">Continue Reading</button>
                         </p>
+                        {% endcomment %}
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Projects Page -->
-        <div class="container-fluid fullscreen" id="projPage">
-            <h1 class="pageHeading">PROJECTS<hr></h1>
+        <div class="container-fluid fullscreen" id="projects">
+            <h1 class="pageHeading">PROJECTS</h1><hr>
             <div class="row justify-content-around">
 
-                <!-- Chatbot Project -->
-                <div class="col-lg-5 my-3 text-center">
-                    <h2>ServiceNow Chatbot</h2>
-                    <div class="py-3 mx-3">
-                        <img src="./IMG/chatbot.png" alt="Multnomah County Logo" width="100%" class="image-fluid rounded" loading="lazy" />
-                    </div>
-                    <span class="ellipses"></span>
-                    
-                    <!-- "Read More" button -->
-                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
-                    
-                    <div class="more">
-                        <p>
-                        This was a chatbot prototype built for Multnomah County in Portland, Oregon. They were experiencing
-                        frustrations with the interface provided by ServiceNow and wanted a simple way for employees to 
-                        submit and check on work orders without becoming experts in the ServiceNow dashboard. The chatbot
-                        allowed users to interact with natural language to request services or report outages. Since chatbots
-                        can be frustrating, conversation details for current and previous conversations were saved in a user profile
-                        to remember common fields for forms and the problem the user is experiencing. This was also 
-                        intended to reduce the work done by the departments addressing the work orders by checking current tickets
-                        before submitting and allowing comments to be added as others exerience similar issues rather than creating
-                        duplicate requests.
-                        </p>
-                        <div class="row mt-5">
-                            <div class="col-12">
-                                <h3><u>Requirements:</u></h3>
-                                <ul>
-                                    <li>Open ServiceNow tickets, incidents, or work requests</li>
-                                    <ol>
-                                        <li>Through chat dialogue</li>
-                                        <li>Through forms</li>
-                                        <li>Using information from previous conversations (never re-ask a question)</li>
-                                    </ol>
-                                    <li>Check open tickets to prevent duplicates</li>
-                                    <li>Query/Search previous tickets</li>
-                                    <ol>
-                                        <li>By service reported/requested</li>
-                                        <li>By who created the ticket</li>
-                                        <li>By date and time</li>
-                                    </ol>
-                                    <li>Allow comments or new reports</li>
-                                    <ol>
-                                        <li>Additional reports of outages</li>
-                                        <li>Feedback from department assigned to the ticket</li>
-                                        <li>Additional information from reporters</li>
-                                    </ol>
-                                    <li>Integrate LUIS (Language Understanding Intelligent Service) for natural language interactions</li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <h3><u>The Stack:</u></h3>
-                                <ul>
-                                    <li>Azure Web Apps</li>
-                                    <li>Azure Bot Framework</li>
-                                    <li>Azure Language Understanding Intelligent Service (LUIS)</li>
-                                    <li>Azure Key Vault</li>
-                                    <li>Bot Framework Composer</li>
-                                    <li>C#, .NET, JSON</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
                 <!-- Seismic Dashboard Project -->
                 <div class="col-lg-5 my-3 text-center">
                     <h2>Seismic Dashboard</h2>
-                    <a href="https://www.seismic-dashboard.com" target="_blank" rel="noopener noreferrer">
-                        <img src="./IMG/SeismicDashboard.webp" alt="Snapshot of Seismic Dashboard Website" width="100%" class="image-fluid rounded py-3" loading="lazy" />
+                    <a href="{{ siteContent.projects.seismic.liveUrl }}" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ siteContent.projects.seismic.image }}" alt="{{ siteContent.projects.seismic.imageAlt }}" width="100%" class="image-fluid rounded py-3" loading="lazy" />
                     </a>
                     <br>
-                    <a href="https://github.com/freethinkingzen/Seismic-Dashboard" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ siteContent.projects.seismic.sourceUrl }}" target="_blank" rel="noopener noreferrer">
                         <span>--> <u>See Source Code</u> <--</span>
                     </a>
                     <br><br>
                     <span class="ellipses"></span>
-                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+                    <button class="moreBtn" type="button" aria-expanded="false">Learn More</button>
                     <div class="more">
-                        <p>
-                        This project accesses the USGS Earthquake Catalog to get real-time seismic activity around the world. The central goal
-                        for this project was to create a user-friendly and attractive dashboard to analyze and display information from a large
-                        and dynamic dataset. The USGS API is queried every second for alerts and every minute for new seismic activity. Using 
-                        Leaflet.js and Chart.js, the location, time, depth, magnitude, and alert information related to each earthquake are displayed
-                        for the user. Any alerts or hazards trigger a notification at the top of the screen as well as a color code in the live earthquake feed.
-                        Mapped earthquakes are given both a color code, a relative marker size, and a ARIA enabled callout so that any visual
-                        disabilities or impairment should not interfere with accessibilty. Activity can be filtered by set timeframes and the user's
-                        location if they allow it to offer options to filter the data that is relevant to the user without filling our form fields.
-                        This project should offer a one-stop-shop for users looking for quick insights, but also offers more in-depth information if 
-                        the user needs more details or chooses to explore more.
-                        <br><br>
-                        This was my first foray into front-end design and still bears some of the scars of being hacked at
-                        by a beginner. Fortunately, my skills have developed and this site is being redeployed using React in 2021 so it can get
-                        a full overhaul and remain available to the people who have enjoyed it as a web app while offering a mobile app for a 
-                        fully native mobile experience.
-                        </p>
-                        <div class="row mt-5">
-                            <div class="col">
-                                <h3><u>Goals:</u></h3>
-                                <ul>
-                                    <li>Single-page dashboard</li>
-                                    <li>Access and process large dataset available through APIs</li>
-                                    <li>Explore interactive map functionality</li>
-                                    <li>Include interactive charts/graphs</li>
-                                    <li>Accessible for limb-different and visually impaired users</li>
-                                    <li>Responsive - Any screen size should feel native</li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <h3><u>The Stack:</u></h3>
-                                <ul>
-                                    <li>HTML/CSS</li>
-                                    <li>Bootstrap</li>
-                                    <li>AJAX</li>
-                                    <li>Leaflet.js for maps</li>
-                                    <li>Chart.js for charts</li>
-                                    <li>Moment.js for world time conversions</li>
-                                    <li>USGS API</li>
-                                </ul>
-                            </div>
+                        <div class="prose">
+                            {{ siteContent.projects.seismic.prose | markdown | raw }}
                         </div>
                     </div>
                     
@@ -570,117 +424,50 @@
                 <!-- Personal Website Project -->
                 <div class="col-lg-5 my-3 text-center">
                     <h2>This Site!</h2>
-                    <a href="https://www.johnlewiswebdev.com" target="_blank" rel="noopener noreferrer">
-                    <img src="./IMG/snapshot.webp" alt="Picture of this sites landing page" width="100%" class="image-fluid rounded py-3" loading="lazy" />
+                    <a href="{{ siteContent.projects.personalSite.liveUrl }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ siteContent.projects.personalSite.image }}" alt="{{ siteContent.projects.personalSite.imageAlt }}" width="100%" class="image-fluid rounded py-3" loading="lazy" />
                     </a>
                     <br>
-                    <a href="https://github.com/freethinkingzen/PersonalSite" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ siteContent.projects.personalSite.sourceUrl }}" target="_blank" rel="noopener noreferrer">
                         <span>--> <u>See Source Code</u> <--</span>
                     </a>
                     <br><br>
                     <span class="ellipses"></span>
-                    <button class="moreBtn" type="button" tabindex="0">Learn More</button>
+                    <button class="moreBtn" type="button" aria-expanded="false">Learn More</button>
                     <div class="more">
-                        <p>This is my fixed-gear bike:</p>
-                        <b> 
-                        <ul>
-                            <li>It's stylish and fast.</li>
-                            <li>It tells you about the builder and stands out from all the others.</li>
-                            <li>It's not overly practical, but it has a singular purpose that it should fulfill.</li>
-                            <li>I've removed the parts I don't want, don't like, or don't care to maintain.</li>
-                        </ul>
-                        </b>
-                        <p>
-                        This project is a platform for sharing what I do with everyone without being
-                        constrained by the format of LinkedIn.
-                        The goal was something like a marketing splash page that would give people a feel for who I am and
-                        what my work looks like. It should immerse the visitor while remaining as simple as possible.
-                        Anyone should be able to visit this site, not just engineers, developers, and recruiters.
-                        <br><br>
-                        A large part of this was exercising HTML/CSS and limiting the JavaScript needed. It should
-                        be easy to use, easy to understand, fully accessible to everyone, and impactful in its design.
-                        </p>
+                        <div class="prose">
+                            {{ siteContent.projects.personalSite.prose | markdown | raw }}
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="project-cta">
+                <a href="https://github.com/freethinkingzen?tab=repositories" target="_blank" rel="noopener noreferrer">
+                    <img src="./IMG/GitHub-Mark-64px.png" alt="" class="icon" height="32" width="32" loading="lazy" />
+                    <span>See More Projects on GitHub</span>
+                </a>
             </div>
         </div>
 
         <!-- Experience Page -->
         <div class="container-fluid fullscreen" id="expPage">
-            <h1 class="pageHeading">EXPERIENCE<hr></h1>
-            
-            <div class="row justify-content-around">
-                <div class="col-xl-5 col-lg-6 col-12">
-                    <h2>Another Life</h2>
-                    <p>
-                    Before pursuing computer science, I spent 10 years in retail management. I ran large scale retail stores making upwards
-                    of $7M annually, managing up to 100 employees, with duties including operations, logistics, people management, and customer service.
-                    <br><br>
-                    On the other
-                    end of the spectrum, I've run small businesses such as gyms, franchises locations, and mall stores. Between the two I 
-                    have learned how to crank up productivity and roll out new projects while maintaining the personal connection that inspires
-                    a team to work for you and clients to trust you. I take pride in seeing my name on Google and Yelp reviews everywhere I've
-                    worked knowing that I was able to protect businesses from operational loss while growing 
-                    the customer base through genuine customer focused service.
-                    <br><br>
-                    This experience has given me the communication, mediation, and conflict resolution skills that can benefit any
-                    team or company that I work with. Even when I don't find myself in a leadership position, I am an advocate for 
-                    hearing every voice in the room, making sure everyones true position is understood, and no miscommunication can 
-                    exist to hurt the team or the project. 
-                    </p>
-                </div>
-                <div class="col-xl-5 col-lg-6 col-12">
-                    <h2>A Realization</h2>
-                    <p>
-                    As I started to learn front-end, I also learned that most developers do it begrudgingly and it shows.
-                    I mentioned in the previous section that I found this not only unfortunate for the "typical user" in a
-                    user story, but especially unfortunate for those who fall outside the scope of the typical user.
-                     I became obsessed with how design and accessibility make a project usable.
-                    The coolest software on the planet won't gain any traction if it's painful to operate and users shudder at the mention of it.
-                    <br><br>
-                    My interest naturally expanded to accessibility for those with differences and disabilities. A passion for good design turned into a mission for equal access.
-                    Many of us take for granted how UI/UX favors those of us who don't have to use screen readers, operate our mouses or keyboards
-                    differently due to limb differences, or follow complex user experiences with developmental or induced neurodivergence. 
-                    Having experienced how civil engineering can make small things more difficult with a physical disability, I would love to offer
-                    design solutions that fit everyone by really considering how others will interact with it so that technology is useable and
-                    available to everyone. 
-                    <br><br>
-                    As I become a better full-stack developer, I hope to carry this goal with me to any frameworks or tools 
-                    so that the back-end is built to facilitate an accessible front-end, and those tools themselves are accessible to the people using 
-                    them. This can clear the barriers to more diverse builders and designers of technology that will in turn lead to an expanded circle 
-                    of people considered in their designs. I'm still learning, but I'm on a mission to 
-                    improve because more accessible technology benefits everyone.
-                    
-                    </p>
-                </div>
-                <div class="col-xl-10 col-12">
-                    <h2>A New Career</h2>
-                    <p>
-                    During my university studies pursuing a degree in computer science, I was heavily focused on machine learning, artificial intelligence,
-                    and front-end development. I've become familiar with data analysis and data processing techniques using Pandas, NumPy, seaborn, Matplotlib, Excel, etc.
-                    in order to prepare data and using Scikit, PyTorch, and TesorFlow to build and train models on that data.
-                    <br><br>
-                    I have focused most of my effort after graduation on front-end accessibility and working down the stack from
-                    the user experience to the back-end in order to become a full-stack developer without losing sight of the people who will 
-                    use the applications and software that is being built. It will always be my goal to make the technology that I build 
-                    work for everyone and to never consider user differences as minorities or outliers. Design for the "average user" is 
-                    useful to "average users", accessible technology is accessible to everyone.
-                    <br><br>
-                    I currently work as a Software Engineer for ClickBank building full-stack solutions for their e-commerce and affiliate marketing
-                    platform. My daily responsibilities range from managing cloud infrastructure resources to designing and implementing front-end
-                    solutions in JSP, React, Angular, and JS/HTML/CSS.
-                    </p>
-                </div>
+            <h1 class="pageHeading">EXPERIENCE</h1><hr>
+            <div class="prose experience-content">
+                {{ siteContent.experience | markdown | raw }}
             </div>
         </div>
         
         <!-- Skills Page -->
         <div class="container-fluid fullscreen" id="skillPage">
-            <h1 class="pageHeading">SKILLS<hr></h1>
+            <h1 class="pageHeading">SKILLS</h1><hr>
+            <div class="prose skills-content">
+                {{ siteContent.skills | markdown | raw }}
+            </div>
+            {% comment %}
             <div class="row">
                 <div class="col">
                     
-                    <h2>Genereal Skills</h2>
+                    <h2>General Skills</h2>
                     <ul>
                         <li>Just-in-time Learning</li>
                         <li>Communication, mediation, conflict resolution</li>
@@ -699,7 +486,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <h3>Currently Working In</h2>
+                    <h3>Currently Working In</h3>
                     <ul>
                         <li>Java</li>
                         <li>JavaScript</li>
@@ -710,7 +497,7 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <h3>Familiar or Experienced In</h2>
+                    <h3>Familiar or Experienced In</h3>
                     <ul>
                         <li>C</li>
                         <li>C++</li>
@@ -723,7 +510,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <h3>Currently Working With</h2>
+                    <h3>Currently Working With</h3>
                     <ul>
                         <li>React</li>
                         <li>Node.js</li>
@@ -738,7 +525,7 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <h3>Familiar or Experienced With</h2>
+                    <h3>Familiar or Experienced With</h3>
                     <ul>
                         <li>Pandas</li>
                         <li>PyTorch</li>
@@ -748,11 +535,12 @@
                     </ul>
                 </div>
             </div>
+            {% endcomment %}
         </div>
 
         <!-- Quote Page -->
         <div class="container-fluid fullscreen">
-            <h1 class="pageHeading">ONE FINAL WORD<hr></h1>
+            <h1 class="pageHeading">ONE FINAL WORD</h1><hr>
             <br><br>
             <h2>Even stumbling forward is progress.
                 <br><br>
@@ -772,13 +560,14 @@
                         <br>
                         What is great in [humanity] is that it is a bridge and not a goal...
                         <br>
-                        I love [those] who liveth in order to know, and seeketh to know in order that the Ubermench may hereafter live."
-                        <br><br>
-                        <figcaption>- Friedrich Nietzsche, <i>Thus Spoke Zarathustra</i></figcaption>
+                        I love [those] who liveth in order to know, and seeketh to know in order that the Ubermensch may hereafter live."
                     </p>
+                    <figcaption>- Friedrich Nietzsche, <i>Thus Spoke Zarathustra</i></figcaption>
                 </figure>
             </div>
         </div>
+
+        </main>
 
         <footer class="container-fluid text-center">
             <a href="#landing"><h2 class="border-primary rounded mt-5">^ Back to Top ^</h2></a>
@@ -799,7 +588,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="col px-0" href="mailto: johnlewis208503@gmail.com">
+                    <a class="col px-0" href="mailto:johnlewis208503@gmail.com">
                         <img src="./IMG/mail-142.svg" alt="Email icon" height="50" class="icon" loading="lazy" />
                         <p>Contact Me By Email</p>
                     </a>
@@ -808,7 +597,7 @@
             <hr>
             <span>John Lewis</span>
             <br>
-            <small> Copyright &copy; 2021</small>
+            <small> Copyright &copy; 2026</small>
             <hr>
         </footer>
 

@@ -12,9 +12,6 @@
     --neon-border-color: #08f;
     --neon-shadow: #ffffff;
     --link: #007bff;
-    --codingIMG: url(./IMG/coding.jpg);
-    --liftingIMG: url(./IMG/coding.jpg);
-    /*--philIMG: url()*/
 }
 
 /* Light mode theme */
@@ -30,8 +27,6 @@
     --neon-border-color: #dcdcdc;
     --neon-shadow: #ffffff;
     --link: #1100ad;
-    --codingIMG: url(./IMG/coding.jpg);
-    --liftingIMG: url(./IMG/coding.jpg);
 }
 
 * {
@@ -62,6 +57,10 @@ h1{
     letter-spacing: 0.5ch;
 }
 
+.landing-title {
+    visibility: hidden;
+}
+
 h2 {
     font-family: Courier, monospace;
     color: var(--element1);
@@ -87,6 +86,11 @@ q {
     font-weight: bold;
 }
 
+.tabQuote {
+    display: block;
+    margin-bottom: 1em;
+}
+
 p{
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
@@ -99,6 +103,27 @@ p{
     padding: 0em;
     margin-bottom: 0;
     margin-top: 1em;
+}
+
+.prose p,
+.more .prose p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.skills-content h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    font-size: 1.5em;
+    letter-spacing: 0.15ch;
+    text-shadow: none;
+}
+
+.skills-content h3 {
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    letter-spacing: 0.1ch;
+    text-decoration: none;
 }
 
 hr {
@@ -141,7 +166,8 @@ a {
 .theme-switch input {
     display: none;
 }
-.theme-switch p {
+.theme-label {
+    display: block;
     text-align: center;
     margin-top: 1.75em;
 }
@@ -168,8 +194,9 @@ a {
     transition: .4s;
     
 }
-input:focus + .slider{
-    outline: var(--primary);
+input:focus-visible + .slider{
+    outline: 2px solid var(--neon-border-color);
+    outline-offset: 3px;
 }
 input:checked + .slider:before {
     transform: translateX(20px);
@@ -243,8 +270,8 @@ input:checked + .slider:before {
 
 /* Div will "bounce" over and over */
 .bounce {
-    --webkit-animation: bounce 2s;
-    --webkit-iteration-count: infinite;
+    -webkit-animation: bounce 2s;
+    -webkit-animation-iteration-count: infinite;
     animation: bounce 2s;
     animation-iteration-count: infinite;
 }
@@ -294,6 +321,10 @@ input:checked + .slider:before {
     text-shadow: 0px 3px 10px var(--element3);
     font-weight: bolder;
     transition-duration: 0.2s;
+}
+.nav .link-text:focus-visible {
+    outline: 2px solid var(--neon-border-color);
+    outline-offset: 4px;
 }
 .nav .link-text:hover,
 .nav .link-text:focus {
@@ -394,6 +425,28 @@ input:checked + .slider:before {
     text-align: left;
     margin-top: 3em;
 }
+.more,
+.more p,
+.more ul,
+.more ol,
+.more li,
+.more h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.more {
+    color: var(--text);
+    text-shadow: 2px 2px 10px var(--surface2),
+                -2px -2px 10px var(--surface2),
+                1px 1px var(--surface1),
+                -1px -1px var(--surface1);
+}
+.more .prose h3 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    letter-spacing: 0.1ch;
+}
 .moreBtn {
     color: var(--element1);
     font-size: 1.2em;
@@ -401,6 +454,21 @@ input:checked + .slider:before {
     background-color: var(--surface3);
     border: 2px solid var(--element2);
     border-radius: 10px;
+}
+.project-cta {
+    margin-top: 2em;
+    text-align: center;
+}
+.project-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    color: var(--element1);
+    text-shadow: 0 0 0.5em var(--element3);
+}
+.project-cta .icon {
+    height: 32px;
+    width: 32px;
 }
 #intro {
     text-align: center;
@@ -411,46 +479,6 @@ input:checked + .slider:before {
     font-weight: bolder;
     letter-spacing: 0.8ch;
     animation: fade ease 4s;
-}
-
-#warning {
-    text-align: center;
-    transition-duration: 1s;
-}
-
-#warning p {
-    color: white;
-    text-shadow: none;
-    background-color: black;
-    padding: 1em;
-    border: 3px solid white;
-}
-#impact {
-    background-color: black;
-    border: 3px solid white;
-    border-radius: 1em;
-    color:white;
-    text-shadow:
-        -0.1rem -0.1rem 0.5rem #000000,
-        0.1rem 0.1rem 0.5rem #000000,
-        0 0 0.25rem #ff0000,
-        0 0 0.5rem #ff0000,
-        0 0 0.75rem #ff0000,
-        0 0 1rem #ff0000,
-        0 0 1.25rem #ff0000;
-    transition-duration: 0.1s;
-}
-
- #proceedBtn {
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: bolder;
-    width: 18em;
-    height: 3em;
-    margin-top: 2em;
-    background-color: #04a504;
-    border: 2px solid var(--element1);
-    border-radius: 1em;
 }
 
 #landing h1:hover {
@@ -503,28 +531,6 @@ input:checked + .slider:before {
     }    
 }
 
-@keyframes flickerNav {
-    
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        font-weight: bolder;
-
-        text-shadow:
-            -0.1rem -0.1rem 0.5rem var(--neon-shadow),
-            0.1rem 0.1rem 0.5rem var(--neon-shadow),
-            0 0 1rem var(--neon-border-color),
-            0 0 2rem var(--neon-border-color),
-            0 0 3rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            0 0 5rem var(--neon-border-color);
-        
-        
-    }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-    }    
-}
-
 @keyframes flickerBorder {
     
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
@@ -554,6 +560,20 @@ input:checked + .slider:before {
     10%, 20%, 24%, 55% {
         opacity: 0%;
         /*background: #000000;*/
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
 

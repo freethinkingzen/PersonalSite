@@ -4,19 +4,20 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 const downGlyph = document.getElementById("downGlyph");
-const codingPage = document.getElementById("codingPage");
+const profileSection = document.getElementById("profile");
 const icons = document.querySelectorAll(".icon");
-const navlinks = document.querySelectorAll("nav li");
 const moreBtns = document.querySelectorAll(".moreBtn");
 const ellipses = document.querySelectorAll(".ellipses");
 const moreText = document.querySelectorAll(".more");
-const proceed = document.getElementById("proceedBtn");
+const infoTabs = document.querySelectorAll('.nav-tabs [data-toggle="tab"]');
 
 
 /* Controls the text-expanding "Read More" buttons */
 function more(elem, index) {
     elem.addEventListener("click", function() {
-        if (ellipses[index].style.display === "none") {
+        const isExpanded = ellipses[index].style.display === "none";
+
+        if (isExpanded) {
             ellipses[index].style.display = "inline";
             elem.innerHTML = "Learn More"; 
             moreText[index].style.display = "none";
@@ -25,9 +26,28 @@ function more(elem, index) {
             elem.innerHTML = "Read less"; 
             moreText[index].style.display = "inline";
         }
+
+        elem.setAttribute("aria-expanded", String(!isExpanded));
     });
 }
 moreBtns.forEach(more);
+
+// Allows the active About tab to be closed by clicking it again.
+infoTabs.forEach(tab => {
+    tab.addEventListener("click", function(event) {
+        if (!tab.classList.contains("active")) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const panel = document.querySelector(tab.getAttribute("href"));
+        tab.classList.remove("active");
+        tab.setAttribute("aria-selected", "false");
+        panel.classList.remove("active", "show");
+    });
+});
 
 icons.forEach(icon => {
     icon.classList.add("invert");
@@ -65,19 +85,5 @@ toggleSwitch.addEventListener('change', function(e) {
 
 // Scroll down to profile when down arrow on landing is clicked
 downGlyph.addEventListener("click", function() {
-    profile.scrollIntoView({behavior: 'smooth'});
-});
-
-// Scroll based on navigation selection
-navlinks[0].addEventListener("click", function() {
-    profile.scrollIntoView({behavior: 'smooth'});
-});
-navlinks[1].addEventListener("click", function() {
-    projPage.scrollIntoView({behavior: 'smooth'});
-});
-navlinks[2].addEventListener("click", function() {
-    expPage.scrollIntoView({behavior: 'smooth'});
-});
-navlinks[3].addEventListener("click", function() {
-    skillPage.scrollIntoView({behavior: 'smooth'});
+    profileSection.scrollIntoView({behavior: 'smooth'});
 });

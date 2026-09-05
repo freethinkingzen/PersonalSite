@@ -8,10 +8,23 @@ me a great investment for employers or collaborators and make me an excellent de
 and develop my skills.
 
 ## The Stack ##
-- HTML
-- CSS
+- Eleventy
+- Markdown
+- HTML/CSS
 - JavaScript/ECMAScript
 - Bootstrap
+
+## Local Development ##
+Install Node.js, then run:
+
+```sh
+npm install
+npm run build
+npm run start
+```
+
+Editable prose lives in `content/`. Eleventy renders it into `_site/`, which is
+the directory deployed to GitHub Pages by `.github/workflows/deploy.yml`.
 
 ## Goals ##
 - Introduce myself
