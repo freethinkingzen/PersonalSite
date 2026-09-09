@@ -27,5 +27,3 @@ I contribute through design conversations, code review, mentoring, cross-functio
 ## Next Chapter
 
 I am looking for a role where I can take meaningful ownership of systems and help shape the way a team builds and operates software. I am drawn to technically serious environments that value clear thinking, pragmatic architecture, useful communication, and continuous improvement over complexity for its own sake.
-
-The details are yours to refine: add the domains you want to pursue, the types of systems you want to own, the team environments where you do your best work, and the level of influence you want your next role to provide.
