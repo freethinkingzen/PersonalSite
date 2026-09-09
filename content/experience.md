@@ -1,23 +1,31 @@
-## Another Life
+## Current Scope
 
-Before pursuing computer science, I spent 10 years in retail management. I ran large-scale retail stores making upwards of $7M annually, managing up to 100 employees, with duties including operations, logistics, people management, and customer service.
+I work on greenfield platform development and the systems that support scheduled financial workflows, movement of money, and dispute handling. The work sits at the intersection of product requirements, application behavior, integrations, infrastructure, and operational reliability.
 
-At the other end of the spectrum, I ran small businesses such as gyms, franchise locations, and mall stores. Between the two, I learned how to increase productivity and roll out new projects while maintaining the personal connection that inspires a team to work for you and clients to trust you. I take pride in seeing my name on Google and Yelp reviews everywhere I've worked, knowing that I protected businesses from operational loss while growing the customer base through genuine customer-focused service.
+My scope includes turning broad product needs into technical direction, helping define system boundaries, building and evolving full-stack capabilities, and keeping the surrounding delivery and operational concerns in view. The specific products and implementation details are company confidential; the engineering problems are familiar ones: correctness, reliability, maintainability, clear ownership, and steady delivery under real constraints.
 
-This experience gave me communication, mediation, and conflict-resolution skills that benefit any team or company I work with. Even when I am not in a leadership position, I advocate for hearing every voice in the room, making sure everyone's position is understood and preventing miscommunication from hurting the team or project.
+I work best at the boundaries between teams and layers of a system. I can move from a user-facing requirement to an API or service design, from application behavior to cloud infrastructure, and from an immediate delivery decision to the maintenance burden it may create later.
 
-## A Realization
+## Technical Range
 
-As I started learning front-end development, I also learned that many developers approach it begrudgingly, and it shows. I became fascinated by how design and accessibility make a project usable. The coolest software on the planet will not gain traction if it is painful to operate.
+My work spans full-stack product development, cloud infrastructure, APIs, integrations, and the operational concerns that keep software dependable after it ships. I have worked across systems that support financial workflows, scheduled processing, movement of money, and dispute handling without exposing internal product details or implementation specifics.
 
-My interest expanded to accessibility for people with differences and disabilities. A passion for good design became a mission for equal access. Many of us take for granted how UI/UX favors people who do not use screen readers, operate a mouse or keyboard differently, or navigate complex experiences with developmental or induced neurodivergence.
+That range lets me move between customer-facing behavior, application code, service boundaries, infrastructure, and delivery practices. I am most useful when a problem crosses those boundaries and someone needs to understand the whole system rather than optimize one layer in isolation.
 
-Having experienced how civil engineering can make small things more difficult with a physical disability, I want to offer design solutions that fit everyone. As I become a better full-stack developer, I hope to carry this goal into every framework and tool so the back end facilitates an accessible front end. More accessible technology benefits everyone.
+## Technical Responsibilities
 
-## A New Career
+I contribute to architecture and system design, translate ambiguous requirements into workable plans, and make tradeoffs between delivery speed, simplicity, reliability, and long-term maintenance. I work across the stack when needed, from user-facing applications and APIs to cloud resources and deployment concerns.
 
-During my computer science studies, I focused on machine learning, artificial intelligence, and front-end development. I became familiar with data analysis and processing using Pandas, NumPy, seaborn, Matplotlib, and Excel, along with Scikit-learn, PyTorch, and TensorFlow for building and training models.
+I try to leave systems easier to understand and operate than I found them. That means reducing unnecessary complexity, clarifying ownership, documenting decisions, and choosing solutions that a team can support after the original author has moved on.
 
-After graduation, I focused on front-end accessibility and worked down the stack toward full-stack development without losing sight of the people who use the software. I want the technology I build to work for everyone rather than treating user differences as edge cases.
+## Technical Leadership
 
-I currently work as a Software Engineer for ClickBank, building full-stack solutions for its e-commerce and affiliate marketing platform. My responsibilities range from managing cloud infrastructure to designing and implementing front-end solutions in JSP, React, Angular, and JavaScript, HTML, and CSS.
+My leadership is grounded in making technical decisions understandable. I help teams clarify the problem, identify the important constraints, compare options, and commit to a direction without pretending every decision has a perfect answer.
+
+I contribute through design conversations, code review, mentoring, cross-functional communication, and the steady work of resolving ambiguity. I want engineers to have enough context to make good decisions independently, while keeping the team aligned on the outcomes that matter.
+
+## Next Chapter
+
+I am looking for a role where I can take meaningful ownership of systems and help shape the way a team builds and operates software. I am drawn to technically serious environments that value clear thinking, pragmatic architecture, useful communication, and continuous improvement over complexity for its own sake.
+
+The details are yours to refine: add the domains you want to pursue, the types of systems you want to own, the team environments where you do your best work, and the level of influence you want your next role to provide.

@@ -9,7 +9,7 @@ const icons = document.querySelectorAll(".icon");
 const moreBtns = document.querySelectorAll(".moreBtn");
 const ellipses = document.querySelectorAll(".ellipses");
 const moreText = document.querySelectorAll(".more");
-const infoTabs = document.querySelectorAll('.nav-tabs [data-toggle="tab"]');
+const accordionTriggers = document.querySelectorAll(".accordion-trigger");
 
 
 /* Controls the text-expanding "Read More" buttons */
@@ -32,20 +32,24 @@ function more(elem, index) {
 }
 moreBtns.forEach(more);
 
-// Allows the active About tab to be closed by clicking it again.
-infoTabs.forEach(tab => {
-    tab.addEventListener("click", function(event) {
-        if (!tab.classList.contains("active")) {
-            return;
+// Opens one About chapter at a time and allows it to be closed again.
+accordionTriggers.forEach(trigger => {
+    trigger.addEventListener("click", function() {
+        const panel = document.getElementById(trigger.getAttribute("aria-controls"));
+        const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+
+        accordionTriggers.forEach(otherTrigger => {
+            const otherPanel = document.getElementById(otherTrigger.getAttribute("aria-controls"));
+            otherTrigger.setAttribute("aria-expanded", "false");
+            otherTrigger.classList.remove("active");
+            otherPanel.hidden = true;
+        });
+
+        if (!isExpanded) {
+            trigger.setAttribute("aria-expanded", "true");
+            trigger.classList.add("active");
+            panel.hidden = false;
         }
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        const panel = document.querySelector(tab.getAttribute("href"));
-        tab.classList.remove("active");
-        tab.setAttribute("aria-selected", "false");
-        panel.classList.remove("active", "show");
     });
 });
 

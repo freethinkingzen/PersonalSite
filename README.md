@@ -29,7 +29,7 @@ the directory deployed to GitHub Pages by `.github/workflows/deploy.yml`.
 ## Goals ##
 - Introduce myself
 - Promote/display my experience in the website itself and the content
-- Make an accessible and modern design
+- Make a thoughtful and modern design
 - Create a page responsive enough that a desktop user wouldn't think it was mobile first
   and a mobile user wouldn't feel adapted from desktop.
 - Show off some cool CSS tricks

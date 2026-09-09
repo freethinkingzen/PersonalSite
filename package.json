@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "npm run dev",
+    "dev": "eleventy --serve",
+    "watch": "eleventy --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",

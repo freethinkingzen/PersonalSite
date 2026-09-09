@@ -16,17 +16,17 @@
 
 /* Light mode theme */
 [data-theme="light"] {
-    --text: #212121;
-    --surface1: #bdbdbd;
-    --surface2: #cacaca;
-    --surface3: #eeeeee;
-    --element1: #000000;
-    --element2: #525564;
+    --text: #263746;
+    --surface1: #edf2f5;
+    --surface2: #dce6ec;
+    --surface3: #ffffff;
+    --element1: #172530;
+    --element2: #647b89;
     --element3: #ffffff;
-    --neon-text-color: #ffffff;
-    --neon-border-color: #dcdcdc;
+    --neon-text-color: #087f99;
+    --neon-border-color: #087f99;
     --neon-shadow: #ffffff;
-    --link: #1100ad;
+    --link: #075f86;
 }
 
 * {
@@ -86,9 +86,43 @@ q {
     font-weight: bold;
 }
 
+.final-word-content blockquote {
+    margin: 2em auto;
+    padding: 1em 1.5em;
+    border-left: 4px solid var(--neon-border-color);
+    color: var(--element1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.35em;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+    text-shadow: 0 0 0.35em var(--neon-border-color);
+}
+
+.final-word-content blockquote p {
+    margin: 0 0 1em;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-shadow: inherit;
+}
+
 .tabQuote {
     display: block;
-    margin-bottom: 1em;
+    margin: 2em 0 1.25em;
+    padding: 0.75em 1em;
+    border-left: 3px solid var(--neon-border-color);
+    color: var(--element1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.15em;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 0 0 0.35em var(--neon-border-color);
 }
 
 p{
@@ -110,7 +144,7 @@ p{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.skills-content h2 {
+.technical-range-content h2 {
     margin-top: 1.5em;
     margin-bottom: 0.75em;
     font-size: 1.5em;
@@ -118,12 +152,26 @@ p{
     text-shadow: none;
 }
 
-.skills-content h3 {
+.technical-range-content h3 {
     margin-top: 1.25em;
     margin-bottom: 0.5em;
     font-size: 1em;
     letter-spacing: 0.1ch;
     text-decoration: none;
+}
+
+.experience-content h3,
+.profile-content h3 {
+    margin-top: 2.25em;
+    margin-bottom: 0.75em;
+    padding-left: 0.75em;
+    border-left: 3px solid var(--neon-border-color);
+    color: var(--element1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25em;
+    letter-spacing: 0.15ch;
+    text-decoration: none;
+    text-shadow: 0 0 0.35em var(--neon-border-color);
 }
 
 hr {
@@ -403,6 +451,14 @@ input:checked + .slider:before {
     margin-top: 3em;
     max-width: 400px;
 }
+.profile-intro {
+    max-width: 76rem;
+    margin: 0 auto;
+}
+.profile-copy {
+    max-width: 64rem;
+    margin: 3rem auto 0;
+}
 .profileBox .icon:hover,
 .profileBox .icon:active {
     margin-top: -20px;
@@ -454,21 +510,6 @@ input:checked + .slider:before {
     background-color: var(--surface3);
     border: 2px solid var(--element2);
     border-radius: 10px;
-}
-.project-cta {
-    margin-top: 2em;
-    text-align: center;
-}
-.project-cta a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6em;
-    color: var(--element1);
-    text-shadow: 0 0 0.5em var(--element3);
-}
-.project-cta .icon {
-    height: 32px;
-    width: 32px;
 }
 #intro {
     text-align: center;
@@ -561,6 +602,43 @@ input:checked + .slider:before {
         opacity: 0%;
         /*background: #000000;*/
     }
+
+}
+
+@keyframes flickerLight {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            -0.05rem -0.05rem 0.2rem var(--neon-shadow),
+            0.05rem 0.05rem 0.2rem var(--neon-shadow),
+            0 0 0.35rem var(--neon-text-color),
+            0 0 0.7rem var(--neon-text-color),
+            0 0 1.1rem var(--neon-text-color);
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes flickerBorderLight {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow:
+            0 0 0.2rem var(--neon-border-color),
+            0 0 0.6rem var(--neon-border-color),
+            0 0 1.25rem var(--neon-border-color);
+    }
+
+    20%, 24%, 55% {
+        box-shadow: none;
+    }
+}
+
+[data-theme="light"] .neonFlicker {
+    animation-name: flickerLight;
+}
+
+[data-theme="light"] .borderFlicker {
+    animation-name: flickerBorderLight;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -754,4 +832,62 @@ input:checked + .slider:before {
     .nav-link span {
         font-size: 9px;
     }
+}
+
+/* Accordion chapter selector for the Profile stories. */
+.about-accordion {
+    display: flex;
+    flex-direction: column;
+    max-width: 48rem;
+    margin: 2.5rem auto 2rem;
+}
+
+.accordion-trigger {
+    position: relative;
+    padding: 0.8em 2em 0.8em 0;
+    border: 0;
+    border-bottom: 1px solid var(--element2);
+    background: transparent;
+    color: var(--element1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.15ch;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: none;
+    transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.accordion-trigger::after {
+    position: absolute;
+    right: 0.25em;
+    content: "+";
+    font-size: 1.25em;
+}
+
+.accordion-trigger.active {
+    border-color: var(--neon-border-color);
+    color: var(--neon-border-color);
+    text-shadow: 0 0 0.5em var(--neon-border-color);
+}
+
+.accordion-trigger.active::after {
+    content: "-";
+}
+
+.accordion-trigger:hover {
+    color: var(--neon-border-color);
+    text-shadow: 0 0 0.5em var(--neon-border-color);
+}
+
+.accordion-trigger:focus-visible {
+    outline: 2px solid var(--neon-border-color);
+    outline-offset: 5px;
+}
+
+.accordion-panel {
+    max-width: 48rem;
+    margin: 0 auto 1.5em;
+    padding-top: 1em;
 }

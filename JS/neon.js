@@ -6,11 +6,6 @@ const landing = document.getElementById("landing");
 const coding = document.getElementById("coding");
 const lifting = document.getElementById("lifting");
 const phil = document.getElementById("philosophy");
-const profile = document.getElementById("profile");
-const projects = document.getElementById("projects");
-const expPage = document.getElementById("expPage");
-const skillPage = document.getElementById("skillPage");
-//const warning = document.getElementById("warning");
 const pageHeaders = document.getElementsByClassName("pageHeading");
 const landingTitles = {"codingbg": coding,"liftingbg": lifting, "philbg": phil};
 
@@ -104,7 +99,7 @@ function welcomeAnimation() {
     
 }
 window.onload = function(){
-    for(i in landingTitles) {
+    for(const i in landingTitles) {
         bgFlicker(i, landingTitles[i]);
     }
     welcomeAnimation();

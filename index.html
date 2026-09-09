@@ -7,24 +7,42 @@
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
         <!-- Primary Tags -->
-        <title>John Lewis</title>
-        <meta name="title" content="John Lewis" />
-        <meta name="description" content="I'm John Lewis and this is my website. This is a platform to share my story and my work in my own words and personal style. Enjoy!" />
-        <meta name="keywords" content="John Lewis, computer science, web developer" />
+        <title>John Lewis | Senior Software Engineer</title>
+        <meta name="title" content="John Lewis | Senior Software Engineer" />
+        <meta name="description" content="John Lewis is a Senior Software Engineer who moved from intern to senior in five years, combining full-stack engineering, cloud infrastructure, technical leadership, and a nontraditional background in retail management, philosophy, and computer science." />
+        <meta name="keywords" content="John Lewis, Senior Software Engineer, software engineer, full-stack engineer, technical leadership, system architecture, cloud infrastructure, React, Java, Portland software engineer" />
+        <meta name="author" content="John Lewis" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="author" content="John Lewis" />
         <meta charset="UTF-8" />
         
         <!-- OG/Facebook -->
         <meta property="og:image" content="https://www.johnlewiswebdev.com/IMG/snapshot.png" />
         <meta property="og:image:secure_url" content="https://www.johnlewiswebdev.com/IMG/snapshot.png" />
-        <meta name="title" property="og:title" content="John Lewis" />
-        <meta name="description" property="og:description" content="I'm John Lewis and this is my website. This is a platform to share my story and my work in my own words and personal style. Enjoy!" />
+        <meta name="title" property="og:title" content="John Lewis | Senior Software Engineer" />
+        <meta name="description" property="og:description" content="John Lewis is a Senior Software Engineer who moved from intern to senior in five years, combining full-stack engineering, cloud infrastructure, technical leadership, and a nontraditional background in retail management, philosophy, and computer science." />
         <meta name="url" property="og:url" content="https://www.johnlewiswebdev.com" />
         <meta name="author" property="og:author" content="John Lewis" />
         <meta name="type" property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="John Lewis | Senior Software Engineer" />
+        <meta name="twitter:description" content="Senior Software Engineer focused on full-stack systems, technical leadership, cloud infrastructure, and practical engineering judgment." />
+        <meta name="twitter:image" content="https://www.johnlewiswebdev.com/IMG/snapshot.png" />
         <link rel="canonical" href="https://www.johnlewiswebdev.com/" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "John Lewis",
+                "url": "https://www.johnlewiswebdev.com/",
+                "jobTitle": "Senior Software Engineer",
+                "description": "Senior Software Engineer with experience in full-stack development, cloud infrastructure, technical leadership, and system design.",
+                "sameAs": [
+                    "https://github.com/freethinkingzen/",
+                    "https://www.linkedin.com/in/john-lewis-b85a93202/"
+                ]
+            }
+        </script>
         
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -76,24 +94,18 @@
 
         <!-- Sticky Navbar -->
         <nav class="nav" aria-label="Primary navigation">
-
-            <!-- Navbar links -->
             <ul class="nav-links">
                 <li>
                     <img src="./IMG/profile.svg" alt="Profile icon" class="icon" height="35" width="35" />
                     <a class="link-text" href="#profile">Profile</a>
                 </li>
                 <li>
-                    <img src="./IMG/coding-icon.png" alt="Computer icon" class="icon" height="35" width="35"/>
-                    <a class="link-text" href="#projects">Projects</a>
-                </li>
-                <li>
                     <img src="./IMG/experience.jpg" alt="Experience icon" class="icon" height="35" width="35" />
-                    <a class="link-text" href="#expPage">Experience</a>
+                    <a class="link-text" href="#experience">Experience</a>
                 </li>
                 <li>
                     <img src="./IMG/skills.png" alt="Skills icon" class="icon" height="35" width="35" />
-                    <a class="link-text" href="#skillPage">Skills</a>
+                    <a class="link-text" href="#toolkit">Toolkit</a>
                 </li>
             </ul>
 
@@ -106,8 +118,8 @@
             <h1 class="pageHeading">JOHN LEWIS</h1><hr>
 
             <!-- Profile Picture and Short Bio-->
-            <div class="row justify-content-around">
-                <div class="col-xl-4 col-md-5 col-sm-7 col-10 profileBox mx-auto">
+            <div class="profile-intro">
+                <div class="profileBox mx-auto">
                     
                     <!-- Profile Pic -->
                     <img src="./IMG/profilePic.webp" alt="Profile Picture"  width="100%" class="image-fluid" id="profilePic" loading="lazy" />
@@ -128,35 +140,23 @@
 
                 </div>
             
-                <div class="col-xl-8 col-12">
+                <div class="profile-copy">
                     <!-- About Me -->
                     <h2>Let Me Introduce Myself</h2>
-                    <div id="bio" class="prose">
-                        {{ siteContent.profileIntro | markdown | raw }}
+                    <div id="bio" class="prose profile-content">
+                        {{ siteContent.profile | markdown | raw }}
                     </div>
                 </div>
-            </div>    
+            </div>
 
             <h2 class="text-center">Want to Know More?</h2>
-            <p class="text-center">SELECT A TAB BELOW</p>
+            <p class="text-center">CHOOSE A CHAPTER</p>
 
             <!-- Tabs navigation to control info panels-->
-            <div class="nav nav-tabs" role="tablist" aria-label="More About Me Tabs">
-                <!-- Education -->
-                <a class="nav-link test" data-toggle="tab" href="#edPanel" id="edTab" role="tab" aria-controls="edPanel" aria-selected="false">
-                    <img src="./IMG/graduation-cap-64.png" alt="Graduation cap icon" class="icon" height="30" width="30" loading="lazy" />
-                    <span>Education</span>
-                </a>
-                <!-- Lifting -->
-                <a class="nav-link" data-toggle="tab" href="#liftPanel"  id="liftTab" role="tab" aria-controls="liftPanel" aria-selected="false">
-                    <img src="./IMG/dumbbell.png" alt="Dumbbell icon" class="icon" height="30" width="30" loading="lazy"/>
-                    <span>Lifting</span>
-                </a>
-                <!-- Philosophy -->
-                <a class="nav-link" data-toggle="tab" href="#philPanel" id="philTab" role="tab" aria-controls="philPanel" aria-selected="false">
-                    <img src="./IMG/book.svg" alt="Book icon" class="icon" height="30" width="30" loading="lazy" />
-                    <span>Philosophy</span>
-                </a>
+            <div class="about-accordion" role="list">
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="edPanel">Education</button>
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="liftPanel">Lifting</button>
+                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="philPanel">Philosophy</button>
             </div>
                 
             <!-- Info Panels controlled by tabs-->
@@ -164,7 +164,7 @@
                 <div class="tab-content">
 
                     <!-- Education Panel -->
-                    <div class="tab-pane fade" id="edPanel" role="tabpanel" aria-labelledby="edTab">
+                    <div class="accordion-panel" id="edPanel" role="region" aria-label="Education" hidden>
                         <q class="tabQuote">With almost four years' worth of credits already, I assumed I'd be out with a degree in no time. I WAS <em>VERY WRONG</em>.</q>
                         <div class="prose">
                             {{ siteContent.education | markdown | raw }}
@@ -258,7 +258,7 @@
                     </div>
 
                     <!-- Lifting Panel -->
-                    <div class="tab-pane fade" id="liftPanel" role="tabpanel" aria-labelledby="liftTab">
+                    <div class="accordion-panel" id="liftPanel" role="region" aria-label="Lifting" hidden>
                         <q class="tabQuote">Maybe, with work, I could be one strong-ass string bean.</q>
                         <div class="prose">
                             {{ siteContent.lifting | markdown | raw }}
@@ -331,7 +331,7 @@
                     </div>
 
                     <!-- Philosophy Panel -->
-                    <div class="tab-pane fade" id="philPanel" role="tabpanel" aria-labelledby="philTab">
+                    <div class="accordion-panel" id="philPanel" role="region" aria-label="Philosophy" hidden>
                         <q class="tabQuote">We are better off when we know that we don't know than when we are ignorant to our ignorance.</q>
                         <div class="prose">
                             {{ siteContent.philosophy | markdown | raw }}
@@ -395,73 +395,19 @@
             </div>
         </div>
 
-        <!-- Projects Page -->
-        <div class="container-fluid fullscreen" id="projects">
-            <h1 class="pageHeading">PROJECTS</h1><hr>
-            <div class="row justify-content-around">
-
-                <!-- Seismic Dashboard Project -->
-                <div class="col-lg-5 my-3 text-center">
-                    <h2>Seismic Dashboard</h2>
-                    <a href="{{ siteContent.projects.seismic.liveUrl }}" target="_blank" rel="noopener noreferrer">
-                        <img src="{{ siteContent.projects.seismic.image }}" alt="{{ siteContent.projects.seismic.imageAlt }}" width="100%" class="image-fluid rounded py-3" loading="lazy" />
-                    </a>
-                    <br>
-                    <a href="{{ siteContent.projects.seismic.sourceUrl }}" target="_blank" rel="noopener noreferrer">
-                        <span>--> <u>See Source Code</u> <--</span>
-                    </a>
-                    <br><br>
-                    <span class="ellipses"></span>
-                    <button class="moreBtn" type="button" aria-expanded="false">Learn More</button>
-                    <div class="more">
-                        <div class="prose">
-                            {{ siteContent.projects.seismic.prose | markdown | raw }}
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <!-- Personal Website Project -->
-                <div class="col-lg-5 my-3 text-center">
-                    <h2>This Site!</h2>
-                    <a href="{{ siteContent.projects.personalSite.liveUrl }}" target="_blank" rel="noopener noreferrer">
-                    <img src="{{ siteContent.projects.personalSite.image }}" alt="{{ siteContent.projects.personalSite.imageAlt }}" width="100%" class="image-fluid rounded py-3" loading="lazy" />
-                    </a>
-                    <br>
-                    <a href="{{ siteContent.projects.personalSite.sourceUrl }}" target="_blank" rel="noopener noreferrer">
-                        <span>--> <u>See Source Code</u> <--</span>
-                    </a>
-                    <br><br>
-                    <span class="ellipses"></span>
-                    <button class="moreBtn" type="button" aria-expanded="false">Learn More</button>
-                    <div class="more">
-                        <div class="prose">
-                            {{ siteContent.projects.personalSite.prose | markdown | raw }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-cta">
-                <a href="https://github.com/freethinkingzen?tab=repositories" target="_blank" rel="noopener noreferrer">
-                    <img src="./IMG/GitHub-Mark-64px.png" alt="" class="icon" height="32" width="32" loading="lazy" />
-                    <span>See More Projects on GitHub</span>
-                </a>
-            </div>
-        </div>
-
         <!-- Experience Page -->
-        <div class="container-fluid fullscreen" id="expPage">
-            <h1 class="pageHeading">EXPERIENCE</h1><hr>
+        <section class="container-fluid fullscreen" id="experience" aria-labelledby="experience-heading">
+            <h1 class="pageHeading" id="experience-heading">EXPERIENCE</h1><hr>
             <div class="prose experience-content">
                 {{ siteContent.experience | markdown | raw }}
             </div>
-        </div>
-        
+        </section>
+
         <!-- Skills Page -->
-        <div class="container-fluid fullscreen" id="skillPage">
-            <h1 class="pageHeading">SKILLS</h1><hr>
-            <div class="prose skills-content">
-                {{ siteContent.skills | markdown | raw }}
+        <div class="container-fluid fullscreen" id="toolkit">
+            <h1 class="pageHeading">TOOLKIT</h1><hr>
+            <div class="prose technical-range-content">
+                {{ siteContent.technicalRange | markdown | raw }}
             </div>
             {% comment %}
             <div class="row">
@@ -474,7 +420,7 @@
                         <li>Management and Leadership</li>
                         <li>Object Oriented Programming</li>
                         <li>Front-end Design</li>
-                        <li>Accessibility</li>
+                        <li>Product-minded engineering</li>
                         <li>Simplifying and Streamlining Complex Solutions</li>
                         <li>Data Analysis</li>
                         <li>Basic ML/AI</li>
@@ -541,29 +487,8 @@
         <!-- Quote Page -->
         <div class="container-fluid fullscreen">
             <h1 class="pageHeading">ONE FINAL WORD</h1><hr>
-            <br><br>
-            <h2>Even stumbling forward is progress.
-                <br><br>
-                We ARE headed toward being something greater, despite our setbacks,
-                <br>
-                as long as we continue to seek being something greater.
-                <br><br>
-                In the words of Zarathustra...
-            </h2>
-            <br><br>
-            <div class="row py-5 px-3 justify-content-center border">
-                <figure>
-                    <p>
-                        "[Humanity] is a rope stretched between the animal and the Ubermensch (<i>advanced being</i>)—a rope over an abyss.
-                        <br>
-                        A dangerous crossing, a dangerous wayfaring, a dangerous looking-back, a dangerous trembling and halting.
-                        <br>
-                        What is great in [humanity] is that it is a bridge and not a goal...
-                        <br>
-                        I love [those] who liveth in order to know, and seeketh to know in order that the Ubermensch may hereafter live."
-                    </p>
-                    <figcaption>- Friedrich Nietzsche, <i>Thus Spoke Zarathustra</i></figcaption>
-                </figure>
+            <div class="prose final-word-content">
+                {{ siteContent.finalWord | markdown | raw }}
             </div>
         </div>
 
