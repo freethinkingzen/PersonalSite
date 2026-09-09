@@ -20,7 +20,7 @@
         <meta property="og:image" content="https://www.johnlewiswebdev.com/IMG/snapshot.png" />
         <meta property="og:image:secure_url" content="https://www.johnlewiswebdev.com/IMG/snapshot.png" />
         <meta name="title" property="og:title" content="John Lewis | Senior Software Engineer" />
-        <meta name="description" property="og:description" content="John Lewis is a Senior Software Engineer who moved from intern to senior in five years, combining full-stack engineering, cloud infrastructure, technical leadership, and a nontraditional background in retail management, philosophy, and computer science." />
+        <meta property="og:description" content="John Lewis is a Senior Software Engineer who moved from intern to senior in five years, combining full-stack engineering, cloud infrastructure, technical leadership, and a nontraditional background in retail management, philosophy, and computer science." />
         <meta name="url" property="og:url" content="https://www.johnlewiswebdev.com" />
         <meta name="author" property="og:author" content="John Lewis" />
         <meta name="type" property="og:type" content="website" />
@@ -75,9 +75,9 @@
             </div>
             <div class="my-auto mx-auto pb-2">
                 <div>
-                    <h1 id="coding" class="landing-title">CODING</h1>
-                    <h1 id="lifting" class="landing-title">LIFTING</h1>
-                    <h1 id="philosophy" class="landing-title">PHILOSOPHY</h1>
+                    <span id="coding" class="landing-title">CODING</span>
+                    <span id="lifting" class="landing-title">LIFTING</span>
+                    <span id="philosophy" class="landing-title">PHILOSOPHY</span>
                 </div>
             </div>
     
@@ -397,7 +397,7 @@
 
         <!-- Experience Page -->
         <section class="container-fluid fullscreen" id="experience" aria-labelledby="experience-heading">
-            <h1 class="pageHeading" id="experience-heading">EXPERIENCE</h1><hr>
+            <h2 class="pageHeading" id="experience-heading">EXPERIENCE</h2><hr>
             <div class="prose experience-content">
                 {{ siteContent.experience | markdown | raw }}
             </div>
@@ -405,7 +405,7 @@
 
         <!-- Skills Page -->
         <div class="container-fluid fullscreen" id="toolkit">
-            <h1 class="pageHeading">TOOLKIT</h1><hr>
+            <h2 class="pageHeading">TOOLKIT</h2><hr>
             <div class="prose technical-range-content">
                 {{ siteContent.technicalRange | markdown | raw }}
             </div>
@@ -486,7 +486,7 @@
 
         <!-- Quote Page -->
         <div class="container-fluid fullscreen">
-            <h1 class="pageHeading">ONE FINAL WORD</h1><hr>
+            <h2 class="pageHeading">ONE FINAL WORD</h2><hr>
             <div class="prose final-word-content">
                 {{ siteContent.finalWord | markdown | raw }}
             </div>

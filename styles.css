@@ -48,7 +48,8 @@ body {
     
 }
 
-h1{
+h1,
+.pageHeading{
     margin-top: 1em;
     color: var(--element1);
     text-shadow: 0 5px 5px var(--surface2);
@@ -58,7 +59,14 @@ h1{
 }
 
 .landing-title {
+    display: block;
+    margin-top: 1em;
+    color: var(--element1);
     visibility: hidden;
+    text-shadow: 0 5px 5px var(--surface2);
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 0.5ch;
 }
 
 h2 {
@@ -522,7 +530,7 @@ input:checked + .slider:before {
     animation: fade ease 4s;
 }
 
-#landing h1:hover {
+.landing-title:hover {
     cursor: none;
 }
 
@@ -691,7 +699,15 @@ input:checked + .slider:before {
 }
 
 @media only screen and (max-width: 500px) {
-    h1 {
+    h1,
+    .pageHeading {
+        font-size: 32px;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 1.75em;
+        margin-bottom: 1em;
+    }
+    .landing-title {
         font-size: 32px;
         font-weight: bolder;
         text-align: center;
@@ -759,9 +775,15 @@ input:checked + .slider:before {
 }
 
 @media only screen and (max-width: 400px) {
-    h1 {
+    h1,
+    .pageHeading {
         text-align: center;
         font-size: 28px;
+        margin-top: 2.5em;
+    }
+    .landing-title {
+        font-size: 28px;
+        text-align: center;
         margin-top: 2.5em;
     }
     h2 {
