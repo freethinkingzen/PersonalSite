@@ -1,29 +1,31 @@
 ## Current Scope
 
-I work on greenfield platform development and the systems that support scheduled financial workflows, movement of money, and dispute handling. The work sits at the intersection of product requirements, application behavior, integrations, infrastructure, and operational reliability.
+I work on full-stack greenfield platform development in the creator <dfn class="tooltip-term" tabindex="0" data-tooltip="Paying creators to produce short-form clips of content that drive views, engagement, or referral traffic.">clipping</dfn> and affiliate marketing space. I create and maintain the systems that support sales, attribution, settlement, multi-processor payment integrations, refunds, and dispute resolution. The work sits at the intersection of three distinct user groups: brands/vendors, clippers/affiliates, and the end consumers. For this ecosystem to function, these financial and operational systems must serve every party. That requires product design built for sustainability, not just short-term value extraction.
 
-My scope includes turning broad product needs into technical direction, helping define system boundaries, building and evolving full-stack capabilities, and keeping the surrounding delivery and operational concerns in view. The specific products and implementation details are company confidential; the engineering problems are familiar ones: correctness, reliability, maintainability, clear ownership, and steady delivery under real constraints.
+My role includes turning broad product needs into technical designs and breaking those into specific, time bound, actionable, and realistic phases of implementation to meet deadlines and budgets. While I love living with my head in the clouds pondering the future of our prodcut, I come down to earth and do the dirty buisiness of standing up and building out new services. 
 
-I work best at the boundaries between teams and layers of a system. I can move from a user-facing requirement to an API or service design, from application behavior to cloud infrastructure, and from an immediate delivery decision to the maintenance burden it may create later.
+On a daily basis I move from user-facing requirements back into the API or service to support it, from application behavior to cloud infrastructure to adjust permissions and resources, and from an immediate delivery decision to the maintenance burdens of our existing tech stack.
 
 ## Technical Range
 
-My work spans full-stack product development, cloud infrastructure, APIs, integrations, and the operational concerns that keep software dependable after it ships. I have worked across systems that support financial workflows, scheduled processing, movement of money, and dispute handling without exposing internal product details or implementation specifics.
+My experience spans the full product lifecycle and full engineering stack.
 
-That range lets me move between customer-facing behavior, application code, service boundaries, infrastructure, and delivery practices. I am most useful when a problem crosses those boundaries and someone needs to understand the whole system rather than optimize one layer in isolation.
+I work with product to define expectations, scope, limitations, and future enhancements to shape timelines, rollout strategies, and technical trade-offs. I aim to ship high-impact work without burning down the codebase or blowing the budget to get MVP or a new feature out the door.
 
-## Technical Responsibilities
+I collaborate with design to understand and improve the user experience and bring that knowledge of "Who is using this?", "How are they using this?", and "What will they want next?" all the way into the deepest reaches of the back end. Serving the users is the goal, the engineering is a technical constraint to navigate in achieving that goal.
 
-I contribute to architecture and system design, translate ambiguous requirements into workable plans, and make tradeoffs between delivery speed, simplicity, reliability, and long-term maintenance. I work across the stack when needed, from user-facing applications and APIs to cloud resources and deployment concerns.
+Once I have complete mental model of a product to weather any changes and injections, I turn the product requirements and design intent into system architecture, API contracts, and data models. I plan and sequence the build into shippable increments a team can execute. Feature requests, injections, and technical tradeoffs are expected and welcomed during this time. The plan, like the code, should be durable and extensible.
 
-I try to leave systems easier to understand and operate than I found them. That means reducing unnecessary complexity, clarifying ownership, documenting decisions, and choosing solutions that a team can support after the original author has moved on.
+I am most useful when a problem crosses boundaries and someone needs to understand the whole system. A system or service in isolation can be designed or debugged quickly, but a requirement or bug that isn't discovered in design, implementation, testing, or deployment is usually the result of something difficult to define that has crossed boundaries and nobody clearly owned.
 
 ## Technical Leadership
 
-My leadership is grounded in making technical decisions understandable. I help teams clarify the problem, identify the important constraints, compare options, and commit to a direction without pretending every decision has a perfect answer.
+My leadership is grounded in making technical decisions understandable. I help teams clarify the problem, identify the important constraints, compare options, and commit to a direction without pretending every decision has a perfect answer. Those goals have pushed me to despise jargon. While those shorthands are useful when an engineer speaks to another engineer in ticket or technical requirements, it bleeds out into other communication and excludes stakeholders in conversations about progress, updates, and blockers. "Explain it to me like I am 5" is a constant theme in my head. I believe that if you can't explain it to a child, you don't demonstrate a firm grasp of the issue.
 
-I contribute through design conversations, code review, mentoring, cross-functional communication, and the steady work of resolving ambiguity. I want engineers to have enough context to make good decisions independently, while keeping the team aligned on the outcomes that matter.
+I contribute through design conversations, code review, mentoring, cross-functional communication, and the most difficult work of nurturing the ability to resolve ambiguity. I want engineers to have enough context to make good decisions independently, while keeping the team aligned on the outcomes that matter. You can captain a ship by asking each person to do the job that they're asked, but I firmly believe sharing the direction gets us there faster, creates buy-in, and unifies the team around a positive goal. 
 
 ## Next Chapter
 
-I am looking for a role where I can take meaningful ownership of systems and help shape the way a team builds and operates software. I am drawn to technically serious environments that value clear thinking, pragmatic architecture, useful communication, and continuous improvement over complexity for its own sake.
+I am looking for a role where I can teach and learn. I want to be the best and learn from the best while making every person around me better. I want to take meaningful ownership of systems and help shape the way a team builds software. I am drawn to technically complex and novel problems to be solved with pragmatic architecture, clear communication across teams and responsibilities, and continuous improvement.
+
+I want to simplify difficult problems.

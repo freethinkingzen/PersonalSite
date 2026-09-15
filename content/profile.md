@@ -20,10 +20,10 @@ My focus became the practical relationship between product decisions, technical 
 
 That perspective shapes how I evaluate technical and design decisions. I look for unnecessary complexity, unclear ownership, and friction that can be removed for users and teams alike.
 
-### From Intern To Senior Engineer
+### Senior Engineering
 
-During my computer science studies, I focused on machine learning, artificial intelligence, and front-end development. That foundation helped me move from internship into professional software engineering and then through the responsibilities of increasingly senior roles.
+During my computer science studies, I focused on machine learning, artificial intelligence, and front-end development. That foundation led me into professional software engineering and the responsibilities of senior technical work.
 
-In five years, I moved from intern to Senior Software Engineer. I built breadth across front-end development, back-end services, cloud infrastructure, and delivery while keeping product outcomes and operational reality in view. Senior engineering, to me, is the ability to make sound technical decisions, explain tradeoffs clearly, and help a team solve the right problem rather than simply produce more code.
+I built breadth across front-end development, back-end services, cloud infrastructure, and delivery while keeping product outcomes and operational reality in view. Senior engineering, to me, is the ability to make sound technical decisions, explain tradeoffs clearly, and help a team solve the right problem rather than simply produce more code.
 
 I currently work as a Senior Software Engineer for ClickBank, building full-stack solutions for its e-commerce and affiliate marketing platform. My work ranges from managing cloud infrastructure to designing and implementing full-stack solutions with React, JavaScript, HTML, and CSS. I am now looking for a team where I can contribute at that level while continuing to grow the people, systems, and products around me.
