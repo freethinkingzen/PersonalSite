@@ -91,3 +91,24 @@ toggleSwitch.addEventListener('change', function(e) {
 downGlyph.addEventListener("click", function() {
     profileSection.scrollIntoView({behavior: 'smooth'});
 });
+
+// Layout switcher: swaps the page "skin" via a data-layout attribute on <html>
+const layoutButtons = document.querySelectorAll(".layout-option");
+function applyLayout(layout) {
+    if (layout === 'store') {
+        document.documentElement.setAttribute('data-layout', 'store');
+    } else {
+        document.documentElement.removeAttribute('data-layout');
+    }
+    layoutButtons.forEach(function(btn) {
+        btn.setAttribute('aria-pressed', String(btn.dataset.choice === layout));
+    });
+}
+applyLayout(localStorage.getItem('layout') === 'store' ? 'store' : 'resume');
+layoutButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        applyLayout(btn.dataset.choice);
+        localStorage.setItem('layout', btn.dataset.choice);
+        window.scrollTo(0, 0);
+    });
+});

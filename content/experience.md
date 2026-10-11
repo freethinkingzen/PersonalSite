@@ -4,6 +4,8 @@ I work on full-stack greenfield platform development in the creator <dfn class="
 
 My role includes turning broad product needs into technical designs and breaking those into specific, time bound, actionable, and realistic phases of implementation to meet deadlines and budgets. While I love living with my head in the clouds pondering the future of our prodcut, I come down to earth and do the dirty buisiness of standing up and building out new services. 
 
+I am AI fluent and build with it every day. I use Claude as my primary tool and write my own AI skills and workflows that support the whole software development lifecycle: design, agent code review, test coverage, and polish. The AI accelerates the work, and my experience as an engineer decides what ships. I tune, correct, and harden the output so production gets reliable systems instead of AI slop.
+
 On a daily basis I move from user-facing requirements back into the API or service to support it, from application behavior to cloud infrastructure to adjust permissions and resources, and from an immediate delivery decision to the maintenance burdens of our existing tech stack.
 
 ## Technical Range

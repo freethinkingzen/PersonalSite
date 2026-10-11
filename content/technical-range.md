@@ -39,6 +39,16 @@
 - GraphQL and REST-style integrations
 - AWS, Azure, and Google Cloud resources
 
+## AI-Assisted Engineering
+
+- Daily AI-first development with Claude and other agentic coding tools
+- Custom AI skills and workflows across the full software development lifecycle
+- AI-assisted design, planning, and architecture exploration
+- Agent-driven code review and test coverage
+- Prompt, context, and specification design for reliable agent output
+- Reviewing, refining, and hardening AI-generated code with senior engineering judgment
+- Shipping production-ready systems, not AI slop
+
 ## Data And Intelligence
 
 - Data analysis and data processing

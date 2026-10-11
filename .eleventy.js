@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("IMG");
     eleventyConfig.addPassthroughCopy("JS");
     eleventyConfig.addPassthroughCopy("styles.css");
+    eleventyConfig.addPassthroughCopy("layouts.css");
     eleventyConfig.addPassthroughCopy("robots.txt");
     eleventyConfig.addPassthroughCopy("sitemap.xml");
     eleventyConfig.addWatchTarget("content");
